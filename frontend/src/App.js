@@ -106,39 +106,41 @@ const Home = () => {
               className="text-left space-y-8 py-8"
             >
               {/* Logo with Gradient */}
-              <div className="flex items-center gap-4 mb-8">
+              <div className="flex items-center gap-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 via-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-500 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  <h1 className="text-3xl xl:text-4xl font-bold bg-gradient-to-r from-blue-400 via-blue-500 to-purple-400 bg-clip-text text-transparent">
                     WebOS Toolkit
                   </h1>
-                  <p className="text-blue-400 font-medium">Developer Extension</p>
+                  <p className="text-blue-300 font-medium">Developer Extension</p>
                 </div>
               </div>
 
-              <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white leading-tight">
-                Supercharge Your
-                <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Browser Experience
-                </span>
-              </h2>
-              
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-xl">
-                Professional developer tools to speed up your browser, unlock advanced insights, and take full control of your browsing experience.
-              </p>
+              <div className="space-y-6">
+                <h2 className="text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-tight">
+                  Supercharge Your
+                  <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    Browser Experience
+                  </span>
+                </h2>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-2xl">
+                  Professional developer tools to speed up your browser, unlock advanced insights, and take full control of your browsing experience.
+                </p>
+              </div>
 
               {/* Feature Pills */}
-              <div className="flex flex-wrap gap-3 mb-12">
-                <div className="px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30">
-                  <span className="text-blue-300 font-medium">⚡ Performance Boost</span>
+              <div className="flex flex-wrap gap-3">
+                <div className="px-4 py-3 bg-blue-500/30 backdrop-blur-sm rounded-full border border-blue-400/50">
+                  <span className="text-blue-100 font-medium">⚡ Performance Boost</span>
                 </div>
-                <div className="px-4 py-2 bg-purple-500/20 backdrop-blur-sm rounded-full border border-purple-400/30">
-                  <span className="text-purple-300 font-medium">🧠 Smart Analytics</span>
+                <div className="px-4 py-3 bg-purple-500/30 backdrop-blur-sm rounded-full border border-purple-400/50">
+                  <span className="text-purple-100 font-medium">🧠 Smart Analytics</span>
                 </div>
-                <div className="px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30">
-                  <span className="text-blue-300 font-medium">🗂️ Tab Management</span>
+                <div className="px-4 py-3 bg-blue-500/30 backdrop-blur-sm rounded-full border border-blue-400/50">
+                  <span className="text-blue-100 font-medium">🗂️ Tab Management</span>
                 </div>
               </div>
 
@@ -147,9 +149,8 @@ const Home = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="mb-8"
               >
-                <div className="inline-flex items-center gap-4 bg-white/90 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300">
+                <div className="inline-flex items-center gap-4 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300">
                   <img 
                     src="https://developer.chrome.com/static/docs/webstore/branding/image/HRs9MPufa1J1h5glNhut.png"
                     alt="Available in the Chrome Web Store"
@@ -167,21 +168,20 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="mb-8"
               >
-                <div className="flex items-start gap-3 p-4 bg-gray-800/40 backdrop-blur-sm rounded-xl border border-gray-700/50">
+                <div className="flex items-start gap-3 p-4 bg-gray-800/60 backdrop-blur-sm rounded-xl border border-gray-600/50">
                   <input
                     type="checkbox"
                     id="privacy-agreement"
                     checked={isPrivacyAccepted}
                     onChange={(e) => setIsPrivacyAccepted(e.target.checked)}
-                    className="w-5 h-5 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 focus:ring-2 mt-0.5"
+                    className="w-5 h-5 text-blue-600 bg-gray-700 border-gray-500 rounded focus:ring-blue-500 focus:ring-2 mt-0.5"
                   />
-                  <label htmlFor="privacy-agreement" className="text-gray-300 text-sm leading-relaxed">
+                  <label htmlFor="privacy-agreement" className="text-gray-200 text-sm leading-relaxed">
                     By installing the extension you agree to our{' '}
                     <button
                       onClick={() => setIsPrivacyModalOpen(true)}
-                      className="text-blue-400 hover:text-blue-300 underline font-medium"
+                      className="text-blue-300 hover:text-blue-200 underline font-medium"
                     >
                       Privacy Policy
                     </button>
@@ -215,7 +215,7 @@ const Home = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="relative hidden lg:block"
+              className="relative hidden lg:block py-8"
             >
               <div className="relative">
                 {/* Main Visual Card */}
