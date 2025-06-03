@@ -106,7 +106,7 @@ const Home = () => {
               className="text-left xl:text-left lg:text-center space-y-8 py-8 xl:max-w-none lg:max-w-4xl lg:mx-auto"
             >
               {/* Logo with Gradient */}
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 xl:justify-start lg:justify-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 via-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
@@ -126,13 +126,13 @@ const Home = () => {
                   </span>
                 </h2>
                 
-                <p className="text-xl text-gray-200 leading-relaxed max-w-2xl">
+                <p className="text-xl text-gray-200 leading-relaxed max-w-2xl xl:max-w-2xl lg:mx-auto">
                   Professional developer tools to speed up your browser, unlock advanced insights, and take full control of your browsing experience.
                 </p>
               </div>
 
               {/* Feature Pills */}
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 xl:justify-start lg:justify-center">
                 <div className="px-4 py-3 bg-blue-500/30 backdrop-blur-sm rounded-full border border-blue-400/50">
                   <span className="text-blue-100 font-medium">⚡ Performance Boost</span>
                 </div>
@@ -149,6 +149,7 @@ const Home = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
+                className="xl:flex xl:justify-start lg:flex lg:justify-center"
               >
                 <div className="inline-flex items-center gap-4 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300">
                   <img 
@@ -168,8 +169,9 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
+                className="xl:flex xl:justify-start lg:flex lg:justify-center"
               >
-                <div className="flex items-start gap-3 p-4 bg-gray-800/60 backdrop-blur-sm rounded-xl border border-gray-600/50">
+                <div className="flex items-start gap-3 p-4 bg-gray-800/60 backdrop-blur-sm rounded-xl border border-gray-600/50 max-w-md">
                   <input
                     type="checkbox"
                     id="privacy-agreement"
@@ -194,6 +196,7 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 }}
+                className="xl:flex xl:justify-start lg:flex lg:justify-center"
               >
                 <button
                   onClick={handleAcceptAndContinue}
