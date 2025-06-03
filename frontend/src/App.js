@@ -83,11 +83,11 @@ const Home = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url('https://images.unsplash.com/photo-1658998765622-962cb51e7888')` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-blue-500/10 to-purple-600/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-blue-900/90 to-gray-900/95" />
         
         {/* Geometric Pattern Overlay */}
         <div 
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0 opacity-5"
           style={{ 
             backgroundImage: `url('https://images.unsplash.com/photo-1496167117681-944f702be1f4')`,
             backgroundSize: '400px 400px',
@@ -95,15 +95,15 @@ const Home = () => {
           }}
         />
         
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
+          <div className="grid xl:grid-cols-2 gap-12 xl:gap-20 items-center min-h-screen">
             
             {/* Left Column - Content */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-left"
+              className="text-left space-y-8 py-8"
             >
               {/* Logo with Gradient */}
               <div className="flex items-center gap-4 mb-8">
