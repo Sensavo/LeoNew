@@ -1,11 +1,13 @@
-/* Base styles with aipcprotect.com inspired brand identity */
+/* Modern UI Base styles inspired by contemporary design patterns */
 :root {
-  --primary-blue: #007BFF;
-  --secondary-gray: #6C757D;
-  --accent-green: #28A745;
-  --dark-bg: #111827;
-  --darker-bg: #0f172a;
-  --aipc-blue: #007BFF;
+  --primary-blue: #3b82f6;
+  --secondary-blue: #1d4ed8;
+  --purple-accent: #8b5cf6;
+  --secondary-gray: #6b7280;
+  --accent-green: #10b981;
+  --dark-bg: #0f172a;
+  --darker-bg: #020617;
+  --glass-bg: rgba(255, 255, 255, 0.1);
 }
 
 * {
