@@ -139,19 +139,67 @@ body {
   animation: float-gentle 4s ease-in-out infinite;
 }
 
-/* Modern hero grid layout */
+/* Modern hero grid layout with MacBook 11" support */
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 4rem;
+  gap: 3rem;
   align-items: center;
   min-height: 100vh;
+  padding: 2rem 0;
 }
 
-@media (min-width: 1024px) {
+/* MacBook 11" (1366px) and similar medium screens */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero-visual {
+    display: none !important;
+  }
+}
+
+/* Larger screens (1400px+) */
+@media (min-width: 1400px) {
   .hero-grid {
     grid-template-columns: 1fr 1fr;
     gap: 6rem;
+  }
+}
+
+/* Better contrast and readability */
+.text-high-contrast {
+  color: #f8fafc;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.text-medium-contrast {
+  color: #e2e8f0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.bg-high-contrast {
+  background: rgba(31, 41, 55, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(75, 85, 99, 0.6);
+}
+
+/* Modern section spacing */
+.section-spacing {
+  padding: 6rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-spacing {
+    padding: 4rem 0;
   }
 }
 
