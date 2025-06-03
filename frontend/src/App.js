@@ -279,25 +279,25 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 relative bg-gradient-to-b from-gray-900 to-gray-800">
+      {/* Modern Features Section */}
+      <section className="py-24 relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
-              🛠️ Features
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              🛠️ Powerful Features
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Everything you need to optimize, analyze, and control your browsing experience
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Everything you need to optimize, analyze, and control your browsing experience with professional-grade tools
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -307,19 +307,21 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="bg-gray-800/60 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <feature.icon className="w-8 h-8 text-white" />
+                <div className="bg-gray-800/40 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 h-full">
+                  <div className="flex items-center gap-6 mb-8">
+                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                      <feature.icon className="w-10 h-10 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white">
-                      {feature.title}
-                    </h3>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-white mb-2">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-300 text-lg leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                    {feature.description}
-                  </p>
-                  <div className="w-full h-48 rounded-2xl overflow-hidden">
+                  <div className="w-full h-56 rounded-2xl overflow-hidden shadow-2xl">
                     <img
                       src={feature.image}
                       alt={feature.title}
@@ -333,22 +335,26 @@ const Home = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-gray-800/30">
-        <div className="max-w-4xl mx-auto px-6">
+      {/* Modern FAQ Section */}
+      <section className="py-24 bg-gradient-to-b from-gray-900 to-gray-800 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/5 to-purple-900/5"></div>
+        <div className="max-w-5xl mx-auto px-6 relative">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Frequently Asked Questions
             </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Get answers to common questions about WebOS Toolkit
+            </p>
           </motion.div>
 
-          <div className="space-y-4">
+          <div className="space-y-6">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
@@ -356,27 +362,29 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50"
+                className="bg-gray-800/40 backdrop-blur-xl rounded-2xl border border-gray-700/50 overflow-hidden"
               >
                 <button
                   onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
-                  className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-700/30 transition-colors duration-200 rounded-2xl"
+                  className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-700/30 transition-colors duration-200"
                 >
-                  <span className="text-lg font-semibold text-white">{faq.question}</span>
-                  {expandedFaq === index ? (
-                    <ChevronUp className="w-5 h-5 text-blue-400" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-blue-400" />
-                  )}
+                  <span className="text-lg font-semibold text-white pr-4">{faq.question}</span>
+                  <div className="flex-shrink-0">
+                    {expandedFaq === index ? (
+                      <ChevronUp className="w-6 h-6 text-blue-400" />
+                    ) : (
+                      <ChevronDown className="w-6 h-6 text-blue-400" />
+                    )}
+                  </div>
                 </button>
                 {expandedFaq === index && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     transition={{ duration: 0.3 }}
-                    className="px-8 pb-6"
+                    className="px-8 pb-6 border-t border-gray-700/30"
                   >
-                    <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                    <p className="text-gray-300 leading-relaxed pt-4">{faq.answer}</p>
                   </motion.div>
                 )}
               </motion.div>
@@ -385,33 +393,36 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 border-t border-gray-800 bg-gray-900">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-8">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <Shield className="w-8 h-8 text-blue-400" />
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+      {/* Modern Footer */}
+      <footer className="py-16 border-t border-gray-800/50 bg-gradient-to-b from-gray-800 to-gray-900 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/5 to-purple-900/5"></div>
+        <div className="max-w-7xl mx-auto px-6 relative">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl">
+                <Shield className="w-6 h-6 text-white" />
+              </div>
+              <span className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 WebOS Toolkit
               </span>
             </div>
-            <p className="text-gray-400 mb-6">
-              Created by developers, for developers. Upgrade your browser experience today.
+            <p className="text-gray-300 mb-8 text-lg max-w-2xl mx-auto">
+              Created by developers, for developers. Upgrade your browser experience with professional-grade tools.
             </p>
           </div>
           
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-gray-500">
-            <div className="flex items-center gap-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-8 border-t border-gray-700/50">
+            <div className="flex items-center gap-8 text-gray-400">
               <button
                 onClick={() => setIsPrivacyModalOpen(true)}
-                className="hover:text-blue-400 transition-colors duration-200"
+                className="hover:text-blue-400 transition-colors duration-200 font-medium"
               >
                 Privacy Policy
               </button>
               <span>•</span>
               <span>© 2025 WebOS Toolkit</span>
             </div>
-            <div className="text-gray-600">
+            <div className="text-gray-500 text-sm">
               Built with security and performance in mind
             </div>
           </div>
