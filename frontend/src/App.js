@@ -51,7 +51,7 @@ const Home = () => {
       icon: FolderOpen,
       title: "Tab Manager & Resource Monitor",
       description: "Stay organized, stay fast. See what's slowing you down and fix it in real time.",
-      image: "https://images.unsplash.com/photo-1477013743164-ffc3a5e556da?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwzfHxjaHJvbWUlMjB3ZWIlMjBzdG9yZXxlbnwwfHx8Ymx1ZXwxNzQ4OTY0MTIxfDA&ixlib=rb-4.1.0&q=85"
+      image: "https://images.unsplash.com/photo-1529071242804-840f9a164b8b"
     }
   ];
 
@@ -79,10 +79,10 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-          style={{ backgroundImage: `url('https://images.pexels.com/photos/16053029/pexels-photo-16053029.jpeg')` }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1644088379091-d574269d422f')` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-purple-900/60 to-gray-900/90" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/70 to-gray-900/95" />
         
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
           <motion.div
@@ -90,7 +90,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent leading-tight">
               WebOS Toolkit
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto">
@@ -101,16 +101,23 @@ const Home = () => {
             </p>
           </motion.div>
 
-          {/* Chrome Store Banner */}
+          {/* Chrome Store Banner with Official Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-8"
           >
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-green-600 to-blue-600 px-8 py-4 rounded-2xl border border-green-400/30 shadow-2xl backdrop-blur-sm">
-              <Download className="w-6 h-6" />
-              <span className="text-lg font-semibold">Available in Chrome Store</span>
+            <div className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-sm px-8 py-6 rounded-2xl border border-blue-400/30 shadow-2xl">
+              <img 
+                src="https://developer.chrome.com/static/docs/webstore/branding/image/HRs9MPufa1J1h5glNhut.png"
+                alt="Available in the Chrome Web Store"
+                className="h-16 w-auto"
+              />
+              <div className="text-left">
+                <div className="text-lg font-semibold text-white">Available in</div>
+                <div className="text-xl font-bold text-blue-300">Chrome Web Store</div>
+              </div>
             </div>
           </motion.div>
 
@@ -152,7 +159,7 @@ const Home = () => {
               disabled={!isPrivacyAccepted}
               className={`px-12 py-4 text-xl font-bold rounded-2xl transition-all duration-300 flex items-center gap-3 mx-auto ${
                 isPrivacyAccepted
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105'
+                  ? 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105'
                   : 'bg-gray-700 cursor-not-allowed opacity-50'
               }`}
             >
@@ -164,7 +171,7 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 relative">
+      <section className="py-20 relative bg-gradient-to-b from-gray-900 to-gray-800">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -173,7 +180,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
               🛠️ Features
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -191,10 +198,10 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="bg-gray-800/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10">
+                <div className="bg-gray-800/60 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <feature.icon className="w-8 h-8" />
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <feature.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold text-white">
                       {feature.title}
@@ -227,7 +234,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
               Frequently Asked Questions
             </h2>
           </motion.div>
@@ -270,26 +277,34 @@ const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-gray-800">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <Shield className="w-8 h-8 text-blue-400" />
-            <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              WebOS Toolkit
-            </span>
+      <footer className="py-12 border-t border-gray-800 bg-gray-900">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-8">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <Shield className="w-8 h-8 text-blue-400" />
+              <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+                WebOS Toolkit
+              </span>
+            </div>
+            <p className="text-gray-400 mb-6">
+              Created by developers, for developers. Upgrade your browser experience today.
+            </p>
           </div>
-          <p className="text-gray-400 mb-4">
-            Created by developers, for developers. Upgrade your browser experience today.
-          </p>
-          <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
-            <button
-              onClick={() => setIsPrivacyModalOpen(true)}
-              className="hover:text-blue-400 transition-colors duration-200"
-            >
-              Privacy Policy
-            </button>
-            <span>•</span>
-            <span>© 2024 WebOS Toolkit</span>
+          
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-gray-500">
+            <div className="flex items-center gap-6">
+              <button
+                onClick={() => setIsPrivacyModalOpen(true)}
+                className="hover:text-blue-400 transition-colors duration-200"
+              >
+                Privacy Policy
+              </button>
+              <span>•</span>
+              <span>© 2025 WebOS Toolkit</span>
+            </div>
+            <div className="text-gray-600">
+              Built with security and performance in mind
+            </div>
           </div>
         </div>
       </footer>
