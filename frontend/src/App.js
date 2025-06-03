@@ -76,97 +76,206 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center">
+      {/* Modern Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Modern Background */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1644088379091-d574269d422f')` }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1658998765622-962cb51e7888')` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/70 to-gray-900/95" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-blue-500/10 to-purple-600/20" />
         
-        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent leading-tight">
-              WebOS Toolkit
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto">
-              A Developer Tool to upgrade your browser created by developers
-            </p>
-            <p className="text-2xl md:text-3xl font-semibold mb-12 text-blue-300">
-              🚀 Speed up your browser. Supercharge your browsing. Unlock full control.
-            </p>
-          </motion.div>
-
-          {/* Chrome Store Banner with Official Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mb-8"
-          >
-            <div className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-sm px-8 py-6 rounded-2xl border border-blue-400/30 shadow-2xl">
-              <img 
-                src="https://developer.chrome.com/static/docs/webstore/branding/image/HRs9MPufa1J1h5glNhut.png"
-                alt="Available in the Chrome Web Store"
-                className="h-16 w-auto"
-              />
-              <div className="text-left">
-                <div className="text-lg font-semibold text-white">Available in</div>
-                <div className="text-xl font-bold text-blue-300">Chrome Web Store</div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Privacy Checkbox */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="mb-8"
-          >
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <input
-                type="checkbox"
-                id="privacy-agreement"
-                checked={isPrivacyAccepted}
-                onChange={(e) => setIsPrivacyAccepted(e.target.checked)}
-                className="w-5 h-5 text-blue-600 bg-gray-800 border-gray-600 rounded focus:ring-blue-500 focus:ring-2"
-              />
-              <label htmlFor="privacy-agreement" className="text-gray-300">
-                By installing the extension you agree to our{' '}
-                <button
-                  onClick={() => setIsPrivacyModalOpen(true)}
-                  className="text-blue-400 hover:text-blue-300 underline font-medium"
-                >
-                  Privacy Policy
-                </button>
-              </label>
-            </div>
-          </motion.div>
-
-          {/* Main CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-          >
-            <button
-              onClick={handleAcceptAndContinue}
-              disabled={!isPrivacyAccepted}
-              className={`px-12 py-4 text-xl font-bold rounded-2xl transition-all duration-300 flex items-center gap-3 mx-auto ${
-                isPrivacyAccepted
-                  ? 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105'
-                  : 'bg-gray-700 cursor-not-allowed opacity-50'
-              }`}
+        {/* Geometric Pattern Overlay */}
+        <div 
+          className="absolute inset-0 opacity-10"
+          style={{ 
+            backgroundImage: `url('https://images.unsplash.com/photo-1496167117681-944f702be1f4')`,
+            backgroundSize: '400px 400px',
+            backgroundRepeat: 'repeat'
+          }}
+        />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Left Column - Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-left"
             >
-              Accept and Continue
-              <ExternalLink className="w-5 h-5" />
-            </button>
-          </motion.div>
+              {/* Logo with Gradient */}
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 via-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-500 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    WebOS Toolkit
+                  </h1>
+                  <p className="text-blue-400 font-medium">Developer Extension</p>
+                </div>
+              </div>
+
+              <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white leading-tight">
+                Supercharge Your
+                <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Browser Experience
+                </span>
+              </h2>
+              
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-xl">
+                Professional developer tools to speed up your browser, unlock advanced insights, and take full control of your browsing experience.
+              </p>
+
+              {/* Feature Pills */}
+              <div className="flex flex-wrap gap-3 mb-12">
+                <div className="px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30">
+                  <span className="text-blue-300 font-medium">⚡ Performance Boost</span>
+                </div>
+                <div className="px-4 py-2 bg-purple-500/20 backdrop-blur-sm rounded-full border border-purple-400/30">
+                  <span className="text-purple-300 font-medium">🧠 Smart Analytics</span>
+                </div>
+                <div className="px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30">
+                  <span className="text-blue-300 font-medium">🗂️ Tab Management</span>
+                </div>
+              </div>
+
+              {/* Chrome Store Badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="mb-8"
+              >
+                <div className="inline-flex items-center gap-4 bg-white/90 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300">
+                  <img 
+                    src="https://developer.chrome.com/static/docs/webstore/branding/image/HRs9MPufa1J1h5glNhut.png"
+                    alt="Available in the Chrome Web Store"
+                    className="h-12 w-auto"
+                  />
+                  <div className="text-left">
+                    <div className="text-sm font-medium text-gray-700">Available in</div>
+                    <div className="text-lg font-bold text-gray-900">Chrome Web Store</div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Privacy Checkbox */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="mb-8"
+              >
+                <div className="flex items-start gap-3 p-4 bg-gray-800/40 backdrop-blur-sm rounded-xl border border-gray-700/50">
+                  <input
+                    type="checkbox"
+                    id="privacy-agreement"
+                    checked={isPrivacyAccepted}
+                    onChange={(e) => setIsPrivacyAccepted(e.target.checked)}
+                    className="w-5 h-5 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 focus:ring-2 mt-0.5"
+                  />
+                  <label htmlFor="privacy-agreement" className="text-gray-300 text-sm leading-relaxed">
+                    By installing the extension you agree to our{' '}
+                    <button
+                      onClick={() => setIsPrivacyModalOpen(true)}
+                      className="text-blue-400 hover:text-blue-300 underline font-medium"
+                    >
+                      Privacy Policy
+                    </button>
+                  </label>
+                </div>
+              </motion.div>
+
+              {/* Main CTA */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+              >
+                <button
+                  onClick={handleAcceptAndContinue}
+                  disabled={!isPrivacyAccepted}
+                  className={`px-10 py-4 text-lg font-bold rounded-2xl transition-all duration-300 flex items-center gap-3 ${
+                    isPrivacyAccepted
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 shadow-2xl hover:shadow-blue-500/30 transform hover:scale-105 text-white'
+                      : 'bg-gray-700 cursor-not-allowed opacity-50 text-gray-400'
+                  }`}
+                >
+                  Install WebOS Toolkit
+                  <ExternalLink className="w-5 h-5" />
+                </button>
+              </motion.div>
+            </motion.div>
+
+            {/* Right Column - Visual Element */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="relative hidden lg:block"
+            >
+              <div className="relative">
+                {/* Main Visual Card */}
+                <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-xl flex items-center justify-center">
+                      <Zap className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-white font-bold text-lg">Performance Monitor</h3>
+                      <p className="text-blue-300 text-sm">Real-time optimization</p>
+                    </div>
+                  </div>
+                  
+                  {/* Mock Performance Stats */}
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-300">Memory Usage</span>
+                      <div className="flex items-center gap-2">
+                        <div className="w-24 h-2 bg-gray-700 rounded-full overflow-hidden">
+                          <div className="w-1/3 h-full bg-gradient-to-r from-green-400 to-blue-500"></div>
+                        </div>
+                        <span className="text-green-400 font-medium">32%</span>
+                      </div>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-300">CPU Load</span>
+                      <div className="flex items-center gap-2">
+                        <div className="w-24 h-2 bg-gray-700 rounded-full overflow-hidden">
+                          <div className="w-1/2 h-full bg-gradient-to-r from-yellow-400 to-orange-500"></div>
+                        </div>
+                        <span className="text-yellow-400 font-medium">48%</span>
+                      </div>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-300">Active Tabs</span>
+                      <span className="text-blue-400 font-bold">12</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating Elements */}
+                <motion.div
+                  animate={{ y: [-10, 10, -10] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl"
+                >
+                  <Brain className="w-8 h-8 text-white" />
+                </motion.div>
+
+                <motion.div
+                  animate={{ y: [10, -10, 10] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-2xl"
+                >
+                  <Globe className="w-6 h-6 text-white" />
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
