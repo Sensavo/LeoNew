@@ -103,7 +103,7 @@ const Home = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-left space-y-8 py-8"
+              className="text-left xl:text-left lg:text-center space-y-8 py-8 xl:max-w-none lg:max-w-4xl lg:mx-auto"
             >
               {/* Logo with Gradient */}
               <div className="flex items-center gap-4">
