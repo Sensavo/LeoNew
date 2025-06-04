@@ -213,7 +213,7 @@ const Home = () => {
                 <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-xl flex items-center justify-center">
-                      <Zap className="w-6 h-6 text-white" />
+                      <Gauge className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h3 className="text-white font-bold text-lg">Performance Monitor</h3>
