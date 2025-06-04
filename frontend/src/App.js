@@ -316,7 +316,7 @@ const Home = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 4.5, duration: 0.8 }}
                     className="grid grid-cols-2 gap-4 mb-6"
-                    style={{ marginTop: '-96px', paddingTop: '24px' }} /* Position exactly where progress chart was */
+                    style={{ marginTop: '-96px', paddingTop: '24px' }}
                   >
                     {/* Left Tile - White */}
                     <div className="bg-white rounded-xl p-4 border border-gray-200 shadow-lg">
