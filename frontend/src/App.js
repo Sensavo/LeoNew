@@ -206,7 +206,7 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Right Column - Alternative Illustration */}
+            {/* Right Column - New Hero Illustration */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -214,17 +214,17 @@ const Home = () => {
               className="relative hidden xl:block py-8"
             >
               <div className="relative max-w-sm mx-auto">
-                {/* Browser Performance Monitor */}
+                {/* Main Control Panel */}
                 <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
-                  {/* Monitor Header */}
+                  {/* Header */}
                   <div className="flex items-center justify-between mb-8">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center">
-                        <Gauge className="w-6 h-6 text-white" />
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                        <Shield className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-white font-bold text-lg">System Monitor</h3>
-                        <p className="text-blue-300 text-sm">Browser Performance</p>
+                        <h3 className="text-white font-bold text-lg">Control Center</h3>
+                        <p className="text-blue-300 text-sm">WebOS Active</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
@@ -233,85 +233,87 @@ const Home = () => {
                     </div>
                   </div>
                   
-                  {/* Large Performance Circle */}
-                  <div className="flex items-center justify-center mb-8">
-                    <div className="relative w-32 h-32">
-                      <svg className="w-32 h-32 transform -rotate-90" viewBox="0 0 36 36">
-                        <path
-                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                          fill="none"
-                          stroke="#374151"
-                          strokeWidth="2"
-                        />
-                        <motion.path
-                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                          fill="none"
-                          stroke="url(#gradient)"
-                          strokeWidth="2"
-                          strokeDasharray="85, 100"
-                          initial={{ strokeDasharray: "0, 100" }}
-                          animate={{ strokeDasharray: "85, 100" }}
-                          transition={{ duration: 2, delay: 1 }}
-                          strokeLinecap="round"
-                        />
-                        <defs>
-                          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stopColor="#10b981" />
-                            <stop offset="100%" stopColor="#3b82f6" />
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-center">
-                          <div className="text-3xl font-bold text-white">85%</div>
-                          <div className="text-xs text-gray-300">Optimized</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Quick Stats */}
-                  <div className="grid grid-cols-2 gap-4">
+                  {/* Stats Grid */}
+                  <div className="grid grid-cols-2 gap-4 mb-6">
                     <motion.div 
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 1.5 }}
-                      className="text-center p-3 bg-blue-500/20 rounded-xl border border-blue-400/30"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6, delay: 1 }}
+                      className="text-center p-4 bg-blue-500/20 rounded-xl border border-blue-400/30"
                     >
-                      <ChartLine className="w-5 h-5 text-blue-400 mx-auto mb-2" />
-                      <div className="text-white font-bold">Real-time</div>
-                      <div className="text-blue-300 text-xs">Analytics</div>
+                      <Gauge className="w-6 h-6 text-blue-400 mx-auto mb-2" />
+                      <div className="text-white font-bold text-lg">+47%</div>
+                      <div className="text-blue-300 text-xs">Speed Boost</div>
                     </motion.div>
                     
                     <motion.div 
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 1.7 }}
-                      className="text-center p-3 bg-purple-500/20 rounded-xl border border-purple-400/30"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6, delay: 1.2 }}
+                      className="text-center p-4 bg-red-500/20 rounded-xl border border-red-400/30"
                     >
-                      <LayoutGrid className="w-5 h-5 text-purple-400 mx-auto mb-2" />
-                      <div className="text-white font-bold">12</div>
-                      <div className="text-purple-300 text-xs">Active Tabs</div>
+                      <Search className="w-6 h-6 text-red-400 mx-auto mb-2" />
+                      <div className="text-white font-bold text-lg">24</div>
+                      <div className="text-red-300 text-xs">Ads Blocked</div>
                     </motion.div>
+                    
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6, delay: 1.4 }}
+                      className="text-center p-4 bg-purple-500/20 rounded-xl border border-purple-400/30"
+                    >
+                      <ChartLine className="w-6 h-6 text-purple-400 mx-auto mb-2" />
+                      <div className="text-white font-bold text-lg">Live</div>
+                      <div className="text-purple-300 text-xs">Analytics</div>
+                    </motion.div>
+                    
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6, delay: 1.6 }}
+                      className="text-center p-4 bg-cyan-500/20 rounded-xl border border-cyan-400/30"
+                    >
+                      <LayoutGrid className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
+                      <div className="text-white font-bold text-lg">8</div>
+                      <div className="text-cyan-300 text-xs">Active Tabs</div>
+                    </motion.div>
+                  </div>
+
+                  {/* Status Indicator */}
+                  <div className="bg-green-500/20 rounded-xl p-4 border border-green-400/30">
+                    <div className="flex items-center justify-center gap-2">
+                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                      <span className="text-green-300 text-sm font-medium">All systems optimized</span>
+                    </div>
                   </div>
                 </div>
 
-                {/* Floating Elements */}
+                {/* Glass Effect Floating Elements */}
                 <motion.div
                   animate={{ y: [-8, 8, -8] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -top-4 -right-6 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl"
+                  className="absolute -top-4 -right-6 bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl border border-white/20"
                 >
-                  <Search className="w-3 h-3 inline mr-1" />
-                  SCANNING
+                  <Shield className="w-3 h-3 inline mr-1" />
+                  PROTECTED
                 </motion.div>
 
                 <motion.div
                   animate={{ x: [-6, 6, -6] }}
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
-                  className="absolute -bottom-3 -left-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-2 rounded-full text-xs font-bold shadow-xl"
+                  className="absolute -bottom-3 -left-5 bg-white/10 backdrop-blur-md text-white px-3 py-2 rounded-full text-xs font-bold shadow-xl border border-white/20"
                 >
-                  ⚡ BOOST
+                  <Gauge className="w-3 h-3 inline mr-1" />
+                  OPTIMIZING
+                </motion.div>
+
+                <motion.div
+                  animate={{ y: [6, -6, 6] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 4 }}
+                  className="absolute top-1/3 -left-8 bg-white/10 backdrop-blur-md text-white px-3 py-2 rounded-full text-xs font-bold shadow-xl border border-white/20"
+                >
+                  ⚡ FAST
                 </motion.div>
               </div>
             </motion.div>
