@@ -363,6 +363,127 @@ const Home = () => {
                     boxShadow: '0 0 18px rgba(251,191,36,0.5)'
                   }}
                 ></motion.div>
+
+                {/* New Floating Icon Bubbles */}
+                <motion.div
+                  animate={{
+                    x: [0, 20, 0],
+                    y: [0, -15, 0],
+                    rotate: [0, 360, 0]
+                  }}
+                  transition={{
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 3
+                  }}
+                  className="absolute -top-2 right-1/3 w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center opacity-80"
+                  style={{
+                    boxShadow: '0 0 25px rgba(59,130,246,0.4)'
+                  }}
+                >
+                  <span className="text-white text-xs">⚡</span>
+                </motion.div>
+
+                <motion.div
+                  animate={{
+                    x: [0, -15, 0],
+                    y: [0, 12, 0],
+                    scale: [1, 1.3, 1]
+                  }}
+                  transition={{
+                    duration: 9,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1.5
+                  }}
+                  className="absolute top-1/2 -left-2 w-5 h-5 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center opacity-75"
+                  style={{
+                    boxShadow: '0 0 20px rgba(34,197,94,0.5)'
+                  }}
+                >
+                  <Shield className="w-2.5 h-2.5 text-white" />
+                </motion.div>
+
+                <motion.div
+                  animate={{
+                    x: [0, 8, -8, 0],
+                    y: [0, -18, 0],
+                    rotate: [0, -180, 0]
+                  }}
+                  transition={{
+                    duration: 11,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 4
+                  }}
+                  className="absolute bottom-1/3 right-0 w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center opacity-70"
+                  style={{
+                    boxShadow: '0 0 15px rgba(168,85,247,0.6)'
+                  }}
+                >
+                  <span className="text-white text-xs">🔒</span>
+                </motion.div>
+
+                <motion.div
+                  animate={{
+                    x: [0, -10, 10, 0],
+                    y: [0, 8, -8, 0],
+                    scale: [1, 0.9, 1.2, 1]
+                  }}
+                  transition={{
+                    duration: 8.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 2.5
+                  }}
+                  className="absolute top-1/4 right-1/2 w-3 h-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center opacity-65"
+                  style={{
+                    boxShadow: '0 0 12px rgba(239,68,68,0.5)'
+                  }}
+                >
+                  <span className="text-white text-xs">🚫</span>
+                </motion.div>
+
+                <motion.div
+                  animate={{
+                    x: [0, 18, 0],
+                    y: [0, -25, 0],
+                    rotate: [0, 270, 360]
+                  }}
+                  transition={{
+                    duration: 12,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 5
+                  }}
+                  className="absolute bottom-1/2 -left-1 w-4 h-4 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-full flex items-center justify-center opacity-80"
+                  style={{
+                    boxShadow: '0 0 18px rgba(99,102,241,0.4)'
+                  }}
+                >
+                  <Gauge className="w-2 h-2 text-white" />
+                </motion.div>
+
+                <motion.div
+                  animate={{
+                    x: [0, -12, 12, 0],
+                    y: [0, 16, -8, 0],
+                    scale: [1, 1.1, 0.9, 1]
+                  }}
+                  transition={{
+                    duration: 9.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 6
+                  }}
+                  className="absolute top-3/4 right-2/3 w-5 h-5 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full flex items-center justify-center opacity-70"
+                  style={{
+                    boxShadow: '0 0 16px rgba(20,184,166,0.5)'
+                  }}
+                >
+                  <ChartLine className="w-2.5 h-2.5 text-white" />
+                </motion.div>
                 
                 {/* Main Card Container - Enhanced Glass Effect */}
                 <motion.div 
