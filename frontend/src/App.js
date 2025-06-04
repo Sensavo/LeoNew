@@ -447,58 +447,58 @@ const Home = () => {
                     </div>
                   </motion.div>
 
-                  {/* Compact Feature Showcase */}
+                  {/* Compact Feature List - No Tiles */}
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 1.1 }}
-                    className="space-y-2"
+                    className="space-y-1.5"
                   >
-                    <div className="flex items-center gap-2 p-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
-                      <div className="w-6 h-6 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                        <span className="text-blue-400 text-sm">🔧</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 bg-blue-500/30 rounded-md flex items-center justify-center">
+                        <span className="text-blue-400 text-xs">🔧</span>
                       </div>
                       <span className="text-gray-200 text-xs font-medium flex-1">Headers</span>
                       <motion.div 
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity }}
-                        className="w-2 h-2 bg-emerald-400 rounded-full"
+                        className="w-1.5 h-1.5 bg-emerald-400 rounded-full"
                       ></motion.div>
                     </div>
 
-                    <div className="flex items-center gap-2 p-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
-                      <div className="w-6 h-6 bg-red-500/20 rounded-lg flex items-center justify-center">
-                        <span className="text-red-400 text-sm">🚫</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 bg-red-500/30 rounded-md flex items-center justify-center">
+                        <span className="text-red-400 text-xs">🚫</span>
                       </div>
                       <span className="text-gray-200 text-xs font-medium flex-1">Ad Block</span>
                       <motion.div 
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                        className="w-2 h-2 bg-emerald-400 rounded-full"
+                        className="w-1.5 h-1.5 bg-emerald-400 rounded-full"
                       ></motion.div>
                     </div>
 
-                    <div className="flex items-center gap-2 p-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
-                      <div className="w-6 h-6 bg-purple-500/20 rounded-lg flex items-center justify-center">
-                        <span className="text-purple-400 text-sm">⚡</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 bg-purple-500/30 rounded-md flex items-center justify-center">
+                        <span className="text-purple-400 text-xs">⚡</span>
                       </div>
                       <span className="text-gray-200 text-xs font-medium flex-1">HTML Sim</span>
                       <motion.div 
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                        className="w-2 h-2 bg-emerald-400 rounded-full"
+                        className="w-1.5 h-1.5 bg-emerald-400 rounded-full"
                       ></motion.div>
                     </div>
 
-                    <div className="flex items-center gap-2 p-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
-                      <div className="w-6 h-6 bg-cyan-500/20 rounded-lg flex items-center justify-center">
-                        <Search className="w-3 h-3 text-cyan-400" />
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 bg-cyan-500/30 rounded-md flex items-center justify-center">
+                        <Search className="w-2.5 h-2.5 text-cyan-400" />
                       </div>
                       <span className="text-gray-200 text-xs font-medium flex-1">Images</span>
                       <motion.div 
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
-                        className="w-2 h-2 bg-emerald-400 rounded-full"
+                        className="w-1.5 h-1.5 bg-emerald-400 rounded-full"
                       ></motion.div>
                     </div>
                   </motion.div>
