@@ -119,16 +119,60 @@ const Home = () => {
               </div>
 
               <div className="space-y-5">
-                <h2 className="text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-tight">
-                  Supercharge Your
-                  <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <motion.h2 
+                  className="text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-tight"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                  <motion.span
+                    animate={{
+                      backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                    style={{
+                      background: 'linear-gradient(90deg, #ffffff, #e2e8f0, #ffffff)',
+                      backgroundSize: '200% 100%',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent'
+                    }}
+                  >
+                    Supercharge Your
+                  </motion.span>
+                  <motion.span 
+                    className="block"
+                    animate={{
+                      backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 1
+                    }}
+                    style={{
+                      background: 'linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4, #3b82f6)',
+                      backgroundSize: '300% 100%',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent'
+                    }}
+                  >
                     Browser Experience
-                  </span>
-                </h2>
+                  </motion.span>
+                </motion.h2>
                 
-                <p className="text-xl text-gray-200 leading-relaxed max-w-2xl xl:max-w-2xl lg:mx-auto">
+                <motion.p 
+                  className="text-xl text-gray-200 leading-relaxed max-w-2xl xl:max-w-2xl lg:mx-auto"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                >
                   Professional developer tools to speed up your browser, unlock advanced insights, and take full control of your browsing experience.
-                </p>
+                </motion.p>
               </div>
 
               {/* Privacy Checkbox & Chrome Store Button */}
