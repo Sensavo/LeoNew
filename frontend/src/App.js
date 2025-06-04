@@ -339,7 +339,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Redesigned Features Section - Smaller & Simpler */}
+      {/* Redesigned Features Section - Dashboard Style */}
       <section className="py-20 relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
@@ -350,10 +350,11 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              🛠️ Powerful Features
+              <LayoutGrid className="w-12 h-12 inline-block mr-4 text-blue-400" />
+              Key Features
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              Professional tools to optimize your browsing experience
+              Professional tools designed to optimize your browser performance
             </p>
           </motion.div>
 
@@ -367,16 +368,47 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="bg-gray-800/40 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 h-full text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 h-full">
+                  {/* Header */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <feature.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {feature.description}
-                  </p>
+                  
+                  {/* Content */}
+                  <div className="mb-4">
+                    <h3 className="text-lg font-bold text-white mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                  
+                  {/* Performance Bar */}
+                  <div className="mt-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-gray-400 text-xs">Performance</span>
+                      <span className="text-green-400 text-xs font-medium">
+                        {index === 0 ? '+47%' : index === 1 ? 'Real-time' : index === 2 ? 'Active' : 'Optimized'}
+                      </span>
+                    </div>
+                    <div className="w-full h-1.5 bg-gray-700/50 rounded-full overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${75 + index * 5}%` }}
+                        transition={{ duration: 1.5, delay: 0.5 + index * 0.1 }}
+                        viewport={{ once: true }}
+                        className={`h-full rounded-full ${
+                          index === 0 ? 'bg-blue-400' :
+                          index === 1 ? 'bg-purple-400' :
+                          index === 2 ? 'bg-cyan-400' : 'bg-green-400'
+                        }`}
+                      ></motion.div>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             ))}
