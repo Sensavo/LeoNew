@@ -206,68 +206,63 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Right Column - Optimized Glass Hero with Progress Preloader */}
+            {/* Right Column - Lowered Glass Hero with True Progress Chart */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="relative hidden xl:block py-16 flex items-center"
+              className="relative hidden xl:block py-20 flex items-center"
             >
-              <div className="relative max-w-xs mx-auto">
+              <div className="relative max-w-sm mx-auto">
                 
-                {/* Main Glass Container - Optimized Size */}
+                {/* Main Glass Container - Bigger */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 1, delay: 0.5 }}
-                  className="relative backdrop-blur-xl bg-white/10 rounded-3xl p-5 border border-white/20 shadow-2xl"
+                  className="relative backdrop-blur-xl bg-white/10 rounded-3xl p-6 border border-white/20 shadow-2xl"
                   style={{ 
                     background: 'linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)',
                     backdropFilter: 'blur(20px)',
                   }}
                 >
                   
-                  {/* Header - Compact */}
+                  {/* Header */}
                   <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.8, duration: 0.6 }}
-                    className="flex items-center gap-2 mb-5"
+                    className="flex items-center gap-3 mb-6"
                   >
-                    <div className="w-7 h-7 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-                      <Shield className="w-3 h-3 text-white" />
+                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                      <Shield className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <div className="text-white text-sm font-bold">WebOS Active</div>
-                      <div className="text-emerald-300 text-xs">Optimized</div>
+                      <div className="text-white text-base font-bold">WebOS Active</div>
+                      <div className="text-emerald-300 text-xs">Optimizing</div>
                     </div>
                   </motion.div>
 
-                  {/* Progress Preloader with Great Color Gradient */}
+                  {/* True Progress Chart - Shows Actual Progress */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.8 }}
                     transition={{ delay: 1, duration: 0.6 }}
-                    className="mb-5 flex justify-center"
+                    className="mb-6 flex justify-center"
                   >
                     <motion.div
                       initial={{ opacity: 1 }}
                       animate={{ opacity: 0 }}
                       transition={{ delay: 4, duration: 0.5 }}
-                      className="relative w-20 h-20"
+                      className="relative w-24 h-24"
                     >
                       {/* Background Circle */}
                       <div className="absolute inset-0 rounded-full bg-white/10"></div>
                       
-                      {/* Gradient Progress Circle */}
-                      <motion.div
-                        initial={{ strokeDasharray: "0 283" }}
-                        animate={{ strokeDasharray: "283 283" }}
-                        transition={{ duration: 3, ease: "easeInOut" }}
-                        className="absolute inset-0"
-                      >
-                        <svg className="w-20 h-20 transform -rotate-90" viewBox="0 0 100 100">
+                      {/* Progress Circle with True Progress Animation */}
+                      <motion.div className="absolute inset-0">
+                        <svg className="w-24 h-24 transform -rotate-90" viewBox="0 0 100 100">
                           <defs>
                             <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                               <stop offset="0%" stopColor="#3b82f6" />
@@ -280,65 +275,78 @@ const Home = () => {
                           <circle
                             cx="50"
                             cy="50"
-                            r="45"
+                            r="42"
+                            fill="none"
+                            stroke="rgba(255,255,255,0.1)"
+                            strokeWidth="6"
+                          />
+                          <motion.circle
+                            cx="50"
+                            cy="50"
+                            r="42"
                             fill="none"
                             stroke="url(#progressGradient)"
-                            strokeWidth="4"
+                            strokeWidth="6"
                             strokeLinecap="round"
-                            style={{ strokeDasharray: "283", strokeDashoffset: "0" }}
+                            initial={{ strokeDasharray: "264", strokeDashoffset: "264" }}
+                            animate={{ strokeDashoffset: "0" }}
+                            transition={{ duration: 3, ease: "easeInOut" }}
+                            style={{ strokeDasharray: "264" }}
                           />
                         </svg>
                       </motion.div>
                       
-                      {/* Center Progress Text */}
-                      <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 1.5, duration: 0.5 }}
-                        className="absolute inset-0 flex items-center justify-center"
-                      >
+                      {/* Animated Progress Text */}
+                      <motion.div className="absolute inset-0 flex items-center justify-center">
                         <motion.span
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: 2, duration: 0.5 }}
-                          className="text-white text-xs font-bold"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ delay: 0.5, duration: 0.5 }}
+                          className="text-white text-sm font-bold"
                         >
-                          100%
+                          <motion.span
+                            initial={{ textContent: "0%" }}
+                            animate={{ textContent: "100%" }}
+                            transition={{ duration: 3, ease: "easeInOut" }}
+                          >
+                            0%
+                          </motion.span>
                         </motion.span>
-                      </motion.div>
+                      </div>
                     </motion.div>
                   </motion.div>
 
-                  {/* Compact Tiles Grid */}
+                  {/* White Tiles - Appear in Same Location as Progress Chart */}
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 4.5, duration: 0.8 }}
-                    className="grid grid-cols-2 gap-3 mb-4"
+                    className="grid grid-cols-2 gap-4 mb-6"
+                    style={{ marginTop: '-96px', paddingTop: '24px' }} // Position exactly where progress chart was
                   >
-                    {/* Left Tile - Compact */}
-                    <div className="backdrop-blur-sm bg-white/10 rounded-xl p-3 border border-white/20 shadow-lg">
+                    {/* Left Tile - White */}
+                    <div className="bg-white rounded-xl p-4 border border-gray-200 shadow-lg">
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-red-400 mb-1">25</div>
-                        <div className="text-white/70 text-xs leading-tight">Ads blocked</div>
+                        <div className="text-2xl font-bold text-red-500 mb-1">25</div>
+                        <div className="text-gray-600 text-xs leading-tight">Ads blocked</div>
                       </div>
                     </div>
                     
-                    {/* Right Tile - Compact */}
-                    <div className="backdrop-blur-sm bg-white/10 rounded-xl p-3 border border-white/20 shadow-lg">
+                    {/* Right Tile - White */}
+                    <div className="bg-white rounded-xl p-4 border border-gray-200 shadow-lg">
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-emerald-400 mb-1">+73%</div>
-                        <div className="text-white/70 text-xs leading-tight">Speed boost</div>
+                        <div className="text-2xl font-bold text-emerald-500 mb-1">+73%</div>
+                        <div className="text-gray-600 text-xs leading-tight">Speed boost</div>
                       </div>
                     </div>
                   </motion.div>
 
-                  {/* Compact Feature List */}
+                  {/* Feature List */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 5, duration: 0.6 }}
-                    className="space-y-1.5"
+                    className="space-y-2"
                   >
                     {[
                       { icon: '🔧', text: 'Edit Headers', active: true },
@@ -347,15 +355,15 @@ const Home = () => {
                     ].map((feature, index) => (
                       <div
                         key={index}
-                        className={`flex items-center gap-2 p-1.5 rounded-lg ${
+                        className={`flex items-center gap-3 p-2 rounded-lg ${
                           feature.active 
                             ? 'text-white/90' 
                             : 'text-white/50'
                         }`}
                       >
-                        <span className="text-xs">{feature.icon}</span>
+                        <span className="text-sm">{feature.icon}</span>
                         <span className="text-xs font-medium flex-1">{feature.text}</span>
-                        <div className={`w-1 h-1 rounded-full ${
+                        <div className={`w-1.5 h-1.5 rounded-full ${
                           feature.active ? 'bg-emerald-400' : 'bg-white/30'
                         }`} />
                       </div>
@@ -363,21 +371,21 @@ const Home = () => {
                   </motion.div>
                 </motion.div>
 
-                {/* Optimized Floating Elements with Colored Shapes */}
+                {/* Floating Elements - Bigger */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 2.5, duration: 0.8 }}
-                  className="absolute -top-4 -right-4"
+                  className="absolute -top-5 -right-5"
                 >
                   <motion.div
-                    animate={{ y: [-6, 6, -6] }}
+                    animate={{ y: [-8, 8, -8] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                     className="relative"
                   >
                     {/* Gradient Shape Background */}
-                    <div className="absolute -inset-1.5 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-2xl opacity-25 blur-sm"></div>
-                    <div className="relative w-10 h-10 backdrop-blur-xl bg-white/15 border border-white/30 rounded-full flex items-center justify-center text-emerald-400 text-sm shadow-xl"
+                    <div className="absolute -inset-2 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-2xl opacity-25 blur-sm"></div>
+                    <div className="relative w-12 h-12 backdrop-blur-xl bg-white/15 border border-white/30 rounded-full flex items-center justify-center text-emerald-400 text-lg shadow-xl"
                          style={{ backdropFilter: 'blur(20px)' }}>
                       ✓
                     </div>
@@ -388,18 +396,18 @@ const Home = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 3, duration: 0.8 }}
-                  className="absolute -bottom-3 -left-4"
+                  className="absolute -bottom-4 -left-5"
                 >
                   <motion.div
-                    animate={{ y: [4, -4, 4] }}
+                    animate={{ y: [6, -6, 6] }}
                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                     className="relative"
                   >
                     {/* Gradient Shape Background */}
-                    <div className="absolute -inset-1.5 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full opacity-25 blur-sm"></div>
-                    <div className="relative w-10 h-10 backdrop-blur-xl bg-white/15 border border-white/30 rounded-full flex items-center justify-center text-purple-400 shadow-xl"
+                    <div className="absolute -inset-2 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full opacity-25 blur-sm"></div>
+                    <div className="relative w-12 h-12 backdrop-blur-xl bg-white/15 border border-white/30 rounded-full flex items-center justify-center text-purple-400 shadow-xl"
                          style={{ backdropFilter: 'blur(20px)' }}>
-                      <Search className="w-3 h-3" />
+                      <Search className="w-4 h-4" />
                     </div>
                   </motion.div>
                 </motion.div>
@@ -408,16 +416,16 @@ const Home = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 3.5, duration: 0.8 }}
-                  className="absolute top-1/4 -left-6"
+                  className="absolute top-1/4 -left-7"
                 >
                   <motion.div
-                    animate={{ y: [-3, 7, -3] }}
+                    animate={{ y: [-5, 10, -5] }}
                     transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                     className="relative"
                   >
                     {/* Gradient Shape Background */}
-                    <div className="absolute -inset-1.5 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl opacity-25 blur-sm transform rotate-45"></div>
-                    <div className="relative w-10 h-10 backdrop-blur-xl bg-white/15 border border-white/30 rounded-full flex items-center justify-center text-blue-400 text-sm shadow-xl"
+                    <div className="absolute -inset-2 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl opacity-25 blur-sm transform rotate-45"></div>
+                    <div className="relative w-12 h-12 backdrop-blur-xl bg-white/15 border border-white/30 rounded-full flex items-center justify-center text-blue-400 text-lg shadow-xl"
                          style={{ backdropFilter: 'blur(20px)' }}>
                       ⚡
                     </div>
