@@ -95,18 +95,18 @@ const Home = () => {
           }}
         />
         
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
-          <div className="grid xl:grid-cols-2 gap-16 xl:gap-12 items-center min-h-screen">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-4">
+          <div className="grid xl:grid-cols-2 gap-16 xl:gap-12 items-start min-h-screen">
             
-            {/* Left Column - Moved Higher */}
+            {/* Left Column - Much Higher */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-left xl:text-left lg:text-center space-y-8 py-4 xl:max-w-none lg:max-w-4xl lg:mx-auto"
+              className="text-left xl:text-left lg:text-center space-y-6 xl:max-w-none lg:max-w-4xl lg:mx-auto"
             >
-              {/* Logo with Gradient - Moved Higher */}
-              <div className="flex items-center gap-4 xl:justify-start lg:justify-center pt-4">
+              {/* Logo with Gradient - Much Higher */}
+              <div className="flex items-center gap-4 xl:justify-start lg:justify-center pt-8">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 via-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
@@ -118,7 +118,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-5">
                 <h2 className="text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-tight">
                   Supercharge Your
                   <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -132,7 +132,7 @@ const Home = () => {
               </div>
 
               {/* Privacy Checkbox & Chrome Store Button */}
-              <div className="space-y-5">
+              <div className="space-y-4">
                 {/* Privacy Checkbox - Simple & Clean */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -206,7 +206,7 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Right Column - Another Illustration Design */}
+            {/* Right Column - New Dashboard Illustration */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -214,95 +214,124 @@ const Home = () => {
               className="relative hidden xl:block py-8"
             >
               <div className="relative max-w-sm mx-auto">
-                {/* Code Editor Style Interface */}
-                <div className="bg-gray-900/90 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl overflow-hidden">
-                  {/* Editor Header */}
-                  <div className="bg-gray-800/80 px-4 py-3 flex items-center gap-3 border-b border-gray-700/50">
-                    <div className="flex gap-1.5">
-                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                      <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                {/* Performance Dashboard */}
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl">
+                  {/* Dashboard Header */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+                        <Shield className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-white font-semibold text-sm">Performance Dashboard</h3>
+                        <p className="text-blue-300 text-xs">Real-time monitoring</p>
+                      </div>
                     </div>
-                    <div className="text-gray-400 text-xs font-mono">webos-toolkit.js</div>
+                    <div className="flex items-center gap-1">
+                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                      <span className="text-green-400 text-xs font-medium">Live</span>
+                    </div>
                   </div>
                   
-                  {/* Code Content */}
-                  <div className="p-6 font-mono text-sm">
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.8, delay: 1 }}
-                      className="space-y-3"
+                  {/* Metrics Grid */}
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6, delay: 1 }}
+                      className="bg-blue-500/20 rounded-xl p-4 border border-blue-400/30"
                     >
-                      <div className="flex items-center gap-2">
-                        <span className="text-gray-500">1</span>
-                        <span className="text-purple-400">const</span>
-                        <span className="text-blue-300">toolkit</span>
-                        <span className="text-gray-300">=</span>
-                        <span className="text-green-300">{`{`}</span>
+                      <div className="flex items-center gap-2 mb-2">
+                        <Gauge className="w-4 h-4 text-blue-400" />
+                        <span className="text-blue-300 text-xs font-medium">Speed</span>
                       </div>
-                      
-                      <div className="flex items-center gap-2 ml-6">
-                        <span className="text-gray-500">2</span>
-                        <span className="text-yellow-300">performance:</span>
-                        <div className="flex items-center gap-2">
-                          <span className="text-green-300">'+47%'</span>
-                          <div className="w-12 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
-                        </div>
+                      <div className="text-white text-lg font-bold">+47%</div>
+                      <div className="w-full h-1.5 bg-blue-700/30 rounded-full mt-2">
+                        <motion.div 
+                          initial={{ width: 0 }}
+                          animate={{ width: "75%" }}
+                          transition={{ duration: 1.5, delay: 1.2 }}
+                          className="h-full bg-blue-400 rounded-full"
+                        ></motion.div>
                       </div>
-                      
-                      <div className="flex items-center gap-2 ml-6">
-                        <span className="text-gray-500">3</span>
-                        <span className="text-yellow-300">analytics:</span>
-                        <span className="text-green-300">'real-time'</span>
-                        <ChartLine className="w-4 h-4 text-purple-400 ml-2" />
-                      </div>
-                      
-                      <div className="flex items-center gap-2 ml-6">
-                        <span className="text-gray-500">4</span>
-                        <span className="text-yellow-300">tabs:</span>
-                        <span className="text-cyan-300">12</span>
-                        <LayoutGrid className="w-4 h-4 text-cyan-400 ml-2" />
-                      </div>
-                      
-                      <div className="flex items-center gap-2">
-                        <span className="text-gray-500">5</span>
-                        <span className="text-green-300">{`}`}</span>
-                      </div>
-                      
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 2 }}
-                        className="mt-4 p-3 bg-green-500/20 border border-green-400/30 rounded-lg"
-                      >
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                          <span className="text-green-300 text-xs">✓ Extension Running</span>
-                        </div>
-                      </motion.div>
                     </motion.div>
+
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6, delay: 1.2 }}
+                      className="bg-purple-500/20 rounded-xl p-4 border border-purple-400/30"
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <ChartLine className="w-4 h-4 text-purple-400" />
+                        <span className="text-purple-300 text-xs font-medium">Analytics</span>
+                      </div>
+                      <div className="text-white text-lg font-bold">Real-time</div>
+                      <div className="w-full h-1.5 bg-purple-700/30 rounded-full mt-2">
+                        <motion.div 
+                          initial={{ width: 0 }}
+                          animate={{ width: "90%" }}
+                          transition={{ duration: 1.5, delay: 1.4 }}
+                          className="h-full bg-purple-400 rounded-full"
+                        ></motion.div>
+                      </div>
+                    </motion.div>
+
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6, delay: 1.4 }}
+                      className="bg-cyan-500/20 rounded-xl p-4 border border-cyan-400/30"
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <LayoutGrid className="w-4 h-4 text-cyan-400" />
+                        <span className="text-cyan-300 text-xs font-medium">Tabs</span>
+                      </div>
+                      <div className="text-white text-lg font-bold">12</div>
+                      <div className="text-cyan-300 text-xs">Active</div>
+                    </motion.div>
+
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6, delay: 1.6 }}
+                      className="bg-green-500/20 rounded-xl p-4 border border-green-400/30"
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <Search className="w-4 h-4 text-green-400" />
+                        <span className="text-green-300 text-xs font-medium">Memory</span>
+                      </div>
+                      <div className="text-white text-lg font-bold">68%</div>
+                      <div className="text-green-300 text-xs">Optimized</div>
+                    </motion.div>
+                  </div>
+
+                  {/* Status Bar */}
+                  <div className="bg-green-500/20 rounded-lg p-3 border border-green-400/30">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                      <span className="text-green-300 text-sm font-medium">All systems optimized</span>
+                    </div>
                   </div>
                 </div>
 
-                {/* Floating Performance Badge */}
+                {/* Floating Status Badge */}
                 <motion.div
                   animate={{ y: [-6, 6, -6] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -top-3 -right-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl border border-white/20"
+                  className="absolute -top-3 -right-4 bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl"
                 >
-                  <Gauge className="w-3 h-3 inline mr-1" />
-                  BOOST +47%
+                  ✓ ACTIVE
                 </motion.div>
 
-                {/* Floating Analytics Badge */}
+                {/* Floating Performance Indicator */}
                 <motion.div
                   animate={{ x: [-4, 4, -4] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                  className="absolute -bottom-2 -left-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-2 rounded-full text-xs font-bold shadow-xl"
+                  className="absolute -bottom-2 -left-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-2 rounded-full text-xs font-bold shadow-xl"
                 >
-                  <Search className="w-3 h-3 inline mr-1" />
-                  ANALYZE
+                  <Gauge className="w-3 h-3 inline mr-1" />
+                  OPTIMIZED
                 </motion.div>
               </div>
             </motion.div>
