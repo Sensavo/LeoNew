@@ -716,41 +716,27 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Compact Features Section - No White Tiles */}
-      <section className="py-16 relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+      {/* Redesigned Features Section - Bottom-Aligned Progress Bars */}
+      <section className="py-20 relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
-            <motion.h2 
-              className="text-3xl md:text-4xl font-bold mb-4"
-              animate={{
-                backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              style={{
-                background: 'linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4, #3b82f6)',
-                backgroundSize: '300% 100%',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
-              }}
-            >
-              Key Features
-            </motion.h2>
-            <p className="text-base text-gray-300 max-w-xl mx-auto leading-relaxed">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-600 bg-clip-text text-transparent animate-pulse">
+                Key Features
+              </span>
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
               Professional tools designed to optimize your browser performance
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -758,61 +744,48 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="group text-center"
+                className="group"
               >
-                {/* Floating Icon */}
-                <motion.div 
-                  className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-600/20 backdrop-blur-xl rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/10"
-                  whileHover={{ 
-                    scale: 1.1,
-                    boxShadow: '0 20px 40px rgba(59,130,246,0.2)'
-                  }}
-                  animate={{
-                    y: [0, -4, 0],
-                    rotateY: [0, 5, 0]
-                  }}
-                  transition={{
-                    y: { duration: 2.5 + index * 0.5, repeat: Infinity, ease: "easeInOut" },
-                    rotateY: { duration: 3 + index * 0.3, repeat: Infinity, ease: "easeInOut" }
-                  }}
-                >
-                  <feature.icon className="w-8 h-8 text-blue-400 group-hover:text-purple-400 transition-colors duration-300" />
-                </motion.div>
-                
-                {/* Content */}
-                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4 group-hover:text-gray-300 transition-colors duration-300">
-                  {feature.description}
-                </p>
-                
-                {/* Animated Progress Indicator */}
-                <div className="flex items-center justify-center gap-2">
-                  <span className="text-green-400 text-xs font-medium">
-                    {index === 0 ? '+47%' : index === 1 ? 'Real-time' : index === 2 ? 'Active' : 'Optimized'}
-                  </span>
-                  <motion.div
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
-                    className="w-2 h-2 bg-green-400 rounded-full"
-                  ></motion.div>
-                </div>
-
-                {/* Subtle performance line */}
-                <div className="w-24 h-0.5 bg-gray-700/50 rounded-full overflow-hidden mx-auto mt-3">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${75 + index * 5}%` }}
-                    transition={{ duration: 1.5, delay: 0.5 + index * 0.1 }}
-                    viewport={{ once: true }}
-                    className={`h-full rounded-full ${
-                      index === 0 ? 'bg-blue-400' :
-                      index === 1 ? 'bg-purple-400' :
-                      index === 2 ? 'bg-cyan-400' : 'bg-green-400'
-                    }`}
-                  ></motion.div>
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 h-full flex flex-col">
+                  {/* Header */}
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <feature.icon className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                  
+                  {/* Content - Flexible grow */}
+                  <div className="flex-grow mb-4">
+                    <h3 className="text-lg font-bold text-white mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                  
+                  {/* Performance Bar - Aligned to bottom */}
+                  <div className="mt-auto">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-gray-400 text-xs">Performance</span>
+                      <span className="text-green-400 text-xs font-medium">
+                        {index === 0 ? '+47%' : index === 1 ? 'Real-time' : index === 2 ? 'Active' : 'Optimized'}
+                      </span>
+                    </div>
+                    <div className="w-full h-1.5 bg-gray-700/50 rounded-full overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${75 + index * 5}%` }}
+                        transition={{ duration: 1.5, delay: 0.5 + index * 0.1 }}
+                        viewport={{ once: true }}
+                        className={`h-full rounded-full ${
+                          index === 0 ? 'bg-blue-400' :
+                          index === 1 ? 'bg-purple-400' :
+                          index === 2 ? 'bg-cyan-400' : 'bg-green-400'
+                        }`}
+                      ></motion.div>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             ))}
