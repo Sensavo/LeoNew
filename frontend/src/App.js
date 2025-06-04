@@ -251,8 +251,80 @@ const Home = () => {
             </motion.div>
 
             {/* Right Column - Compact Contemporary Hero Illustration */}
-            <div className="relative hidden xl:block py-12 flex items-center">
-              <div className="relative max-w-xs mx-auto">
+            <div className="relative hidden xl:block py-16 flex items-center">
+              <div className="relative max-w-xs mx-auto mt-8">
+                
+                {/* Additional Floating Elements */}
+                <motion.div
+                  animate={{
+                    x: [0, 15, 0],
+                    y: [0, -20, 0],
+                    rotate: [0, 180, 360]
+                  }}
+                  transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute -top-8 left-1/4 w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-60"
+                  style={{
+                    boxShadow: '0 0 20px rgba(6,182,212,0.6)'
+                  }}
+                ></motion.div>
+
+                <motion.div
+                  animate={{
+                    x: [0, -20, 0],
+                    y: [0, 25, 0],
+                    scale: [1, 1.2, 1]
+                  }}
+                  transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1
+                  }}
+                  className="absolute top-1/3 -right-6 w-3 h-3 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full opacity-70"
+                  style={{
+                    boxShadow: '0 0 15px rgba(236,72,153,0.5)'
+                  }}
+                ></motion.div>
+
+                <motion.div
+                  animate={{
+                    x: [0, 12, 0],
+                    y: [0, -15, 0],
+                    rotate: [0, -90, 0]
+                  }}
+                  transition={{
+                    duration: 7,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 2
+                  }}
+                  className="absolute bottom-1/4 -left-4 w-2 h-6 bg-gradient-to-b from-emerald-400 to-green-500 rounded-full opacity-50"
+                  style={{
+                    boxShadow: '0 0 12px rgba(16,185,129,0.4)'
+                  }}
+                ></motion.div>
+
+                <motion.div
+                  animate={{
+                    x: [0, -8, 8, 0],
+                    y: [0, 10, -10, 0],
+                    scale: [1, 0.8, 1.1, 1]
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.5
+                  }}
+                  className="absolute top-2/3 right-1/4 w-5 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full opacity-60"
+                  style={{
+                    boxShadow: '0 0 18px rgba(251,191,36,0.5)'
+                  }}
+                ></motion.div>
                 
                 {/* Main Card Container - Enhanced Glass Effect */}
                 <motion.div 
@@ -283,26 +355,26 @@ const Home = () => {
                     </div>
                   </motion.div>
 
-                  {/* Compact Results Grid */}
+                  {/* Compact Results Grid - Higher Contrast */}
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.9 }}
                     className="grid grid-cols-2 gap-3 mb-4"
                   >
-                    {/* Ads Blocked */}
-                    <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/20">
+                    {/* Ads Blocked - More White */}
+                    <div className="bg-white/80 backdrop-blur-md rounded-xl p-3 border border-white/40 shadow-lg">
                       <div className="text-center">
                         <motion.div 
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
                           transition={{ duration: 0.6, delay: 1.2 }}
-                          className="text-2xl font-bold text-red-400 mb-1"
+                          className="text-2xl font-bold text-red-500 mb-1"
                         >
                           247
                         </motion.div>
-                        <div className="text-gray-300 text-xs">Ads Blocked</div>
-                        <div className="w-full bg-gray-600/30 rounded-full h-1.5 mt-1">
+                        <div className="text-gray-700 text-xs font-medium">Ads Blocked</div>
+                        <div className="w-full bg-red-100 rounded-full h-1.5 mt-1">
                           <motion.div 
                             initial={{ width: 0 }}
                             animate={{ width: '85%' }}
@@ -313,19 +385,19 @@ const Home = () => {
                       </div>
                     </div>
                     
-                    {/* Speed Boost */}
-                    <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/20">
+                    {/* Speed Boost - More White */}
+                    <div className="bg-white/80 backdrop-blur-md rounded-xl p-3 border border-white/40 shadow-lg">
                       <div className="text-center">
                         <motion.div 
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
                           transition={{ duration: 0.6, delay: 1.3 }}
-                          className="text-2xl font-bold text-emerald-400 mb-1"
+                          className="text-2xl font-bold text-emerald-500 mb-1"
                         >
                           +73%
                         </motion.div>
-                        <div className="text-gray-300 text-xs">Speed Boost</div>
-                        <div className="w-full bg-gray-600/30 rounded-full h-1.5 mt-1">
+                        <div className="text-gray-700 text-xs font-medium">Speed Boost</div>
+                        <div className="w-full bg-emerald-100 rounded-full h-1.5 mt-1">
                           <motion.div 
                             initial={{ width: 0 }}
                             animate={{ width: '73%' }}
