@@ -76,7 +76,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
-      {/* Hero Section - Larger Elements, Better Layout */}
+      {/* Redesigned Hero Section - Focused Layout */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Modern Background */}
         <div 
@@ -98,7 +98,7 @@ const Home = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
           <div className="grid xl:grid-cols-2 gap-16 xl:gap-12 items-center min-h-screen">
             
-            {/* Left Column - More Space */}
+            {/* Left Column - Clean Content */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -131,138 +131,167 @@ const Home = () => {
                 </p>
               </div>
 
-              {/* Feature Pills - Original Size */}
-              <div className="flex flex-wrap gap-3 xl:justify-start lg:justify-center">
-                <div className="px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30">
-                  <span className="text-blue-100 font-medium text-sm">⚡ Performance Boost</span>
-                </div>
-                <div className="px-4 py-2 bg-purple-500/20 backdrop-blur-sm rounded-full border border-purple-400/30">
-                  <span className="text-purple-100 font-medium text-sm">🧠 Smart Analytics</span>
-                </div>
-                <div className="px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30">
-                  <span className="text-blue-100 font-medium text-sm">🗂️ Tab Management</span>
-                </div>
-              </div>
-
-              {/* Privacy Checkbox - Simpler & Smaller */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="xl:flex xl:justify-start lg:flex lg:justify-center"
-              >
-                <div className="flex items-center gap-2 text-sm">
-                  <input
-                    type="checkbox"
-                    id="privacy-agreement"
-                    checked={isPrivacyAccepted}
-                    onChange={(e) => setIsPrivacyAccepted(e.target.checked)}
-                    className="w-4 h-4 text-blue-600 bg-transparent border-gray-500 rounded focus:ring-blue-500 focus:ring-1"
-                  />
-                  <label htmlFor="privacy-agreement" className="text-gray-300 text-sm">
-                    I agree to the{' '}
-                    <button
-                      onClick={() => setIsPrivacyModalOpen(true)}
-                      className="text-blue-400 hover:text-blue-300 underline"
-                    >
-                      Privacy Policy
-                    </button>
-                  </label>
-                </div>
-              </motion.div>
-
-              {/* Chrome Store Clickable Button */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="xl:flex xl:justify-start lg:flex lg:justify-center"
-              >
-                <button
-                  onClick={handleAcceptAndContinue}
-                  disabled={!isPrivacyAccepted}
-                  className={`inline-flex items-center gap-4 px-8 py-4 rounded-2xl shadow-2xl transition-all duration-300 ${
-                    isPrivacyAccepted
-                      ? 'bg-white/95 hover:bg-white hover:scale-105 cursor-pointer'
-                      : 'bg-gray-600/50 cursor-not-allowed opacity-50'
-                  }`}
+              {/* Privacy Checkbox & Chrome Store Button */}
+              <div className="space-y-4">
+                {/* Privacy Checkbox - Simple & Clean */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="xl:flex xl:justify-start lg:flex lg:justify-center"
                 >
-                  <img 
-                    src="https://developer.chrome.com/static/docs/webstore/branding/image/HRs9MPufa1J1h5glNhut.png"
-                    alt="Available in the Chrome Web Store"
-                    className="h-12 w-auto"
-                  />
-                  <div className="text-left">
-                    <div className="text-sm font-medium text-gray-700">Available in</div>
-                    <div className="text-lg font-bold text-gray-900">Chrome Web Store</div>
+                  <div 
+                    className={`flex items-center gap-3 text-sm p-3 rounded-lg transition-all duration-500 ${
+                      !isPrivacyAccepted && expandedFaq === 'highlight-checkbox' 
+                        ? 'bg-red-500/20 border-2 border-red-400 shadow-lg shadow-red-500/25 animate-pulse' 
+                        : 'bg-gray-800/40 border border-gray-600/30'
+                    }`}
+                  >
+                    <input
+                      type="checkbox"
+                      id="privacy-agreement"
+                      checked={isPrivacyAccepted}
+                      onChange={(e) => setIsPrivacyAccepted(e.target.checked)}
+                      className="w-5 h-5 text-blue-600 bg-transparent border-gray-400 rounded focus:ring-blue-500 focus:ring-2"
+                    />
+                    <label htmlFor="privacy-agreement" className="text-gray-200 text-sm">
+                      I agree to the{' '}
+                      <button
+                        onClick={() => setIsPrivacyModalOpen(true)}
+                        className="text-blue-400 hover:text-blue-300 underline font-medium"
+                      >
+                        Privacy Policy
+                      </button>
+                    </label>
                   </div>
-                  <ExternalLink className="w-5 h-5 text-gray-600" />
-                </button>
-              </motion.div>
+                </motion.div>
+
+                {/* Chrome Store Button - Prominent */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="xl:flex xl:justify-start lg:flex lg:justify-center"
+                >
+                  <button
+                    onClick={() => {
+                      if (!isPrivacyAccepted) {
+                        setExpandedFaq('highlight-checkbox');
+                        setTimeout(() => setExpandedFaq(null), 3000);
+                      } else {
+                        handleAcceptAndContinue();
+                      }
+                    }}
+                    className="group relative inline-flex items-center gap-4 px-8 py-5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-blue-500/30"
+                  >
+                    <div className="flex items-center gap-3">
+                      <img 
+                        src="https://developer.chrome.com/static/docs/webstore/branding/image/HRs9MPufa1J1h5glNhut.png"
+                        alt="Chrome Web Store"
+                        className="h-10 w-auto"
+                      />
+                      <div className="text-left">
+                        <div className="text-xs font-medium text-blue-100">Get it from</div>
+                        <div className="text-lg font-bold text-white">Chrome Web Store</div>
+                      </div>
+                    </div>
+                    <ExternalLink className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform duration-200" />
+                    
+                    {/* Shine effect */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 group-hover:animate-pulse"></div>
+                  </button>
+                </motion.div>
+              </div>
             </motion.div>
 
-            {/* Right Column - Tighter Illustration */}
+            {/* Right Column - Integrated Features Illustration */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="relative hidden xl:block py-8 xl:pl-8"
+              className="relative hidden xl:block py-8"
             >
-              <div className="relative max-w-sm mx-auto">
-                {/* Main Visual Card - Tighter */}
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center">
-                      <Gauge className="w-5 h-5 text-white" />
+              <div className="relative max-w-md mx-auto">
+                {/* Main Performance Card */}
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-xl flex items-center justify-center">
+                      <Gauge className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-white font-bold text-sm">Performance Monitor</h3>
-                      <p className="text-blue-300 text-xs">Real-time optimization</p>
+                      <h3 className="text-white font-bold text-lg">Performance Monitor</h3>
+                      <p className="text-blue-300 text-sm">Real-time optimization</p>
                     </div>
                   </div>
                   
-                  {/* Mock Performance Stats - Compact */}
-                  <div className="space-y-3">
+                  {/* Mock Performance Stats */}
+                  <div className="space-y-4">
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-300 text-xs">Memory</span>
+                      <span className="text-gray-300 text-sm">Memory Usage</span>
                       <div className="flex items-center gap-2">
-                        <div className="w-16 h-1.5 bg-gray-700 rounded-full overflow-hidden">
+                        <div className="w-20 h-2 bg-gray-700 rounded-full overflow-hidden">
                           <div className="w-1/3 h-full bg-gradient-to-r from-green-400 to-blue-500"></div>
                         </div>
-                        <span className="text-green-400 font-medium text-xs">32%</span>
+                        <span className="text-green-400 font-medium text-sm">32%</span>
                       </div>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-300 text-xs">CPU</span>
+                      <span className="text-gray-300 text-sm">CPU Load</span>
                       <div className="flex items-center gap-2">
-                        <div className="w-16 h-1.5 bg-gray-700 rounded-full overflow-hidden">
+                        <div className="w-20 h-2 bg-gray-700 rounded-full overflow-hidden">
                           <div className="w-1/2 h-full bg-gradient-to-r from-yellow-400 to-orange-500"></div>
                         </div>
-                        <span className="text-yellow-400 font-medium text-xs">48%</span>
+                        <span className="text-yellow-400 font-medium text-sm">48%</span>
                       </div>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-300 text-xs">Tabs</span>
-                      <span className="text-blue-400 font-bold text-xs">12</span>
+                      <span className="text-gray-300 text-sm">Active Tabs</span>
+                      <span className="text-blue-400 font-bold text-sm">12</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Floating Elements - Smaller & Tighter */}
+                {/* Feature Pills - Integrated as Floating Cards */}
                 <motion.div
-                  animate={{ y: [-6, 6, -6] }}
+                  animate={{ y: [-8, 8, -8] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-lg flex items-center justify-center shadow-lg"
+                  className="absolute -top-4 -right-6 bg-blue-500/90 backdrop-blur-sm rounded-xl px-4 py-2 border border-blue-400/50 shadow-xl"
                 >
-                  <ChartLine className="w-5 h-5 text-white" />
+                  <div className="flex items-center gap-2">
+                    <Gauge className="w-4 h-4 text-white" />
+                    <span className="text-white font-medium text-sm">Performance Boost</span>
+                  </div>
                 </motion.div>
 
                 <motion.div
-                  animate={{ y: [6, -6, 6] }}
+                  animate={{ y: [8, -8, 8] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -bottom-2 -left-2 w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center shadow-lg"
+                  className="absolute top-1/2 -left-6 bg-purple-500/90 backdrop-blur-sm rounded-xl px-4 py-2 border border-purple-400/50 shadow-xl"
                 >
-                  <Search className="w-4 h-4 text-white" />
+                  <div className="flex items-center gap-2">
+                    <ChartLine className="w-4 h-4 text-white" />
+                    <span className="text-white font-medium text-sm">Smart Analytics</span>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  animate={{ y: [-6, 6, -6] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+                  className="absolute -bottom-4 -left-4 bg-cyan-500/90 backdrop-blur-sm rounded-xl px-4 py-2 border border-cyan-400/50 shadow-xl"
+                >
+                  <div className="flex items-center gap-2">
+                    <LayoutGrid className="w-4 h-4 text-white" />
+                    <span className="text-white font-medium text-sm">Tab Management</span>
+                  </div>
+                </motion.div>
+
+                {/* Additional Floating Element */}
+                <motion.div
+                  animate={{ y: [10, -10, 10] }}
+                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+                  className="absolute top-8 -right-2 w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center shadow-xl"
+                >
+                  <Search className="w-6 h-6 text-white" />
                 </motion.div>
               </div>
             </motion.div>
