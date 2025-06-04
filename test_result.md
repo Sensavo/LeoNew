@@ -105,7 +105,7 @@
 user_problem_statement: "Redesign hero illustration to make it animated, contemporary professional and friendly. Extension features: customize headers, edit websites, block ads, simulate in HTML and find similar images."
 
 frontend:
-  - task: "Professional Digital Product Hero Illustration"
+  - task: "Minimalistic Glass Hero with Animated Chart"
     implemented: true
     working: true
     file: "/app/frontend/src/App.js"
@@ -116,9 +116,12 @@ frontend:
       - working: false
         agent: "main"
         comment: "First attempt was too overwhelming and random with excessive floating elements"
+      - working: false
+        agent: "main"
+        comment: "Second attempt was clean but still too complex with browser mockup and multiple panels"
       - working: true
         agent: "main"
-        comment: "Redesigned with clean, professional digital product hero showing actual extension features: clean browser mockup with header customization, ad blocking demonstration, HTML simulation panel, and extension control panel. Focused on real functionality over random animations."
+        comment: "Final minimalistic glass design with: glassmorphism container, animated performance chart (before/after bars), key metrics (247 ads blocked, +73% faster), most important features list with status indicators, minimal floating glass badges (LIVE, Find Similar), subtle particles. Focus on essential information only."
 
 metadata:
   created_by: "main_agent"
