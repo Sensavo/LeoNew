@@ -76,7 +76,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
-      {/* Redesigned Hero Section - Focused Layout */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Modern Background */}
         <div 
@@ -206,92 +206,314 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Right Column - Smaller & Simpler Illustration */}
+            {/* Right Column - Completely New Highly Animated Illustration */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="relative hidden xl:block py-16 flex items-end"
+              className="relative hidden xl:block py-16 flex items-center"
             >
-              <div className="relative max-w-xs mx-auto">
-                {/* Simplified Control Panel */}
-                <div className="bg-white/20 backdrop-blur-xl rounded-2xl p-6 border border-white/30 shadow-2xl">
-                  {/* Header */}
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
-                      <Shield className="w-5 h-5 text-blue-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-white font-bold">WebOS Active</h3>
-                      <p className="text-blue-200 text-sm">System Monitor</p>
+              <div className="relative max-w-md mx-auto">
+                {/* Animated Browser Window */}
+                <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-t-2xl p-4 border border-gray-600">
+                  {/* Browser Header */}
+                  <div className="flex items-center gap-2 mb-4">
+                    <motion.div 
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                      className="w-3 h-3 bg-red-400 rounded-full"
+                    />
+                    <motion.div 
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
+                      className="w-3 h-3 bg-yellow-400 rounded-full"
+                    />
+                    <motion.div 
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
+                      className="w-3 h-3 bg-green-400 rounded-full"
+                    />
+                    <div className="flex-1 bg-gray-700 rounded-lg px-3 py-1 ml-3">
+                      <motion.div 
+                        animate={{ opacity: [0.5, 1, 0.5] }}
+                        transition={{ duration: 3, repeat: Infinity }}
+                        className="text-gray-300 text-xs"
+                      >
+                        webos-toolkit.dev
+                      </motion.div>
                     </div>
                   </div>
                   
-                  {/* Stats Grid - Simplified */}
-                  <div className="grid grid-cols-2 gap-3 mb-4">
-                    <motion.div 
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.6, delay: 1 }}
-                      className="text-center p-3 bg-blue-600/80 rounded-xl"
-                    >
-                      <div className="text-white font-bold text-lg">+47%</div>
-                      <div className="text-blue-100 text-xs">Speed</div>
-                    </motion.div>
+                  {/* Content Area */}
+                  <div className="bg-white rounded-lg p-6 min-h-[300px] relative overflow-hidden">
+                    {/* Animated Background Waves */}
+                    <motion.div
+                      animate={{ 
+                        background: [
+                          "linear-gradient(45deg, #3b82f6, #8b5cf6)",
+                          "linear-gradient(45deg, #8b5cf6, #06b6d4)",
+                          "linear-gradient(45deg, #06b6d4, #3b82f6)"
+                        ]
+                      }}
+                      transition={{ duration: 4, repeat: Infinity }}
+                      className="absolute inset-0 opacity-10"
+                    />
                     
-                    <motion.div 
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.6, delay: 1.2 }}
-                      className="text-center p-3 bg-red-600/80 rounded-xl"
+                    {/* Performance Graph */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1 }}
+                      className="mb-6"
                     >
-                      <div className="text-white font-bold text-lg">24</div>
-                      <div className="text-red-100 text-xs">Ads Blocked</div>
+                      <h3 className="text-gray-800 font-bold mb-3">Performance Monitor</h3>
+                      <div className="flex items-end gap-2 h-20">
+                        {[40, 60, 45, 80, 65, 90, 75].map((height, index) => (
+                          <motion.div
+                            key={index}
+                            initial={{ height: 0 }}
+                            animate={{ height: `${height}%` }}
+                            transition={{ 
+                              delay: 1.5 + index * 0.2, 
+                              duration: 0.8,
+                              repeat: Infinity,
+                              repeatType: "reverse",
+                              repeatDelay: 3
+                            }}
+                            className={`w-6 rounded-t ${
+                              index < 3 ? 'bg-blue-400' : 
+                              index < 5 ? 'bg-purple-400' : 'bg-green-400'
+                            }`}
+                          />
+                        ))}
+                      </div>
                     </motion.div>
-                    
-                    <motion.div 
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.6, delay: 1.4 }}
-                      className="text-center p-3 bg-purple-600/80 rounded-xl"
-                    >
-                      <div className="text-white font-bold">Live</div>
-                      <div className="text-purple-100 text-xs">Analytics</div>
-                    </motion.div>
-                    
-                    <motion.div 
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.6, delay: 1.6 }}
-                      className="text-center p-3 bg-cyan-600/80 rounded-xl"
-                    >
-                      <div className="text-white font-bold">8</div>
-                      <div className="text-cyan-100 text-xs">Tabs</div>
-                    </motion.div>
-                  </div>
 
-                  {/* Status */}
-                  <div className="bg-green-600/80 rounded-xl p-3 text-center">
-                    <span className="text-white text-sm font-medium">System Optimized</span>
+                    {/* Animated Stats Cards */}
+                    <div className="grid grid-cols-2 gap-3">
+                      <motion.div
+                        animate={{ 
+                          scale: [1, 1.05, 1],
+                          boxShadow: [
+                            "0 4px 20px rgba(59, 130, 246, 0.2)",
+                            "0 8px 40px rgba(59, 130, 246, 0.4)",
+                            "0 4px 20px rgba(59, 130, 246, 0.2)"
+                          ]
+                        }}
+                        transition={{ duration: 3, repeat: Infinity }}
+                        className="bg-blue-50 p-4 rounded-xl border border-blue-200"
+                      >
+                        <motion.div 
+                          animate={{ rotate: [0, 360] }}
+                          transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                          className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mb-2"
+                        >
+                          <Gauge className="w-4 h-4 text-white" />
+                        </motion.div>
+                        <motion.div 
+                          animate={{ 
+                            color: ["#3b82f6", "#8b5cf6", "#3b82f6"]
+                          }}
+                          transition={{ duration: 2, repeat: Infinity }}
+                          className="font-bold text-lg"
+                        >
+                          +47%
+                        </motion.div>
+                        <div className="text-xs text-gray-600">Speed Boost</div>
+                      </motion.div>
+
+                      <motion.div
+                        animate={{ 
+                          scale: [1, 1.05, 1],
+                          boxShadow: [
+                            "0 4px 20px rgba(239, 68, 68, 0.2)",
+                            "0 8px 40px rgba(239, 68, 68, 0.4)",
+                            "0 4px 20px rgba(239, 68, 68, 0.2)"
+                          ]
+                        }}
+                        transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+                        className="bg-red-50 p-4 rounded-xl border border-red-200"
+                      >
+                        <motion.div 
+                          animate={{ scale: [1, 1.3, 1] }}
+                          transition={{ duration: 1.5, repeat: Infinity }}
+                          className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center mb-2"
+                        >
+                          <Search className="w-4 h-4 text-white" />
+                        </motion.div>
+                        <motion.div 
+                          animate={{ 
+                            scale: [1, 1.1, 1],
+                            color: ["#ef4444", "#f97316", "#ef4444"]
+                          }}
+                          transition={{ duration: 2, repeat: Infinity }}
+                          className="font-bold text-lg"
+                        >
+                          24
+                        </motion.div>
+                        <div className="text-xs text-gray-600">Ads Blocked</div>
+                      </motion.div>
+
+                      <motion.div
+                        animate={{ 
+                          scale: [1, 1.05, 1],
+                          boxShadow: [
+                            "0 4px 20px rgba(139, 92, 246, 0.2)",
+                            "0 8px 40px rgba(139, 92, 246, 0.4)",
+                            "0 4px 20px rgba(139, 92, 246, 0.2)"
+                          ]
+                        }}
+                        transition={{ duration: 3, repeat: Infinity, delay: 2 }}
+                        className="bg-purple-50 p-4 rounded-xl border border-purple-200"
+                      >
+                        <motion.div 
+                          animate={{ y: [0, -5, 0] }}
+                          transition={{ duration: 2, repeat: Infinity }}
+                          className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center mb-2"
+                        >
+                          <ChartLine className="w-4 h-4 text-white" />
+                        </motion.div>
+                        <motion.div 
+                          animate={{ 
+                            opacity: [1, 0.7, 1],
+                            color: ["#8b5cf6", "#06b6d4", "#8b5cf6"]
+                          }}
+                          transition={{ duration: 2, repeat: Infinity }}
+                          className="font-bold text-sm"
+                        >
+                          Live
+                        </motion.div>
+                        <div className="text-xs text-gray-600">Analytics</div>
+                      </motion.div>
+
+                      <motion.div
+                        animate={{ 
+                          scale: [1, 1.05, 1],
+                          boxShadow: [
+                            "0 4px 20px rgba(6, 182, 212, 0.2)",
+                            "0 8px 40px rgba(6, 182, 212, 0.4)",
+                            "0 4px 20px rgba(6, 182, 212, 0.2)"
+                          ]
+                        }}
+                        transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
+                        className="bg-cyan-50 p-4 rounded-xl border border-cyan-200"
+                      >
+                        <motion.div 
+                          animate={{ rotate: [0, 90, 180, 270, 360] }}
+                          transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                          className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center mb-2"
+                        >
+                          <LayoutGrid className="w-4 h-4 text-white" />
+                        </motion.div>
+                        <motion.div 
+                          animate={{ 
+                            scale: [1, 1.2, 1],
+                            color: ["#06b6d4", "#10b981", "#06b6d4"]
+                          }}
+                          transition={{ duration: 2, repeat: Infinity }}
+                          className="font-bold text-lg"
+                        >
+                          8
+                        </motion.div>
+                        <div className="text-xs text-gray-600">Active Tabs</div>
+                      </motion.div>
+                    </div>
                   </div>
                 </div>
 
-                {/* Minimalistic Floating Elements */}
+                {/* Highly Animated Floating Elements */}
                 <motion.div
-                  animate={{ y: [-6, 6, -6] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -top-2 -right-3 bg-white text-gray-800 px-3 py-1 rounded-full text-xs font-medium shadow-lg"
+                  animate={{ 
+                    y: [-10, 10, -10],
+                    rotate: [0, 5, -5, 0],
+                    scale: [1, 1.1, 1]
+                  }}
+                  transition={{ 
+                    duration: 4, 
+                    repeat: Infinity, 
+                    ease: "easeInOut" 
+                  }}
+                  className="absolute -top-6 -right-6 bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-2xl"
                 >
-                  Active
+                  <motion.span
+                    animate={{ opacity: [1, 0.7, 1] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  >
+                    ✓ ACTIVE
+                  </motion.span>
                 </motion.div>
 
                 <motion.div
-                  animate={{ x: [-4, 4, -4] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
-                  className="absolute -bottom-2 -left-3 bg-white text-gray-800 px-3 py-1 rounded-full text-xs font-medium shadow-lg"
+                  animate={{ 
+                    x: [-8, 8, -8],
+                    y: [0, -5, 0],
+                    rotate: [0, -10, 10, 0]
+                  }}
+                  transition={{ 
+                    duration: 5, 
+                    repeat: Infinity, 
+                    ease: "easeInOut",
+                    delay: 1 
+                  }}
+                  className="absolute -bottom-4 -left-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-2xl"
                 >
-                  Secure
+                  <motion.span
+                    animate={{ 
+                      scale: [1, 1.2, 1],
+                      color: ["#ffffff", "#fbbf24", "#ffffff"]
+                    }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    ⚡ BOOST
+                  </motion.span>
                 </motion.div>
+
+                <motion.div
+                  animate={{ 
+                    y: [5, -15, 5],
+                    x: [0, 5, 0],
+                    scale: [1, 1.15, 1]
+                  }}
+                  transition={{ 
+                    duration: 3.5, 
+                    repeat: Infinity, 
+                    ease: "easeInOut",
+                    delay: 2
+                  }}
+                  className="absolute top-1/3 -left-8 bg-gradient-to-r from-cyan-400 to-blue-600 text-white px-3 py-2 rounded-full text-sm font-bold shadow-2xl"
+                >
+                  <motion.div
+                    animate={{ rotate: [0, 360] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                    className="flex items-center gap-1"
+                  >
+                    <Shield className="w-3 h-3" />
+                    <span>SECURE</span>
+                  </motion.div>
+                </motion.div>
+
+                {/* Animated Background Particles */}
+                {[...Array(6)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    animate={{ 
+                      y: [0, -20, 0],
+                      opacity: [0.3, 0.8, 0.3],
+                      scale: [1, 1.5, 1]
+                    }}
+                    transition={{ 
+                      duration: 3 + i * 0.5, 
+                      repeat: Infinity, 
+                      delay: i * 0.5,
+                      ease: "easeInOut"
+                    }}
+                    className="absolute w-2 h-2 bg-blue-400 rounded-full"
+                    style={{
+                      left: `${20 + i * 15}%`,
+                      top: `${30 + i * 10}%`
+                    }}
+                  />
+                ))}
               </div>
             </motion.div>
           </div>
