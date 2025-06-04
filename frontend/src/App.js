@@ -403,7 +403,7 @@ const Home = () => {
               <span>© 2025 WebOS Toolkit</span>
             </div>
             <div className="text-gray-500 text-sm">
-              Built with security and performance in mind
+              Created in <span className="text-blue-400 font-medium">Happy Agency</span>
             </div>
           </div>
         </div>
