@@ -204,7 +204,7 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Right Column - Clean Simple Illustration */}
+            {/* Right Column - Redesigned Hero Illustration */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -212,94 +212,110 @@ const Home = () => {
               className="relative hidden xl:block py-8"
             >
               <div className="relative max-w-sm mx-auto">
-                {/* Main Clean Dashboard */}
-                <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
-                  {/* Header */}
-                  <div className="flex items-center justify-between mb-8">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                        <Gauge className="w-5 h-5 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-white font-semibold">WebOS Toolkit</h3>
-                        <p className="text-blue-300 text-xs">Active</p>
+                {/* Main Browser Window Interface */}
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl">
+                  {/* Browser Header */}
+                  <div className="flex items-center gap-2 mb-6 pb-4 border-b border-white/10">
+                    <div className="flex gap-1.5">
+                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                    </div>
+                    <div className="flex-1 bg-white/5 rounded-lg px-3 py-1.5 ml-3">
+                      <div className="text-gray-400 text-xs flex items-center gap-2">
+                        <Search className="w-3 h-3" />
+                        <span>chrome://extensions</span>
                       </div>
                     </div>
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                   </div>
                   
-                  {/* Simple Feature Cards */}
-                  <div className="space-y-4">
-                    <motion.div 
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.8 }}
-                      className="flex items-center gap-3 p-3 bg-blue-500/20 rounded-xl"
-                    >
-                      <Gauge className="w-4 h-4 text-blue-300" />
-                      <div className="flex-1">
-                        <div className="text-white text-sm font-medium">Performance Boost</div>
-                        <div className="w-full h-1.5 bg-gray-700 rounded-full mt-1">
-                          <div className="w-3/4 h-full bg-gradient-to-r from-blue-400 to-blue-500 rounded-full"></div>
-                        </div>
+                  {/* Extension Card */}
+                  <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl p-4 border border-blue-400/30">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+                        <Shield className="w-6 h-6 text-white" />
                       </div>
-                    </motion.div>
-
-                    <motion.div 
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 1 }}
-                      className="flex items-center gap-3 p-3 bg-purple-500/20 rounded-xl"
-                    >
-                      <ChartLine className="w-4 h-4 text-purple-300" />
                       <div className="flex-1">
-                        <div className="text-white text-sm font-medium">Smart Analytics</div>
-                        <div className="w-full h-1.5 bg-gray-700 rounded-full mt-1">
-                          <div className="w-5/6 h-full bg-gradient-to-r from-purple-400 to-purple-500 rounded-full"></div>
-                        </div>
+                        <h3 className="text-white font-semibold text-sm">WebOS Toolkit</h3>
+                        <p className="text-blue-300 text-xs">Browser Extension</p>
                       </div>
-                    </motion.div>
-
-                    <motion.div 
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 1.2 }}
-                      className="flex items-center gap-3 p-3 bg-cyan-500/20 rounded-xl"
-                    >
-                      <LayoutGrid className="w-4 h-4 text-cyan-300" />
-                      <div className="flex-1">
-                        <div className="text-white text-sm font-medium">Tab Management</div>
-                        <div className="w-full h-1.5 bg-gray-700 rounded-full mt-1">
-                          <div className="w-2/3 h-full bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-full"></div>
-                        </div>
-                      </div>
-                    </motion.div>
+                      <div className="text-green-400 text-xs font-medium">ON</div>
+                    </div>
+                    
+                    {/* Quick Stats */}
+                    <div className="grid grid-cols-3 gap-3">
+                      <motion.div 
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 1 }}
+                        className="text-center p-2 bg-white/5 rounded-lg"
+                      >
+                        <Gauge className="w-4 h-4 text-blue-400 mx-auto mb-1" />
+                        <div className="text-xs text-blue-300">Speed</div>
+                        <div className="text-white font-semibold text-sm">+47%</div>
+                      </motion.div>
+                      
+                      <motion.div 
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 1.2 }}
+                        className="text-center p-2 bg-white/5 rounded-lg"
+                      >
+                        <ChartLine className="w-4 h-4 text-purple-400 mx-auto mb-1" />
+                        <div className="text-xs text-purple-300">Analytics</div>
+                        <div className="text-white font-semibold text-sm">Real-time</div>
+                      </motion.div>
+                      
+                      <motion.div 
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 1.4 }}
+                        className="text-center p-2 bg-white/5 rounded-lg"
+                      >
+                        <LayoutGrid className="w-4 h-4 text-cyan-400 mx-auto mb-1" />
+                        <div className="text-xs text-cyan-300">Tabs</div>
+                        <div className="text-white font-semibold text-sm">12</div>
+                      </motion.div>
+                    </div>
                   </div>
 
-                  {/* Bottom Stats */}
-                  <div className="mt-6 pt-6 border-t border-white/10">
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-300 text-sm">Browser Speed</span>
-                      <span className="text-green-400 font-semibold text-sm">+47% faster</span>
+                  {/* Performance Indicator */}
+                  <div className="mt-4 flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">Performance</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-16 h-2 bg-gray-700 rounded-full overflow-hidden">
+                        <motion.div 
+                          initial={{ width: 0 }}
+                          animate={{ width: "85%" }}
+                          transition={{ duration: 2, delay: 1.6 }}
+                          className="h-full bg-gradient-to-r from-green-400 to-blue-500 rounded-full"
+                        ></motion.div>
+                      </div>
+                      <span className="text-green-400 font-medium text-sm">Excellent</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Two Clean Floating Elements */}
+                {/* Floating Notification */}
                 <motion.div
-                  animate={{ y: [-8, 8, -8] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center shadow-xl"
+                  initial={{ opacity: 0, y: 20, scale: 0.8 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 2 }}
+                  className="absolute -top-2 -left-4 bg-green-500 text-white px-3 py-2 rounded-lg text-xs font-medium shadow-xl"
                 >
-                  <Search className="w-5 h-5 text-white" />
+                  ✓ Extension Active
                 </motion.div>
 
+                {/* Speed Boost Indicator */}
                 <motion.div
-                  animate={{ y: [6, -6, 6] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                  className="absolute -bottom-6 -right-2 w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-xl"
+                  animate={{ y: [-6, 6, -6] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+                  className="absolute -bottom-4 -left-2 w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center shadow-xl border-2 border-white/20"
                 >
-                  <Shield className="w-4 h-4 text-white" />
+                  <div className="text-center">
+                    <div className="text-white text-xs font-bold">+47%</div>
+                    <div className="text-cyan-200 text-xs">faster</div>
+                  </div>
                 </motion.div>
               </div>
             </motion.div>
