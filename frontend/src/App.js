@@ -348,7 +348,7 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 h-full">
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 h-full flex flex-col">
                   {/* Header */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
@@ -357,8 +357,8 @@ const Home = () => {
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                   </div>
                   
-                  {/* Content */}
-                  <div className="mb-4">
+                  {/* Content - Flexible grow */}
+                  <div className="flex-grow mb-4">
                     <h3 className="text-lg font-bold text-white mb-2">
                       {feature.title}
                     </h3>
@@ -367,8 +367,8 @@ const Home = () => {
                     </p>
                   </div>
                   
-                  {/* Performance Bar */}
-                  <div className="mt-4">
+                  {/* Performance Bar - Aligned to bottom */}
+                  <div className="mt-auto">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-gray-400 text-xs">Performance</span>
                       <span className="text-green-400 text-xs font-medium">
