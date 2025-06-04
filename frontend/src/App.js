@@ -285,13 +285,21 @@ const Home = () => {
                   </div>
                 </div>
 
-                {/* Single Clean Floating Element */}
+                {/* Two Clean Floating Elements */}
                 <motion.div
                   animate={{ y: [-8, 8, -8] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center shadow-xl"
                 >
                   <Search className="w-5 h-5 text-white" />
+                </motion.div>
+
+                <motion.div
+                  animate={{ y: [6, -6, 6] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+                  className="absolute -bottom-6 -right-2 w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-xl"
+                >
+                  <Shield className="w-4 h-4 text-white" />
                 </motion.div>
               </div>
             </motion.div>
