@@ -432,7 +432,7 @@ const Home = () => {
               <span>© 2025 WebOS Toolkit</span>
             </div>
             <div className="text-gray-500 text-sm">
-              Created in <span className="text-blue-400 font-medium">Happy Agency</span>
+              Created by <a href="https://www.happydesign.pro/" target="_blank" rel="noopener noreferrer" className="text-blue-400 font-medium hover:text-blue-300 transition-colors duration-200">Happy Agency</a>
             </div>
           </div>
         </div>
