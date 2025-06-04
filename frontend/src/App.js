@@ -254,7 +254,7 @@ const Home = () => {
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl"
                 >
-                  <Brain className="w-8 h-8 text-white" />
+                  <ChartLine className="w-8 h-8 text-white" />
                 </motion.div>
 
                 <motion.div
@@ -262,7 +262,7 @@ const Home = () => {
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                   className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-2xl"
                 >
-                  <Globe className="w-6 h-6 text-white" />
+                  <Search className="w-6 h-6 text-white" />
                 </motion.div>
               </div>
             </motion.div>
