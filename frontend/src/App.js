@@ -217,7 +217,7 @@ const Home = () => {
                   transition={{ duration: 0.6, delay: 0.3 }}
                   className="xl:flex xl:justify-start lg:flex lg:justify-center"
                 >
-                  <button
+                  <motion.button
                     onClick={() => {
                       if (!isPrivacyAccepted) {
                         setExpandedFaq('highlight-checkbox');
@@ -226,26 +226,64 @@ const Home = () => {
                         handleAcceptAndContinue();
                       }
                     }}
-                    className="group relative overflow-hidden bg-white hover:bg-gray-50 rounded-2xl px-6 py-4 shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-white/20 border border-gray-200/20"
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
+                      y: -2
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                    transition={{ duration: 0.2 }}
+                    className="group relative overflow-hidden bg-white hover:bg-gray-50 rounded-2xl px-6 py-4 shadow-2xl border border-gray-200/20 cursor-pointer"
+                    style={{
+                      filter: !isPrivacyAccepted ? 'none' : 'none'
+                    }}
                   >
-                    <div className="flex items-center gap-4">
-                      <img 
+                    <motion.div 
+                      className="flex items-center gap-4"
+                      whileHover={{
+                        x: 2
+                      }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <motion.img 
                         src="https://developer.chrome.com/static/docs/webstore/branding/image/HRs9MPufa1J1h5glNhut.png"
                         alt="Chrome Web Store"
                         className="h-12 w-auto"
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ duration: 0.2 }}
                       />
                       <div className="text-left">
-                        <div className="text-xs font-medium text-gray-600 uppercase tracking-wider">Get Extension</div>
-                        <div className="text-lg font-bold text-gray-900">Chrome Web Store</div>
+                        <div className="text-xs font-medium text-gray-600 uppercase tracking-wider group-hover:text-gray-700 transition-colors duration-200">Get Extension</div>
+                        <div className="text-lg font-bold text-gray-900 group-hover:text-gray-800 transition-colors duration-200">Chrome Web Store</div>
                       </div>
-                      <div className="bg-blue-600 text-white p-2 rounded-full group-hover:bg-blue-700 transition-colors duration-300">
+                      <motion.div 
+                        className="bg-blue-600 text-white p-2 rounded-full group-hover:bg-blue-700 transition-colors duration-300"
+                        whileHover={{ 
+                          scale: 1.1,
+                          rotate: 5
+                        }}
+                        transition={{ duration: 0.2 }}
+                      >
                         <ExternalLink className="w-4 h-4" />
-                      </div>
-                    </div>
+                      </motion.div>
+                    </motion.div>
                     
                     {/* Animated background effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </button>
+                    <motion.div 
+                      className="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      initial={{ x: '-100%' }}
+                      whileHover={{ x: 0 }}
+                      transition={{ duration: 0.3 }}
+                    ></motion.div>
+
+                    {/* Shine effect on hover */}
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100"
+                      initial={{ x: '-100%' }}
+                      whileHover={{ x: '100%' }}
+                      transition={{ duration: 0.6 }}
+                    ></motion.div>
+                  </motion.button>
                 </motion.div>
               </div>
             </motion.div>
