@@ -206,7 +206,7 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Right Column - Refined Minimalistic Glass Hero */}
+            {/* Right Column - Clean White Glass Hero */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -215,14 +215,14 @@ const Home = () => {
             >
               <div className="relative max-w-sm mx-auto">
                 
-                {/* Main Glass Container */}
+                {/* Main White Glass Container */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 1, delay: 0.5 }}
-                  className="relative backdrop-blur-xl bg-white/10 rounded-3xl p-6 border border-white/20 shadow-2xl"
+                  className="relative backdrop-blur-xl bg-white/90 rounded-3xl p-6 border border-gray-200/50 shadow-2xl"
                   style={{ 
-                    background: 'linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)',
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%)',
                     backdropFilter: 'blur(20px)',
                   }}
                 >
@@ -238,81 +238,51 @@ const Home = () => {
                       <Shield className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <div className="text-white text-base font-bold">WebOS Active</div>
-                      <motion.div 
-                        animate={{ opacity: [0.7, 1, 0.7] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                        className="text-emerald-300 text-xs"
-                      >
-                        Optimized
-                      </motion.div>
+                      <div className="text-gray-800 text-base font-bold">WebOS Active</div>
+                      <div className="text-emerald-600 text-xs">Optimized</div>
                     </div>
                   </motion.div>
 
-                  {/* Simplified Performance Chart */}
+                  {/* Animated Preloader */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1, duration: 0.6 }}
-                    className="mb-6"
+                    className="mb-6 flex justify-center"
                   >
-                    <div className="text-white text-xs font-medium mb-3">Performance</div>
-                    <div className="flex items-end gap-2 h-12">
-                      {[
-                        { height: 40, color: 'bg-red-400' },
-                        { height: 85, color: 'bg-emerald-400' }
-                      ].map((bar, index) => (
-                        <div key={index} className="flex-1">
-                          <div className="w-full bg-white/10 rounded-full overflow-hidden" style={{ height: '48px' }}>
-                            <motion.div
-                              initial={{ height: 0 }}
-                              animate={{ height: `${bar.height}%` }}
-                              transition={{ delay: 1.5 + index * 0.3, duration: 0.8, ease: "easeOut" }}
-                              className={`w-full ${bar.color} rounded-full`}
-                            />
-                          </div>
-                        </div>
-                      ))}
+                    <div className="relative">
+                      <motion.div
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                        className="w-12 h-12 border-4 border-blue-200 border-t-blue-500 rounded-full"
+                      />
+                      <motion.div
+                        animate={{ scale: [1, 1.2, 1] }}
+                        transition={{ duration: 1, repeat: Infinity }}
+                        className="absolute inset-0 w-12 h-12 border-4 border-transparent border-t-purple-400 rounded-full"
+                      />
                     </div>
                   </motion.div>
 
-                  {/* Key Metrics - Minimal */}
+                  {/* Big Numbers - No Animation */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.3, duration: 0.6 }}
-                    className="grid grid-cols-2 gap-3 mb-5"
+                    className="text-center mb-6"
                   >
-                    <div className="text-center">
-                      <motion.div
-                        animate={{ 
-                          scale: [1, 1.05, 1],
-                          color: ["#ef4444", "#f97316", "#ef4444"]
-                        }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                        className="text-xl font-bold text-red-400 mb-1"
-                      >
-                        247
-                      </motion.div>
-                      <div className="text-white/50 text-xs">Ads Blocked</div>
+                    <div className="mb-4">
+                      <div className="text-4xl font-bold text-red-500 mb-1">247</div>
+                      <div className="text-gray-600 text-sm">ads blocked</div>
                     </div>
-
-                    <div className="text-center">
-                      <motion.div
-                        animate={{ 
-                          scale: [1, 1.05, 1],
-                          color: ["#34d399", "#22d3ee", "#34d399"]
-                        }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                        className="text-xl font-bold text-emerald-400 mb-1"
-                      >
-                        +73%
-                      </motion.div>
-                      <div className="text-white/50 text-xs">Faster</div>
+                    
+                    <div>
+                      <div className="text-4xl font-bold text-emerald-500 mb-1">+73%</div>
+                      <div className="text-gray-600 text-sm">speed optimization</div>
                     </div>
                   </motion.div>
 
-                  {/* Feature List - No Buttons */}
+                  {/* Feature List - Simple */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -326,27 +296,23 @@ const Home = () => {
                     ].map((feature, index) => (
                       <div
                         key={index}
-                        className={`flex items-center gap-3 p-2 rounded-lg transition-all duration-300 ${
+                        className={`flex items-center gap-3 p-2 rounded-lg ${
                           feature.active 
-                            ? 'text-white/90' 
-                            : 'text-white/50'
+                            ? 'text-gray-800' 
+                            : 'text-gray-400'
                         }`}
                       >
                         <span className="text-sm">{feature.icon}</span>
                         <span className="text-xs font-medium flex-1">{feature.text}</span>
-                        <motion.div
-                          animate={feature.active ? { scale: [1, 1.1, 1] } : {}}
-                          transition={{ duration: 2, repeat: Infinity }}
-                          className={`w-1.5 h-1.5 rounded-full ${
-                            feature.active ? 'bg-emerald-400' : 'bg-white/20'
-                          }`}
-                        />
+                        <div className={`w-1.5 h-1.5 rounded-full ${
+                          feature.active ? 'bg-emerald-500' : 'bg-gray-300'
+                        }`} />
                       </div>
                     ))}
                   </motion.div>
                 </motion.div>
 
-                {/* Simple Floating Icons - Only Up/Down Movement */}
+                {/* Bigger Floating Icons with Glass Effect */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -356,7 +322,8 @@ const Home = () => {
                   <motion.div
                     animate={{ y: [-8, 8, -8] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                    className="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white text-sm shadow-lg"
+                    className="w-12 h-12 backdrop-blur-xl bg-white/80 border border-white/60 rounded-full flex items-center justify-center text-emerald-600 text-lg shadow-xl"
+                    style={{ backdropFilter: 'blur(20px)' }}
                   >
                     ✓
                   </motion.div>
@@ -371,9 +338,10 @@ const Home = () => {
                   <motion.div
                     animate={{ y: [6, -6, 6] }}
                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                    className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white shadow-lg"
+                    className="w-12 h-12 backdrop-blur-xl bg-white/80 border border-white/60 rounded-full flex items-center justify-center text-purple-600 shadow-xl"
+                    style={{ backdropFilter: 'blur(20px)' }}
                   >
-                    <Search className="w-3 h-3" />
+                    <Search className="w-4 h-4" />
                   </motion.div>
                 </motion.div>
 
@@ -386,7 +354,8 @@ const Home = () => {
                   <motion.div
                     animate={{ y: [-5, 10, -5] }}
                     transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                    className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm shadow-lg"
+                    className="w-12 h-12 backdrop-blur-xl bg-white/80 border border-white/60 rounded-full flex items-center justify-center text-blue-600 text-lg shadow-xl"
+                    style={{ backdropFilter: 'blur(20px)' }}
                   >
                     ⚡
                   </motion.div>
@@ -399,7 +368,7 @@ const Home = () => {
                     opacity: [0.3, 0.5, 0.3]
                   }}
                   transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-cyan-500/20 rounded-3xl blur-2xl -z-10"
+                  className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-cyan-500/10 rounded-3xl blur-2xl -z-10"
                 />
               </div>
             </motion.div>
