@@ -339,29 +339,57 @@ const Home = () => {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 5, duration: 0.6 }}
-                    className="space-y-2"
+                    transition={{ delay: 1.4, duration: 0.6 }}
+                    className="space-y-3"
                   >
-                    {[
-                      { icon: '🔧', text: 'Edit Headers', active: true },
-                      { icon: '🚫', text: 'Block Ads', active: true },
-                      { icon: '⚡', text: 'HTML Tools', active: false }
-                    ].map((feature, index) => (
-                      <div
-                        key={index}
-                        className={`flex items-center gap-3 p-2 rounded-lg ${
-                          feature.active 
-                            ? 'text-white/90' 
-                            : 'text-white/50'
-                        }`}
-                      >
-                        <span className="text-sm">{feature.icon}</span>
-                        <span className="text-xs font-medium flex-1">{feature.text}</span>
-                        <div className={`w-1.5 h-1.5 rounded-full ${
-                          feature.active ? 'bg-emerald-400' : 'bg-white/30'
-                        }`} />
-                      </div>
-                    ))}
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 1.6, duration: 0.5 }}
+                      whileHover={{ x: 5, scale: 1.02 }}
+                      className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm"
+                    >
+                      <span className="text-base">🔧</span>
+                      <span className="text-white text-sm font-medium flex-1">Edit Headers Live</span>
+                      <motion.div
+                        animate={{ scale: [1, 1.2, 1] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                        className="w-2 h-2 rounded-full bg-emerald-400 shadow-lg"
+                      />
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 1.7, duration: 0.5 }}
+                      whileHover={{ x: 5, scale: 1.02 }}
+                      className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm"
+                    >
+                      <span className="text-base">🚫</span>
+                      <span className="text-white text-sm font-medium flex-1">Block Ads & Trackers</span>
+                      <motion.div
+                        animate={{ scale: [1, 1.2, 1] }}
+                        transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
+                        className="w-2 h-2 rounded-full bg-red-400 shadow-lg"
+                      />
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 1.8, duration: 0.5 }}
+                      whileHover={{ x: 5, scale: 1.02 }}
+                      className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm"
+                    >
+                      <span className="text-base">⚡</span>
+                      <span className="text-white text-sm font-medium flex-1">HTML Simulation</span>
+                      <motion.div
+                        animate={{ scale: [1, 1.2, 1] }}
+                        transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
+                        className="w-2 h-2 rounded-full bg-blue-400 shadow-lg"
+                      />
+                    </motion.div>
+                  </motion.div>
                   </motion.div>
                 </motion.div>
 
