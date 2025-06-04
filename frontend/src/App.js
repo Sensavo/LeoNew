@@ -206,207 +206,238 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Right Column - Professional Digital Product Hero Illustration */}
+            {/* Right Column - Minimalistic Glass Hero with Animated Chart */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               className="relative hidden xl:block py-16 flex items-center"
             >
-              <div className="relative max-w-xl mx-auto">
+              <div className="relative max-w-md mx-auto">
                 
-                {/* Clean Browser Mockup */}
+                {/* Main Glass Container */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 1, delay: 0.5 }}
-                  className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200"
+                  className="relative backdrop-blur-xl bg-white/10 rounded-3xl p-8 border border-white/20 shadow-2xl"
+                  style={{ 
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)',
+                    backdropFilter: 'blur(20px)',
+                  }}
                 >
                   
-                  {/* Browser Header */}
-                  <div className="bg-gray-50 px-4 py-3 border-b border-gray-200">
-                    <div className="flex items-center gap-2">
-                      <div className="flex gap-2">
-                        <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                        <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                        <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                      </div>
-                      <div className="flex-1 bg-white rounded-lg px-3 py-1.5 ml-4 border border-gray-200">
-                        <div className="text-gray-600 text-sm">https://example.com</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Website Content with Extension Interface */}
-                  <div className="relative bg-white p-6">
-                    
-                    {/* Simulated Website Header Being Edited */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 1, duration: 0.6 }}
-                      className="relative"
-                    >
-                      {/* Original Header (faded) */}
-                      <div className="relative">
-                        <div className="text-gray-400 text-lg font-semibold mb-2 line-through opacity-50">
-                          Original Website Header
-                        </div>
-                        
-                        {/* Custom Header (highlighted) */}
-                        <motion.div
-                          animate={{ 
-                            boxShadow: [
-                              "0 0 0 2px rgba(59, 130, 246, 0)",
-                              "0 0 0 2px rgba(59, 130, 246, 0.3)",
-                              "0 0 0 2px rgba(59, 130, 246, 0)"
-                            ]
-                          }}
-                          transition={{ duration: 2, repeat: Infinity }}
-                          className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4"
-                        >
-                          <div className="text-blue-800 text-lg font-semibold">Custom Header - Edited Live</div>
-                          <div className="text-blue-600 text-sm">Headers customized with WebOS Toolkit</div>
-                        </motion.div>
-                      </div>
-                    </motion.div>
-
-                    {/* Ad Blocking Demonstration */}
-                    <motion.div
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 1.3, duration: 0.6 }}
-                      className="relative mb-4"
-                    >
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                        <span className="text-sm text-gray-600">Ads Blocked</span>
-                        <motion.div
-                          animate={{ scale: [1, 1.1, 1] }}
-                          transition={{ duration: 1, repeat: Infinity }}
-                          className="bg-red-100 text-red-700 px-2 py-1 rounded-full text-xs font-medium"
-                        >
-                          +47 blocked
-                        </motion.div>
-                      </div>
-                      
-                      {/* Blocked Ad Placeholders */}
-                      <div className="grid grid-cols-2 gap-3">
-                        <motion.div
-                          animate={{ opacity: [0.3, 0.1, 0.3] }}
-                          transition={{ duration: 2, repeat: Infinity }}
-                          className="bg-gray-100 border-2 border-dashed border-gray-300 rounded p-3 text-center"
-                        >
-                          <div className="text-gray-400 text-xs">🚫 Ad Blocked</div>
-                        </motion.div>
-                        <motion.div
-                          animate={{ opacity: [0.3, 0.1, 0.3] }}
-                          transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                          className="bg-gray-100 border-2 border-dashed border-gray-300 rounded p-3 text-center"
-                        >
-                          <div className="text-gray-400 text-xs">🚫 Ad Blocked</div>
-                        </motion.div>
-                      </div>
-                    </motion.div>
-
-                    {/* HTML Simulation Panel */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 1.6, duration: 0.6 }}
-                      className="bg-gray-900 rounded-lg p-4 text-sm font-mono"
-                    >
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                        <span className="text-green-400 text-xs">HTML Simulation Active</span>
-                      </div>
-                      
-                      <motion.div
-                        animate={{ opacity: [0.6, 1, 0.6] }}
-                        transition={{ duration: 1.5, repeat: Infinity }}
-                        className="text-gray-300"
-                      >
-                        <div className="text-blue-400">&lt;div</div>
-                        <div className="text-yellow-400 ml-4">class="<span className="text-green-400">edited-element</span>"</div>
-                        <div className="text-blue-400">&gt;</div>
-                        <div className="text-white ml-4">Live HTML editing...</div>
-                        <div className="text-blue-400">&lt;/div&gt;</div>
-                      </motion.div>
-                    </motion.div>
-                  </div>
-                </motion.div>
-
-                {/* Extension Control Panel */}
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 2, duration: 0.8 }}
-                  className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-xl border border-gray-200 p-4 min-w-[200px]"
-                >
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                      <Shield className="w-4 h-4 text-white" />
+                  {/* Header - Extension Status */}
+                  <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.8, duration: 0.6 }}
+                    className="flex items-center gap-3 mb-8"
+                  >
+                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                      <Shield className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <div className="text-sm font-semibold text-gray-800">WebOS Toolkit</div>
-                      <div className="text-xs text-green-600">Active</div>
+                      <div className="text-white text-lg font-bold">WebOS Active</div>
+                      <motion.div 
+                        animate={{ opacity: [0.7, 1, 0.7] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                        className="text-emerald-300 text-sm"
+                      >
+                        Performance optimized
+                      </motion.div>
                     </div>
-                  </div>
-                  
-                  <div className="space-y-2 text-xs">
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-600">Headers</span>
-                      <motion.div
-                        animate={{ scale: [1, 1.1, 1] }}
-                        transition={{ duration: 1, repeat: Infinity }}
-                        className="w-2 h-2 bg-blue-500 rounded-full"
-                      />
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-600">Ad Block</span>
-                      <motion.div
-                        animate={{ scale: [1, 1.1, 1] }}
-                        transition={{ duration: 1, repeat: Infinity, delay: 0.3 }}
-                        className="w-2 h-2 bg-red-500 rounded-full"
-                      />
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-600">HTML Sim</span>
-                      <motion.div
-                        animate={{ scale: [1, 1.1, 1] }}
-                        transition={{ duration: 1, repeat: Infinity, delay: 0.6 }}
-                        className="w-2 h-2 bg-green-500 rounded-full"
-                      />
-                    </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
 
-                {/* Image Search Feature Indicator */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 2.5, duration: 0.6 }}
-                  className="absolute -top-4 -left-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-2 rounded-xl text-sm font-medium shadow-lg"
-                >
+                  {/* Animated Performance Chart */}
                   <motion.div
-                    animate={{ y: [0, -2, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="flex items-center gap-2"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1, duration: 0.6 }}
+                    className="mb-8"
                   >
-                    <Search className="w-4 h-4" />
-                    <span>Find Similar</span>
+                    <div className="text-white text-sm font-medium mb-4">Performance Impact</div>
+                    <div className="flex items-end gap-3 h-24">
+                      {[
+                        { height: 40, label: 'Before', color: 'bg-red-400' },
+                        { height: 85, label: 'After', color: 'bg-emerald-400' }
+                      ].map((bar, index) => (
+                        <div key={index} className="flex-1 flex flex-col items-center">
+                          <div className="w-full bg-white/10 rounded-full overflow-hidden mb-2" style={{ height: '80px' }}>
+                            <motion.div
+                              initial={{ height: 0 }}
+                              animate={{ height: `${bar.height}%` }}
+                              transition={{ delay: 1.5 + index * 0.5, duration: 1, ease: "easeOut" }}
+                              className={`w-full ${bar.color} rounded-full relative`}
+                            >
+                              <motion.div
+                                animate={{ opacity: [0.5, 1, 0.5] }}
+                                transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
+                                className="absolute inset-0 bg-white/20 rounded-full"
+                              />
+                            </motion.div>
+                          </div>
+                          <div className="text-white/70 text-xs">{bar.label}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+
+                  {/* Key Metrics - Minimalistic */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.3, duration: 0.6 }}
+                    className="grid grid-cols-2 gap-4 mb-6"
+                  >
+                    
+                    {/* Ads Blocked */}
+                    <div className="text-center">
+                      <motion.div
+                        animate={{ 
+                          scale: [1, 1.1, 1],
+                          color: ["#ef4444", "#f97316", "#ef4444"]
+                        }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                        className="text-2xl font-bold text-red-400 mb-1"
+                      >
+                        247
+                      </motion.div>
+                      <div className="text-white/60 text-xs">Ads Blocked</div>
+                    </div>
+
+                    {/* Speed Boost */}
+                    <div className="text-center">
+                      <motion.div
+                        animate={{ 
+                          scale: [1, 1.1, 1],
+                          color: ["#34d399", "#22d3ee", "#34d399"]
+                        }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                        className="text-2xl font-bold text-emerald-400 mb-1"
+                      >
+                        +73%
+                      </motion.div>
+                      <div className="text-white/60 text-xs">Faster</div>
+                    </div>
+                  </motion.div>
+
+                  {/* Most Important Features */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.6, duration: 0.6 }}
+                    className="space-y-3"
+                  >
+                    {[
+                      { icon: '🔧', text: 'Edit Headers Live', active: true },
+                      { icon: '🚫', text: 'Block Ads & Trackers', active: true },
+                      { icon: '⚡', text: 'HTML Simulation', active: false }
+                    ].map((feature, index) => (
+                      <motion.div
+                        key={index}
+                        whileHover={{ scale: 1.02, x: 5 }}
+                        className={`flex items-center gap-3 p-3 rounded-xl backdrop-blur-sm border transition-all duration-300 ${
+                          feature.active 
+                            ? 'bg-white/10 border-white/20 text-white' 
+                            : 'bg-white/5 border-white/10 text-white/60'
+                        }`}
+                      >
+                        <span className="text-lg">{feature.icon}</span>
+                        <span className="text-sm font-medium flex-1">{feature.text}</span>
+                        <motion.div
+                          animate={feature.active ? { scale: [1, 1.2, 1] } : {}}
+                          transition={{ duration: 2, repeat: Infinity }}
+                          className={`w-2 h-2 rounded-full ${
+                            feature.active ? 'bg-emerald-400' : 'bg-white/30'
+                          }`}
+                        />
+                      </motion.div>
+                    ))}
                   </motion.div>
                 </motion.div>
 
-                {/* Subtle Background Glow */}
+                {/* Floating Glass Badges - Minimal */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 2.5, duration: 0.8, type: "spring" }}
+                  className="absolute -top-4 -right-4"
+                >
+                  <motion.div
+                    animate={{ 
+                      y: [-5, 5, -5],
+                      rotate: [0, 3, -3, 0]
+                    }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    className="backdrop-blur-xl bg-gradient-to-r from-emerald-400/20 to-cyan-500/20 border border-white/30 text-white px-3 py-2 rounded-2xl text-sm font-medium shadow-xl"
+                  >
+                    <div className="flex items-center gap-2">
+                      <motion.div
+                        animate={{ rotate: [0, 360] }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                        className="w-3 h-3 bg-emerald-400 rounded-full"
+                      />
+                      <span>LIVE</span>
+                    </div>
+                  </motion.div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 3, duration: 0.8, type: "spring" }}
+                  className="absolute -bottom-3 -left-4"
+                >
+                  <motion.div
+                    animate={{ 
+                      x: [-3, 3, -3],
+                      scale: [1, 1.05, 1]
+                    }}
+                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                    className="backdrop-blur-xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-white/30 text-white px-3 py-2 rounded-2xl text-sm font-medium shadow-xl"
+                  >
+                    <div className="flex items-center gap-2">
+                      <Search className="w-3 h-3" />
+                      <span>Find Similar</span>
+                    </div>
+                  </motion.div>
+                </motion.div>
+
+                {/* Subtle Animated Background */}
                 <motion.div
                   animate={{ 
                     scale: [1, 1.02, 1],
-                    opacity: [0.5, 0.7, 0.5]
+                    opacity: [0.3, 0.5, 0.3]
                   }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10 rounded-2xl blur-xl -z-10"
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-cyan-500/20 rounded-3xl blur-2xl -z-10"
                 />
+
+                {/* Minimal Floating Particles */}
+                {[...Array(4)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    animate={{ 
+                      y: [0, -20, 0],
+                      opacity: [0.2, 0.6, 0.2],
+                      scale: [0.8, 1.2, 0.8]
+                    }}
+                    transition={{ 
+                      duration: 6 + i, 
+                      repeat: Infinity, 
+                      delay: i * 1.5,
+                      ease: "easeInOut"
+                    }}
+                    className={`absolute w-1 h-1 rounded-full ${
+                      i % 2 === 0 ? 'bg-blue-400/40' : 'bg-purple-400/40'
+                    }`}
+                    style={{
+                      left: `${20 + i * 20}%`,
+                      top: `${30 + i * 15}%`,
+                    }}
+                  />
+                ))}
               </div>
             </motion.div>
           </div>
