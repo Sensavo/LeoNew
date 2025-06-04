@@ -396,26 +396,25 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Modern FAQ Section */}
-      <section className="py-24 bg-gradient-to-b from-gray-900 to-gray-800 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/5 to-purple-900/5"></div>
-        <div className="max-w-5xl mx-auto px-6 relative">
+      {/* Minimalistic FAQ Section with Colors */}
+      <section className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 relative">
+        <div className="max-w-4xl mx-auto px-6 relative">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Frequently Asked Questions
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              FAQ
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Get answers to common questions about WebOS Toolkit
+            <p className="text-lg text-gray-400 max-w-xl mx-auto">
+              Common questions about WebOS Toolkit
             </p>
           </motion.div>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
@@ -423,18 +422,22 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/40 backdrop-blur-xl rounded-2xl border border-gray-700/50 overflow-hidden"
+                className="group"
               >
                 <button
                   onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
-                  className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-700/30 transition-colors duration-200"
+                  className={`w-full px-6 py-4 text-left flex items-center justify-between transition-all duration-200 rounded-xl ${
+                    expandedFaq === index 
+                      ? 'bg-blue-500/10 border border-blue-400/30' 
+                      : 'bg-gray-800/30 border border-gray-700/30 hover:bg-gray-700/30'
+                  }`}
                 >
-                  <span className="text-lg font-semibold text-white pr-4">{faq.question}</span>
+                  <span className="text-lg font-medium text-white pr-4">{faq.question}</span>
                   <div className="flex-shrink-0">
                     {expandedFaq === index ? (
-                      <ChevronUp className="w-6 h-6 text-blue-400" />
+                      <ChevronUp className="w-5 h-5 text-blue-400" />
                     ) : (
-                      <ChevronDown className="w-6 h-6 text-blue-400" />
+                      <ChevronDown className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors duration-200" />
                     )}
                   </div>
                 </button>
@@ -443,9 +446,9 @@ const Home = () => {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     transition={{ duration: 0.3 }}
-                    className="px-8 pb-6 border-t border-gray-700/30"
+                    className="px-6 pb-4"
                   >
-                    <p className="text-gray-300 leading-relaxed pt-4">{faq.answer}</p>
+                    <p className="text-gray-300 leading-relaxed pt-2 border-t border-blue-400/20">{faq.answer}</p>
                   </motion.div>
                 )}
               </motion.div>
