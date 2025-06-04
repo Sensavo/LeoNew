@@ -131,38 +131,18 @@ const Home = () => {
                 </p>
               </div>
 
-              {/* Feature Pills */}
+              {/* Feature Pills - One Line */}
               <div className="flex flex-wrap gap-3 xl:justify-start lg:justify-center">
-                <div className="px-4 py-3 bg-blue-500/30 backdrop-blur-sm rounded-full border border-blue-400/50">
-                  <span className="text-blue-100 font-medium">⚡ Performance Boost</span>
+                <div className="px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30">
+                  <span className="text-blue-100 font-medium text-sm">⚡ Performance Boost</span>
                 </div>
-                <div className="px-4 py-3 bg-purple-500/30 backdrop-blur-sm rounded-full border border-purple-400/50">
-                  <span className="text-purple-100 font-medium">🧠 Smart Analytics</span>
+                <div className="px-4 py-2 bg-purple-500/20 backdrop-blur-sm rounded-full border border-purple-400/30">
+                  <span className="text-purple-100 font-medium text-sm">🧠 Smart Analytics</span>
                 </div>
-                <div className="px-4 py-3 bg-blue-500/30 backdrop-blur-sm rounded-full border border-blue-400/50">
-                  <span className="text-blue-100 font-medium">🗂️ Tab Management</span>
+                <div className="px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30">
+                  <span className="text-blue-100 font-medium text-sm">🗂️ Tab Management</span>
                 </div>
               </div>
-
-              {/* Chrome Store Badge */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="xl:flex xl:justify-start lg:flex lg:justify-center"
-              >
-                <div className="inline-flex items-center gap-4 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300">
-                  <img 
-                    src="https://developer.chrome.com/static/docs/webstore/branding/image/HRs9MPufa1J1h5glNhut.png"
-                    alt="Available in the Chrome Web Store"
-                    className="h-12 w-auto"
-                  />
-                  <div className="text-left">
-                    <div className="text-sm font-medium text-gray-700">Available in</div>
-                    <div className="text-lg font-bold text-gray-900">Chrome Web Store</div>
-                  </div>
-                </div>
-              </motion.div>
 
               {/* Privacy Checkbox */}
               <motion.div
@@ -191,24 +171,32 @@ const Home = () => {
                 </div>
               </motion.div>
 
-              {/* Main CTA */}
+              {/* Chrome Store Clickable Button */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
                 className="xl:flex xl:justify-start lg:flex lg:justify-center"
               >
                 <button
                   onClick={handleAcceptAndContinue}
                   disabled={!isPrivacyAccepted}
-                  className={`px-10 py-4 text-lg font-bold rounded-2xl transition-all duration-300 flex items-center gap-3 ${
+                  className={`inline-flex items-center gap-4 px-8 py-4 rounded-2xl shadow-2xl transition-all duration-300 ${
                     isPrivacyAccepted
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 shadow-2xl hover:shadow-blue-500/30 transform hover:scale-105 text-white'
-                      : 'bg-gray-700 cursor-not-allowed opacity-50 text-gray-400'
+                      ? 'bg-white/95 hover:bg-white hover:scale-105 cursor-pointer'
+                      : 'bg-gray-600/50 cursor-not-allowed opacity-50'
                   }`}
                 >
-                  Install WebOS Toolkit
-                  <ExternalLink className="w-5 h-5" />
+                  <img 
+                    src="https://developer.chrome.com/static/docs/webstore/branding/image/HRs9MPufa1J1h5glNhut.png"
+                    alt="Available in the Chrome Web Store"
+                    className="h-12 w-auto"
+                  />
+                  <div className="text-left">
+                    <div className="text-sm font-medium text-gray-700">Available in</div>
+                    <div className="text-lg font-bold text-gray-900">Chrome Web Store</div>
+                  </div>
+                  <ExternalLink className="w-5 h-5 text-gray-600" />
                 </button>
               </motion.div>
             </motion.div>
