@@ -76,8 +76,8 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
-      {/* Optimized Hero Section - Fits without scrolling */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Hero Section - Larger Elements, Better Layout */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Modern Background */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -95,75 +95,75 @@ const Home = () => {
           }}
         />
         
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-8">
-          <div className="grid xl:grid-cols-2 gap-8 xl:gap-16 items-center h-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
+          <div className="grid xl:grid-cols-2 gap-16 xl:gap-12 items-center min-h-screen">
             
-            {/* Left Column - Optimized Content */}
+            {/* Left Column - More Space */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-left xl:text-left lg:text-center space-y-6 xl:max-w-none lg:max-w-4xl lg:mx-auto"
+              className="text-left xl:text-left lg:text-center space-y-8 py-8 xl:max-w-none lg:max-w-4xl lg:mx-auto"
             >
-              {/* Logo with Gradient - Smaller */}
-              <div className="flex items-center gap-3 xl:justify-start lg:justify-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 via-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-xl">
-                  <Shield className="w-6 h-6 text-white" />
+              {/* Logo with Gradient */}
+              <div className="flex items-center gap-4 xl:justify-start lg:justify-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 via-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl">
+                  <Shield className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h1 className="text-2xl xl:text-3xl font-bold bg-gradient-to-r from-blue-400 via-blue-500 to-purple-400 bg-clip-text text-transparent">
+                  <h1 className="text-3xl xl:text-4xl font-bold bg-gradient-to-r from-blue-400 via-blue-500 to-purple-400 bg-clip-text text-transparent">
                     WebOS Toolkit
                   </h1>
-                  <p className="text-blue-300 font-medium text-sm">Developer Extension</p>
+                  <p className="text-blue-300 font-medium">Developer Extension</p>
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold text-white leading-tight">
+              <div className="space-y-6">
+                <h2 className="text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-tight">
                   Supercharge Your
                   <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                     Browser Experience
                   </span>
                 </h2>
                 
-                <p className="text-lg text-gray-200 leading-relaxed max-w-xl xl:max-w-xl lg:mx-auto">
-                  Professional developer tools to speed up your browser, unlock advanced insights, and take full control.
+                <p className="text-xl text-gray-200 leading-relaxed max-w-2xl xl:max-w-2xl lg:mx-auto">
+                  Professional developer tools to speed up your browser, unlock advanced insights, and take full control of your browsing experience.
                 </p>
               </div>
 
-              {/* Feature Pills - Compact */}
-              <div className="flex flex-wrap gap-2 xl:justify-start lg:justify-center">
-                <div className="px-3 py-1.5 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30">
-                  <span className="text-blue-100 font-medium text-xs">⚡ Performance</span>
+              {/* Feature Pills - Original Size */}
+              <div className="flex flex-wrap gap-3 xl:justify-start lg:justify-center">
+                <div className="px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30">
+                  <span className="text-blue-100 font-medium text-sm">⚡ Performance Boost</span>
                 </div>
-                <div className="px-3 py-1.5 bg-purple-500/20 backdrop-blur-sm rounded-full border border-purple-400/30">
-                  <span className="text-purple-100 font-medium text-xs">🧠 Analytics</span>
+                <div className="px-4 py-2 bg-purple-500/20 backdrop-blur-sm rounded-full border border-purple-400/30">
+                  <span className="text-purple-100 font-medium text-sm">🧠 Smart Analytics</span>
                 </div>
-                <div className="px-3 py-1.5 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30">
-                  <span className="text-blue-100 font-medium text-xs">🗂️ Management</span>
+                <div className="px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30">
+                  <span className="text-blue-100 font-medium text-sm">🗂️ Tab Management</span>
                 </div>
               </div>
 
-              {/* Privacy Checkbox - Compact */}
+              {/* Privacy Checkbox - Simpler & Smaller */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
                 className="xl:flex xl:justify-start lg:flex lg:justify-center"
               >
-                <div className="flex items-start gap-2 p-3 bg-gray-800/60 backdrop-blur-sm rounded-lg border border-gray-600/50 max-w-sm">
+                <div className="flex items-center gap-2 text-sm">
                   <input
                     type="checkbox"
                     id="privacy-agreement"
                     checked={isPrivacyAccepted}
                     onChange={(e) => setIsPrivacyAccepted(e.target.checked)}
-                    className="w-4 h-4 text-blue-600 bg-gray-700 border-gray-500 rounded focus:ring-blue-500 focus:ring-2 mt-0.5"
+                    className="w-4 h-4 text-blue-600 bg-transparent border-gray-500 rounded focus:ring-blue-500 focus:ring-1"
                   />
-                  <label htmlFor="privacy-agreement" className="text-gray-200 text-xs leading-relaxed">
-                    By installing you agree to our{' '}
+                  <label htmlFor="privacy-agreement" className="text-gray-300 text-sm">
+                    I agree to the{' '}
                     <button
                       onClick={() => setIsPrivacyModalOpen(true)}
-                      className="text-blue-300 hover:text-blue-200 underline font-medium"
+                      className="text-blue-400 hover:text-blue-300 underline"
                     >
                       Privacy Policy
                     </button>
@@ -171,7 +171,7 @@ const Home = () => {
                 </div>
               </motion.div>
 
-              {/* Chrome Store Clickable Button - Compact */}
+              {/* Chrome Store Clickable Button */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -181,7 +181,7 @@ const Home = () => {
                 <button
                   onClick={handleAcceptAndContinue}
                   disabled={!isPrivacyAccepted}
-                  className={`inline-flex items-center gap-3 px-6 py-3 rounded-xl shadow-xl transition-all duration-300 ${
+                  className={`inline-flex items-center gap-4 px-8 py-4 rounded-2xl shadow-2xl transition-all duration-300 ${
                     isPrivacyAccepted
                       ? 'bg-white/95 hover:bg-white hover:scale-105 cursor-pointer'
                       : 'bg-gray-600/50 cursor-not-allowed opacity-50'
@@ -190,26 +190,26 @@ const Home = () => {
                   <img 
                     src="https://developer.chrome.com/static/docs/webstore/branding/image/HRs9MPufa1J1h5glNhut.png"
                     alt="Available in the Chrome Web Store"
-                    className="h-8 w-auto"
+                    className="h-12 w-auto"
                   />
                   <div className="text-left">
-                    <div className="text-xs font-medium text-gray-700">Available in</div>
-                    <div className="text-sm font-bold text-gray-900">Chrome Web Store</div>
+                    <div className="text-sm font-medium text-gray-700">Available in</div>
+                    <div className="text-lg font-bold text-gray-900">Chrome Web Store</div>
                   </div>
-                  <ExternalLink className="w-4 h-4 text-gray-600" />
+                  <ExternalLink className="w-5 h-5 text-gray-600" />
                 </button>
               </motion.div>
             </motion.div>
 
-            {/* Right Column - Compact Visual Element */}
+            {/* Right Column - Tighter Illustration */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="relative hidden xl:block"
+              className="relative hidden xl:block py-8 xl:pl-8"
             >
-              <div className="relative">
-                {/* Main Visual Card - Smaller */}
+              <div className="relative max-w-sm mx-auto">
+                {/* Main Visual Card - Tighter */}
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center">
@@ -224,7 +224,7 @@ const Home = () => {
                   {/* Mock Performance Stats - Compact */}
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-300 text-xs">Memory Usage</span>
+                      <span className="text-gray-300 text-xs">Memory</span>
                       <div className="flex items-center gap-2">
                         <div className="w-16 h-1.5 bg-gray-700 rounded-full overflow-hidden">
                           <div className="w-1/3 h-full bg-gradient-to-r from-green-400 to-blue-500"></div>
@@ -233,7 +233,7 @@ const Home = () => {
                       </div>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-300 text-xs">CPU Load</span>
+                      <span className="text-gray-300 text-xs">CPU</span>
                       <div className="flex items-center gap-2">
                         <div className="w-16 h-1.5 bg-gray-700 rounded-full overflow-hidden">
                           <div className="w-1/2 h-full bg-gradient-to-r from-yellow-400 to-orange-500"></div>
@@ -242,27 +242,27 @@ const Home = () => {
                       </div>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-300 text-xs">Active Tabs</span>
+                      <span className="text-gray-300 text-xs">Tabs</span>
                       <span className="text-blue-400 font-bold text-xs">12</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Floating Elements - Smaller */}
+                {/* Floating Elements - Smaller & Tighter */}
                 <motion.div
-                  animate={{ y: [-8, 8, -8] }}
+                  animate={{ y: [-6, 6, -6] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -top-4 -right-4 w-14 h-14 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center shadow-xl"
+                  className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-lg flex items-center justify-center shadow-lg"
                 >
-                  <ChartLine className="w-6 h-6 text-white" />
+                  <ChartLine className="w-5 h-5 text-white" />
                 </motion.div>
 
                 <motion.div
-                  animate={{ y: [8, -8, 8] }}
+                  animate={{ y: [6, -6, 6] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -bottom-3 -left-3 w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center shadow-xl"
+                  className="absolute -bottom-2 -left-2 w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center shadow-lg"
                 >
-                  <Search className="w-5 h-5 text-white" />
+                  <Search className="w-4 h-4 text-white" />
                 </motion.div>
               </div>
             </motion.div>
