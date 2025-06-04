@@ -479,8 +479,8 @@ const Home = () => {
               </p>
             </div>
 
-            {/* Links Section */}
-            <div>
+            {/* Centered Links Section */}
+            <div className="flex flex-col items-center text-center">
               <h3 className="text-white font-semibold mb-4">Quick Links</h3>
               <div className="space-y-3">
                 <button
@@ -501,15 +501,28 @@ const Home = () => {
             {/* Install Section */}
             <div>
               <h3 className="text-white font-semibold mb-4">Get Started</h3>
-              <a 
-                href={chromeStoreUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button 
+                onClick={() => {
+                  // Scroll to top
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  // If privacy not accepted, highlight checkbox
+                  if (!isPrivacyAccepted) {
+                    setTimeout(() => {
+                      setExpandedFaq('highlight-checkbox');
+                      setTimeout(() => setExpandedFaq(null), 3000);
+                    }, 800);
+                  } else {
+                    // If accepted, redirect to Chrome Store
+                    setTimeout(() => {
+                      window.open(chromeStoreUrl, '_blank');
+                    }, 800);
+                  }
+                }}
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition-colors duration-200"
               >
-                <Download className="w-4 h-4" />
+                <ExternalLink className="w-4 h-4" />
                 Install Extension
-              </a>
+              </button>
             </div>
           </div>
 
