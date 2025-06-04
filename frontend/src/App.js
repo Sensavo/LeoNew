@@ -459,8 +459,8 @@ const Home = () => {
               </p>
             </div>
 
-            {/* Centered Links Section */}
-            <div className="flex flex-col items-center text-center">
+            {/* Quick Links Section - Left Aligned */}
+            <div>
               <h3 className="text-white font-semibold mb-4">Quick Links</h3>
               <div className="space-y-3">
                 <button
