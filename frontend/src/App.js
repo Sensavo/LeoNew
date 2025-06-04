@@ -3,10 +3,10 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { motion } from "framer-motion";
 import { 
-  Zap, 
-  Brain, 
-  Globe, 
-  FolderOpen, 
+  Gauge, 
+  ChartLine, 
+  Search, 
+  LayoutGrid, 
   X,
   ExternalLink,
   Shield,
