@@ -206,114 +206,91 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Right Column - New Hero Illustration */}
+            {/* Right Column - Smaller & Simpler Illustration */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="relative hidden xl:block py-8"
+              className="relative hidden xl:block py-16 flex items-end"
             >
-              <div className="relative max-w-sm mx-auto">
-                {/* Main Control Panel */}
-                <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
+              <div className="relative max-w-xs mx-auto">
+                {/* Simplified Control Panel */}
+                <div className="bg-white/20 backdrop-blur-xl rounded-2xl p-6 border border-white/30 shadow-2xl">
                   {/* Header */}
-                  <div className="flex items-center justify-between mb-8">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                        <Shield className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-white font-bold text-lg">Control Center</h3>
-                        <p className="text-blue-300 text-sm">WebOS Active</p>
-                      </div>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
+                      <Shield className="w-5 h-5 text-blue-600" />
                     </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                      <span className="text-green-400 text-sm font-medium">Online</span>
+                    <div>
+                      <h3 className="text-white font-bold">WebOS Active</h3>
+                      <p className="text-blue-200 text-sm">System Monitor</p>
                     </div>
                   </div>
                   
-                  {/* Stats Grid */}
-                  <div className="grid grid-cols-2 gap-4 mb-6">
+                  {/* Stats Grid - Simplified */}
+                  <div className="grid grid-cols-2 gap-3 mb-4">
                     <motion.div 
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.6, delay: 1 }}
-                      className="text-center p-4 bg-blue-500/20 rounded-xl border border-blue-400/30"
+                      className="text-center p-3 bg-blue-600/80 rounded-xl"
                     >
-                      <Gauge className="w-6 h-6 text-blue-400 mx-auto mb-2" />
                       <div className="text-white font-bold text-lg">+47%</div>
-                      <div className="text-blue-300 text-xs">Speed Boost</div>
+                      <div className="text-blue-100 text-xs">Speed</div>
                     </motion.div>
                     
                     <motion.div 
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.6, delay: 1.2 }}
-                      className="text-center p-4 bg-red-500/20 rounded-xl border border-red-400/30"
+                      className="text-center p-3 bg-red-600/80 rounded-xl"
                     >
-                      <Search className="w-6 h-6 text-red-400 mx-auto mb-2" />
                       <div className="text-white font-bold text-lg">24</div>
-                      <div className="text-red-300 text-xs">Ads Blocked</div>
+                      <div className="text-red-100 text-xs">Ads Blocked</div>
                     </motion.div>
                     
                     <motion.div 
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.6, delay: 1.4 }}
-                      className="text-center p-4 bg-purple-500/20 rounded-xl border border-purple-400/30"
+                      className="text-center p-3 bg-purple-600/80 rounded-xl"
                     >
-                      <ChartLine className="w-6 h-6 text-purple-400 mx-auto mb-2" />
-                      <div className="text-white font-bold text-lg">Live</div>
-                      <div className="text-purple-300 text-xs">Analytics</div>
+                      <div className="text-white font-bold">Live</div>
+                      <div className="text-purple-100 text-xs">Analytics</div>
                     </motion.div>
                     
                     <motion.div 
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.6, delay: 1.6 }}
-                      className="text-center p-4 bg-cyan-500/20 rounded-xl border border-cyan-400/30"
+                      className="text-center p-3 bg-cyan-600/80 rounded-xl"
                     >
-                      <LayoutGrid className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
-                      <div className="text-white font-bold text-lg">8</div>
-                      <div className="text-cyan-300 text-xs">Active Tabs</div>
+                      <div className="text-white font-bold">8</div>
+                      <div className="text-cyan-100 text-xs">Tabs</div>
                     </motion.div>
                   </div>
 
-                  {/* Status Indicator */}
-                  <div className="bg-green-500/20 rounded-xl p-4 border border-green-400/30">
-                    <div className="flex items-center justify-center gap-2">
-                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                      <span className="text-green-300 text-sm font-medium">All systems optimized</span>
-                    </div>
+                  {/* Status */}
+                  <div className="bg-green-600/80 rounded-xl p-3 text-center">
+                    <span className="text-white text-sm font-medium">System Optimized</span>
                   </div>
                 </div>
 
-                {/* Glass Effect Floating Elements */}
+                {/* Minimalistic Floating Elements */}
                 <motion.div
-                  animate={{ y: [-8, 8, -8] }}
+                  animate={{ y: [-6, 6, -6] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -top-4 -right-6 bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl border border-white/20"
+                  className="absolute -top-2 -right-3 bg-white text-gray-800 px-3 py-1 rounded-full text-xs font-medium shadow-lg"
                 >
-                  <Shield className="w-3 h-3 inline mr-1" />
-                  PROTECTED
+                  Active
                 </motion.div>
 
                 <motion.div
-                  animate={{ x: [-6, 6, -6] }}
+                  animate={{ x: [-4, 4, -4] }}
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
-                  className="absolute -bottom-3 -left-5 bg-white/10 backdrop-blur-md text-white px-3 py-2 rounded-full text-xs font-bold shadow-xl border border-white/20"
+                  className="absolute -bottom-2 -left-3 bg-white text-gray-800 px-3 py-1 rounded-full text-xs font-medium shadow-lg"
                 >
-                  <Gauge className="w-3 h-3 inline mr-1" />
-                  OPTIMIZING
-                </motion.div>
-
-                <motion.div
-                  animate={{ y: [6, -6, 6] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 4 }}
-                  className="absolute top-1/3 -left-8 bg-white/10 backdrop-blur-md text-white px-3 py-2 rounded-full text-xs font-bold shadow-xl border border-white/20"
-                >
-                  ⚡ FAST
+                  Secure
                 </motion.div>
               </div>
             </motion.div>
