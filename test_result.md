@@ -105,7 +105,7 @@
 user_problem_statement: "Redesign hero illustration to make it animated, contemporary professional and friendly. Extension features: customize headers, edit websites, block ads, simulate in HTML and find similar images."
 
 frontend:
-  - task: "Clean White Glass Hero with Preloader"
+  - task: "Sequential Animation Hero with Tiles"
     implemented: true
     working: true
     file: "/app/frontend/src/App.js"
@@ -125,9 +125,12 @@ frontend:
       - working: false
         agent: "main"
         comment: "Fourth attempt was refined but still had charts and small floating elements"
+      - working: false
+        agent: "main"
+        comment: "Fifth attempt had white background but simultaneous animations"
       - working: true
         agent: "main"
-        comment: "Final white background version: white glassmorphism container (bg-white/90), removed all charts, added single animated preloader (rotating border), big static numbers (247 ads blocked, +73% speed optimization), bigger floating icons (w-12 h-12) with glass effect, clean and minimal."
+        comment: "Final sequential animation version: preloader (donut chart) disappears after 4 seconds, replaced by two tiles (25 Ads blocked, +73% Speed optimization) in grid layout, floating elements with colored shape backgrounds (emerald rounded-2xl, purple rounded-full, blue rounded-xl rotated), clean white glassmorphism design."
 
 metadata:
   created_by: "main_agent"
