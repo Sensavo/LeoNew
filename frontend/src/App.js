@@ -206,7 +206,7 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Right Column - Lowered Glass Hero with True Progress Chart */}
+            {/* Right Column - Simple Beautiful Glass Hero */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
