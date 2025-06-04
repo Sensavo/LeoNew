@@ -304,13 +304,7 @@ const Home = () => {
                           transition={{ delay: 0.5, duration: 0.5 }}
                           className="text-white text-sm font-bold"
                         >
-                          <motion.span
-                            initial={{ textContent: "0%" }}
-                            animate={{ textContent: "100%" }}
-                            transition={{ duration: 3, ease: "easeInOut" }}
-                          >
-                            0%
-                          </motion.span>
+                          100%
                         </motion.span>
                       </div>
                     </motion.div>
