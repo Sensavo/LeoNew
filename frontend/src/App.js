@@ -206,100 +206,139 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Right Column - Clean White Glass Hero with Sequential Animation */}
+            {/* Right Column - Optimized Glass Hero with Progress Preloader */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               className="relative hidden xl:block py-16 flex items-center"
             >
-              <div className="relative max-w-sm mx-auto">
+              <div className="relative max-w-xs mx-auto">
                 
-                {/* Main White Glass Container */}
+                {/* Main Glass Container - Optimized Size */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 1, delay: 0.5 }}
-                  className="relative backdrop-blur-xl bg-white/90 rounded-3xl p-6 border border-gray-200/50 shadow-2xl"
+                  className="relative backdrop-blur-xl bg-white/10 rounded-3xl p-5 border border-white/20 shadow-2xl"
                   style={{ 
-                    background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%)',
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)',
                     backdropFilter: 'blur(20px)',
                   }}
                 >
                   
-                  {/* Header - Extension Status */}
+                  {/* Header - Compact */}
                   <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.8, duration: 0.6 }}
-                    className="flex items-center gap-3 mb-6"
+                    className="flex items-center gap-2 mb-5"
                   >
-                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-                      <Shield className="w-4 h-4 text-white" />
+                    <div className="w-7 h-7 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                      <Shield className="w-3 h-3 text-white" />
                     </div>
                     <div>
-                      <div className="text-gray-800 text-base font-bold">WebOS Active</div>
-                      <div className="text-emerald-600 text-xs">Optimized</div>
+                      <div className="text-white text-sm font-bold">WebOS Active</div>
+                      <div className="text-emerald-300 text-xs">Optimized</div>
                     </div>
                   </motion.div>
 
-                  {/* Animated Preloader - Disappears after 3 seconds */}
+                  {/* Progress Preloader with Great Color Gradient */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.8 }}
                     transition={{ delay: 1, duration: 0.6 }}
-                    className="mb-6 flex justify-center"
+                    className="mb-5 flex justify-center"
                   >
                     <motion.div
                       initial={{ opacity: 1 }}
                       animate={{ opacity: 0 }}
                       transition={{ delay: 4, duration: 0.5 }}
-                      className="relative"
+                      className="relative w-20 h-20"
                     >
+                      {/* Background Circle */}
+                      <div className="absolute inset-0 rounded-full bg-white/10"></div>
+                      
+                      {/* Gradient Progress Circle */}
                       <motion.div
-                        animate={{ rotate: 360 }}
-                        transition={{ duration: 2, repeat: 2, ease: "linear" }}
-                        className="w-16 h-16 border-4 border-gray-200 border-t-blue-500 rounded-full"
-                      />
+                        initial={{ strokeDasharray: "0 283" }}
+                        animate={{ strokeDasharray: "283 283" }}
+                        transition={{ duration: 3, ease: "easeInOut" }}
+                        className="absolute inset-0"
+                      >
+                        <svg className="w-20 h-20 transform -rotate-90" viewBox="0 0 100 100">
+                          <defs>
+                            <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stopColor="#3b82f6" />
+                              <stop offset="25%" stopColor="#8b5cf6" />
+                              <stop offset="50%" stopColor="#ec4899" />
+                              <stop offset="75%" stopColor="#f59e0b" />
+                              <stop offset="100%" stopColor="#10b981" />
+                            </linearGradient>
+                          </defs>
+                          <circle
+                            cx="50"
+                            cy="50"
+                            r="45"
+                            fill="none"
+                            stroke="url(#progressGradient)"
+                            strokeWidth="4"
+                            strokeLinecap="round"
+                            style={{ strokeDasharray: "283", strokeDashoffset: "0" }}
+                          />
+                        </svg>
+                      </motion.div>
+                      
+                      {/* Center Progress Text */}
                       <motion.div
-                        animate={{ scale: [1, 1.2, 1] }}
-                        transition={{ duration: 1, repeat: 4 }}
-                        className="absolute inset-0 w-16 h-16 border-4 border-transparent border-t-purple-400 rounded-full"
-                      />
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 1.5, duration: 0.5 }}
+                        className="absolute inset-0 flex items-center justify-center"
+                      >
+                        <motion.span
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ delay: 2, duration: 0.5 }}
+                          className="text-white text-xs font-bold"
+                        >
+                          100%
+                        </motion.span>
+                      </motion.div>
                     </motion.div>
                   </motion.div>
 
-                  {/* Numbers in Tiles - Appears after preloader */}
+                  {/* Compact Tiles Grid */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 4.5, duration: 0.8 }}
-                    className="grid grid-cols-2 gap-4 mb-6"
+                    className="grid grid-cols-2 gap-3 mb-4"
                   >
-                    {/* Left Tile - Ads Blocked */}
-                    <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 border border-gray-200/60 shadow-lg">
+                    {/* Left Tile - Compact */}
+                    <div className="backdrop-blur-sm bg-white/10 rounded-xl p-3 border border-white/20 shadow-lg">
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-red-500 mb-1">25</div>
-                        <div className="text-gray-600 text-xs leading-tight">Ads blocked</div>
+                        <div className="text-2xl font-bold text-red-400 mb-1">25</div>
+                        <div className="text-white/70 text-xs leading-tight">Ads blocked</div>
                       </div>
                     </div>
                     
-                    {/* Right Tile - Speed Optimization */}
-                    <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 border border-gray-200/60 shadow-lg">
+                    {/* Right Tile - Compact */}
+                    <div className="backdrop-blur-sm bg-white/10 rounded-xl p-3 border border-white/20 shadow-lg">
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-emerald-500 mb-1">+73%</div>
-                        <div className="text-gray-600 text-xs leading-tight">Speed optimization</div>
+                        <div className="text-2xl font-bold text-emerald-400 mb-1">+73%</div>
+                        <div className="text-white/70 text-xs leading-tight">Speed boost</div>
                       </div>
                     </div>
                   </motion.div>
 
-                  {/* Feature List - Simple */}
+                  {/* Compact Feature List */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 5, duration: 0.6 }}
-                    className="space-y-2"
+                    className="space-y-1.5"
                   >
                     {[
                       { icon: '🔧', text: 'Edit Headers', active: true },
@@ -308,37 +347,37 @@ const Home = () => {
                     ].map((feature, index) => (
                       <div
                         key={index}
-                        className={`flex items-center gap-3 p-2 rounded-lg ${
+                        className={`flex items-center gap-2 p-1.5 rounded-lg ${
                           feature.active 
-                            ? 'text-gray-800' 
-                            : 'text-gray-400'
+                            ? 'text-white/90' 
+                            : 'text-white/50'
                         }`}
                       >
-                        <span className="text-sm">{feature.icon}</span>
+                        <span className="text-xs">{feature.icon}</span>
                         <span className="text-xs font-medium flex-1">{feature.text}</span>
-                        <div className={`w-1.5 h-1.5 rounded-full ${
-                          feature.active ? 'bg-emerald-500' : 'bg-gray-300'
+                        <div className={`w-1 h-1 rounded-full ${
+                          feature.active ? 'bg-emerald-400' : 'bg-white/30'
                         }`} />
                       </div>
                     ))}
                   </motion.div>
                 </motion.div>
 
-                {/* Floating Elements with Colored Shape Backgrounds */}
+                {/* Optimized Floating Elements with Colored Shapes */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 2.5, duration: 0.8 }}
-                  className="absolute -top-6 -right-6"
+                  className="absolute -top-4 -right-4"
                 >
                   <motion.div
-                    animate={{ y: [-8, 8, -8] }}
+                    animate={{ y: [-6, 6, -6] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                     className="relative"
                   >
-                    {/* Colored Shape Background */}
-                    <div className="absolute -inset-2 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-2xl opacity-20 blur-sm"></div>
-                    <div className="relative w-12 h-12 backdrop-blur-xl bg-white/80 border border-white/60 rounded-full flex items-center justify-center text-emerald-600 text-lg shadow-xl"
+                    {/* Gradient Shape Background */}
+                    <div className="absolute -inset-1.5 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-2xl opacity-25 blur-sm"></div>
+                    <div className="relative w-10 h-10 backdrop-blur-xl bg-white/15 border border-white/30 rounded-full flex items-center justify-center text-emerald-400 text-sm shadow-xl"
                          style={{ backdropFilter: 'blur(20px)' }}>
                       ✓
                     </div>
@@ -349,18 +388,18 @@ const Home = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 3, duration: 0.8 }}
-                  className="absolute -bottom-4 -left-6"
+                  className="absolute -bottom-3 -left-4"
                 >
                   <motion.div
-                    animate={{ y: [6, -6, 6] }}
+                    animate={{ y: [4, -4, 4] }}
                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                     className="relative"
                   >
-                    {/* Colored Shape Background */}
-                    <div className="absolute -inset-2 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full opacity-20 blur-sm"></div>
-                    <div className="relative w-12 h-12 backdrop-blur-xl bg-white/80 border border-white/60 rounded-full flex items-center justify-center text-purple-600 shadow-xl"
+                    {/* Gradient Shape Background */}
+                    <div className="absolute -inset-1.5 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full opacity-25 blur-sm"></div>
+                    <div className="relative w-10 h-10 backdrop-blur-xl bg-white/15 border border-white/30 rounded-full flex items-center justify-center text-purple-400 shadow-xl"
                          style={{ backdropFilter: 'blur(20px)' }}>
-                      <Search className="w-4 h-4" />
+                      <Search className="w-3 h-3" />
                     </div>
                   </motion.div>
                 </motion.div>
@@ -369,30 +408,30 @@ const Home = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 3.5, duration: 0.8 }}
-                  className="absolute top-1/4 -left-8"
+                  className="absolute top-1/4 -left-6"
                 >
                   <motion.div
-                    animate={{ y: [-5, 10, -5] }}
+                    animate={{ y: [-3, 7, -3] }}
                     transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                     className="relative"
                   >
-                    {/* Colored Shape Background */}
-                    <div className="absolute -inset-2 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl opacity-20 blur-sm transform rotate-45"></div>
-                    <div className="relative w-12 h-12 backdrop-blur-xl bg-white/80 border border-white/60 rounded-full flex items-center justify-center text-blue-600 text-lg shadow-xl"
+                    {/* Gradient Shape Background */}
+                    <div className="absolute -inset-1.5 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl opacity-25 blur-sm transform rotate-45"></div>
+                    <div className="relative w-10 h-10 backdrop-blur-xl bg-white/15 border border-white/30 rounded-full flex items-center justify-center text-blue-400 text-sm shadow-xl"
                          style={{ backdropFilter: 'blur(20px)' }}>
                       ⚡
                     </div>
                   </motion.div>
                 </motion.div>
 
-                {/* Subtle Background Glow */}
+                {/* Enhanced Background Glow */}
                 <motion.div
                   animate={{ 
                     scale: [1, 1.02, 1],
-                    opacity: [0.3, 0.5, 0.3]
+                    opacity: [0.4, 0.6, 0.4]
                   }}
                   transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-cyan-500/10 rounded-3xl blur-2xl -z-10"
+                  className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-cyan-500/20 rounded-3xl blur-2xl -z-10"
                 />
               </div>
             </motion.div>
