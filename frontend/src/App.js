@@ -206,9 +206,101 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Right Column - No Illustration */}
-            <div className="relative hidden xl:block py-20">
-              {/* Empty space - no hero illustration */}
+            {/* Right Column - Simple Contemporary Hero Illustration */}
+            <div className="relative hidden xl:block py-20 flex items-center">
+              <div className="relative max-w-md mx-auto">
+                
+                {/* Main Card Container */}
+                <div className="relative bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl p-8 shadow-2xl border border-blue-200">
+                  
+                  {/* Header Status */}
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                      <Shield className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <div className="text-gray-800 text-lg font-bold">WebOS Toolkit</div>
+                      <div className="text-emerald-600 text-sm">Active & Protecting</div>
+                    </div>
+                  </div>
+
+                  {/* Results Grid */}
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    {/* Ads Blocked */}
+                    <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-100">
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-red-500 mb-2">247</div>
+                        <div className="text-gray-600 text-sm">Ads Blocked</div>
+                        <div className="w-full bg-red-100 rounded-full h-2 mt-2">
+                          <div className="bg-red-500 h-2 rounded-full" style={{ width: '85%' }}></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Speed Boost */}
+                    <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-100">
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-emerald-500 mb-2">+73%</div>
+                        <div className="text-gray-600 text-sm">Speed Boost</div>
+                        <div className="w-full bg-emerald-100 rounded-full h-2 mt-2">
+                          <div className="bg-emerald-500 h-2 rounded-full" style={{ width: '73%' }}></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Feature Showcase */}
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm">
+                      <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <span className="text-blue-600">🔧</span>
+                      </div>
+                      <span className="text-gray-700 font-medium flex-1">Customize Headers</span>
+                      <div className="w-3 h-3 bg-emerald-400 rounded-full"></div>
+                    </div>
+
+                    <div className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm">
+                      <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
+                        <span className="text-red-600">🚫</span>
+                      </div>
+                      <span className="text-gray-700 font-medium flex-1">Block Ads & Trackers</span>
+                      <div className="w-3 h-3 bg-emerald-400 rounded-full"></div>
+                    </div>
+
+                    <div className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm">
+                      <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
+                        <span className="text-purple-600">⚡</span>
+                      </div>
+                      <span className="text-gray-700 font-medium flex-1">HTML Simulation</span>
+                      <div className="w-3 h-3 bg-emerald-400 rounded-full"></div>
+                    </div>
+
+                    <div className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm">
+                      <div className="w-8 h-8 bg-cyan-100 rounded-lg flex items-center justify-center">
+                        <Search className="w-4 h-4 text-cyan-600" />
+                      </div>
+                      <span className="text-gray-700 font-medium flex-1">Find Similar Images</span>
+                      <div className="w-3 h-3 bg-emerald-400 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Friendly Floating Badges */}
+                <div className="absolute -top-4 -right-4 bg-emerald-500 text-white px-3 py-2 rounded-full text-sm font-medium shadow-lg">
+                  ✓ Secure
+                </div>
+
+                <div className="absolute -bottom-3 -left-4 bg-blue-500 text-white px-3 py-2 rounded-full text-sm font-medium shadow-lg">
+                  🚀 Fast
+                </div>
+
+                <div className="absolute top-1/3 -left-6 bg-purple-500 text-white px-3 py-2 rounded-full text-sm font-medium shadow-lg">
+                  🛡️ Protected
+                </div>
+
+                {/* Subtle Background Pattern */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-3xl -z-10"></div>
+              </div>
             </div>
           </div>
         </div>
