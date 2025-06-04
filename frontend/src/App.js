@@ -270,25 +270,25 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Modern Features Section */}
-      <section className="py-24 relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
-        <div className="max-w-7xl mx-auto px-6">
+      {/* Redesigned Features Section - Smaller & Simpler */}
+      <section className="py-20 relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+        <div className="max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               🛠️ Powerful Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Everything you need to optimize, analyze, and control your browsing experience with professional-grade tools
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              Professional tools to optimize your browsing experience
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -298,27 +298,16 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="bg-gray-800/40 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 h-full">
-                  <div className="flex items-center gap-6 mb-8">
-                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-2xl">
-                      <feature.icon className="w-10 h-10 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white mb-2">
-                        {feature.title}
-                      </h3>
-                      <p className="text-gray-300 text-lg leading-relaxed">
-                        {feature.description}
-                      </p>
-                    </div>
+                <div className="bg-gray-800/40 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 h-full text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="w-full h-56 rounded-2xl overflow-hidden shadow-2xl">
-                    <img
-                      src={feature.image}
-                      alt={feature.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
+                  <h3 className="text-lg font-bold text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
