@@ -289,8 +289,8 @@ const Home = () => {
             </motion.div>
 
             {/* Right Column - Compact Contemporary Hero Illustration */}
-            <div className="relative hidden xl:block py-16 flex items-center">
-              <div className="relative max-w-xs mx-auto mt-8">
+            <div className="relative hidden xl:block py-20 flex items-center">
+              <div className="relative max-w-xs mx-auto mt-16">
                 
                 {/* Additional Floating Elements */}
                 <motion.div
