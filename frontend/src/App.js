@@ -206,100 +206,235 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Right Column - Simple Contemporary Hero Illustration */}
-            <div className="relative hidden xl:block py-20 flex items-center">
-              <div className="relative max-w-md mx-auto">
+            {/* Right Column - Compact Contemporary Hero Illustration */}
+            <div className="relative hidden xl:block py-12 flex items-center">
+              <div className="relative max-w-xs mx-auto">
                 
-                {/* Main Card Container */}
-                <div className="relative bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl p-8 shadow-2xl border border-blue-200">
+                {/* Main Card Container - Enhanced Glass Effect */}
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                  className="relative bg-white/5 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-white/10"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(59,130,246,0.05))',
+                    backdropFilter: 'blur(20px)',
+                    boxShadow: '0 25px 50px rgba(0,0,0,0.15), 0 0 60px rgba(59,130,246,0.1)'
+                  }}
+                >
                   
                   {/* Header Status */}
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
-                      <Shield className="w-5 h-5 text-white" />
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.7 }}
+                    className="flex items-center gap-2 mb-4"
+                  >
+                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                      <Shield className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <div className="text-gray-800 text-lg font-bold">WebOS Toolkit</div>
-                      <div className="text-emerald-600 text-sm">Active & Protecting</div>
+                      <div className="text-white text-sm font-bold">WebOS Toolkit</div>
+                      <div className="text-emerald-400 text-xs">Active & Protecting</div>
                     </div>
-                  </div>
+                  </motion.div>
 
-                  {/* Results Grid */}
-                  <div className="grid grid-cols-2 gap-4 mb-6">
+                  {/* Compact Results Grid */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.9 }}
+                    className="grid grid-cols-2 gap-3 mb-4"
+                  >
                     {/* Ads Blocked */}
-                    <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-100">
+                    <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/20">
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-red-500 mb-2">247</div>
-                        <div className="text-gray-600 text-sm">Ads Blocked</div>
-                        <div className="w-full bg-red-100 rounded-full h-2 mt-2">
-                          <div className="bg-red-500 h-2 rounded-full" style={{ width: '85%' }}></div>
+                        <motion.div 
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ duration: 0.6, delay: 1.2 }}
+                          className="text-2xl font-bold text-red-400 mb-1"
+                        >
+                          247
+                        </motion.div>
+                        <div className="text-gray-300 text-xs">Ads Blocked</div>
+                        <div className="w-full bg-gray-600/30 rounded-full h-1.5 mt-1">
+                          <motion.div 
+                            initial={{ width: 0 }}
+                            animate={{ width: '85%' }}
+                            transition={{ duration: 1.5, delay: 1.4 }}
+                            className="bg-gradient-to-r from-red-500 to-red-400 h-1.5 rounded-full"
+                          ></motion.div>
                         </div>
                       </div>
                     </div>
                     
                     {/* Speed Boost */}
-                    <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-100">
+                    <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/20">
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-emerald-500 mb-2">+73%</div>
-                        <div className="text-gray-600 text-sm">Speed Boost</div>
-                        <div className="w-full bg-emerald-100 rounded-full h-2 mt-2">
-                          <div className="bg-emerald-500 h-2 rounded-full" style={{ width: '73%' }}></div>
+                        <motion.div 
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ duration: 0.6, delay: 1.3 }}
+                          className="text-2xl font-bold text-emerald-400 mb-1"
+                        >
+                          +73%
+                        </motion.div>
+                        <div className="text-gray-300 text-xs">Speed Boost</div>
+                        <div className="w-full bg-gray-600/30 rounded-full h-1.5 mt-1">
+                          <motion.div 
+                            initial={{ width: 0 }}
+                            animate={{ width: '73%' }}
+                            transition={{ duration: 1.5, delay: 1.5 }}
+                            className="bg-gradient-to-r from-emerald-500 to-emerald-400 h-1.5 rounded-full"
+                          ></motion.div>
                         </div>
                       </div>
                     </div>
+                  </motion.div>
+
+                  {/* Compact Feature Showcase */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 1.1 }}
+                    className="space-y-2"
+                  >
+                    <div className="flex items-center gap-2 p-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
+                      <div className="w-6 h-6 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                        <span className="text-blue-400 text-sm">🔧</span>
+                      </div>
+                      <span className="text-gray-200 text-xs font-medium flex-1">Headers</span>
+                      <motion.div 
+                        animate={{ scale: [1, 1.2, 1] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                        className="w-2 h-2 bg-emerald-400 rounded-full"
+                      ></motion.div>
+                    </div>
+
+                    <div className="flex items-center gap-2 p-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
+                      <div className="w-6 h-6 bg-red-500/20 rounded-lg flex items-center justify-center">
+                        <span className="text-red-400 text-sm">🚫</span>
+                      </div>
+                      <span className="text-gray-200 text-xs font-medium flex-1">Ad Block</span>
+                      <motion.div 
+                        animate={{ scale: [1, 1.2, 1] }}
+                        transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+                        className="w-2 h-2 bg-emerald-400 rounded-full"
+                      ></motion.div>
+                    </div>
+
+                    <div className="flex items-center gap-2 p-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
+                      <div className="w-6 h-6 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                        <span className="text-purple-400 text-sm">⚡</span>
+                      </div>
+                      <span className="text-gray-200 text-xs font-medium flex-1">HTML Sim</span>
+                      <motion.div 
+                        animate={{ scale: [1, 1.2, 1] }}
+                        transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+                        className="w-2 h-2 bg-emerald-400 rounded-full"
+                      ></motion.div>
+                    </div>
+
+                    <div className="flex items-center gap-2 p-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
+                      <div className="w-6 h-6 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                        <Search className="w-3 h-3 text-cyan-400" />
+                      </div>
+                      <span className="text-gray-200 text-xs font-medium flex-1">Images</span>
+                      <motion.div 
+                        animate={{ scale: [1, 1.2, 1] }}
+                        transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
+                        className="w-2 h-2 bg-emerald-400 rounded-full"
+                      ></motion.div>
+                    </div>
+                  </motion.div>
+                </motion.div>
+
+                {/* Enhanced Floating Badges - Bigger with Better Shadows */}
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 1.6 }}
+                  whileHover={{ scale: 1.1 }}
+                  animate={{ 
+                    y: [0, -8, 0],
+                    rotateZ: [0, 2, 0]
+                  }}
+                  transition={{ 
+                    y: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+                    rotateZ: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+                  }}
+                  className="absolute -top-6 -right-6 bg-gradient-to-r from-emerald-500 to-emerald-400 text-white px-4 py-3 rounded-2xl text-sm font-bold shadow-2xl border border-emerald-300/30"
+                  style={{
+                    boxShadow: '0 20px 40px rgba(16,185,129,0.3), 0 0 30px rgba(16,185,129,0.2)'
+                  }}
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg">✓</span>
+                    <span>Secure</span>
                   </div>
+                </motion.div>
 
-                  {/* Feature Showcase */}
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm">
-                      <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-                        <span className="text-blue-600">🔧</span>
-                      </div>
-                      <span className="text-gray-700 font-medium flex-1">Customize Headers</span>
-                      <div className="w-3 h-3 bg-emerald-400 rounded-full"></div>
-                    </div>
-
-                    <div className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm">
-                      <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
-                        <span className="text-red-600">🚫</span>
-                      </div>
-                      <span className="text-gray-700 font-medium flex-1">Block Ads & Trackers</span>
-                      <div className="w-3 h-3 bg-emerald-400 rounded-full"></div>
-                    </div>
-
-                    <div className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm">
-                      <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
-                        <span className="text-purple-600">⚡</span>
-                      </div>
-                      <span className="text-gray-700 font-medium flex-1">HTML Simulation</span>
-                      <div className="w-3 h-3 bg-emerald-400 rounded-full"></div>
-                    </div>
-
-                    <div className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm">
-                      <div className="w-8 h-8 bg-cyan-100 rounded-lg flex items-center justify-center">
-                        <Search className="w-4 h-4 text-cyan-600" />
-                      </div>
-                      <span className="text-gray-700 font-medium flex-1">Find Similar Images</span>
-                      <div className="w-3 h-3 bg-emerald-400 rounded-full"></div>
-                    </div>
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 1.8 }}
+                  whileHover={{ scale: 1.1 }}
+                  animate={{ 
+                    y: [0, -10, 0],
+                    rotateZ: [0, -2, 0]
+                  }}
+                  transition={{ 
+                    y: { duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 },
+                    rotateZ: { duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }
+                  }}
+                  className="absolute -bottom-4 -left-6 bg-gradient-to-r from-blue-500 to-blue-400 text-white px-4 py-3 rounded-2xl text-sm font-bold shadow-2xl border border-blue-300/30"
+                  style={{
+                    boxShadow: '0 20px 40px rgba(59,130,246,0.3), 0 0 30px rgba(59,130,246,0.2)'
+                  }}
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg">🚀</span>
+                    <span>Fast</span>
                   </div>
-                </div>
+                </motion.div>
 
-                {/* Friendly Floating Badges */}
-                <div className="absolute -top-4 -right-4 bg-emerald-500 text-white px-3 py-2 rounded-full text-sm font-medium shadow-lg">
-                  ✓ Secure
-                </div>
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 2.0 }}
+                  whileHover={{ scale: 1.1 }}
+                  animate={{ 
+                    y: [0, -6, 0],
+                    rotateZ: [0, 1, 0]
+                  }}
+                  transition={{ 
+                    y: { duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 },
+                    rotateZ: { duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }
+                  }}
+                  className="absolute top-1/4 -left-8 bg-gradient-to-r from-purple-500 to-purple-400 text-white px-4 py-3 rounded-2xl text-sm font-bold shadow-2xl border border-purple-300/30"
+                  style={{
+                    boxShadow: '0 20px 40px rgba(139,92,246,0.3), 0 0 30px rgba(139,92,246,0.2)'
+                  }}
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg">🛡️</span>
+                    <span>Protected</span>
+                  </div>
+                </motion.div>
 
-                <div className="absolute -bottom-3 -left-4 bg-blue-500 text-white px-3 py-2 rounded-full text-sm font-medium shadow-lg">
-                  🚀 Fast
-                </div>
-
-                <div className="absolute top-1/3 -left-6 bg-purple-500 text-white px-3 py-2 rounded-full text-sm font-medium shadow-lg">
-                  🛡️ Protected
-                </div>
-
-                {/* Subtle Background Pattern */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-3xl -z-10"></div>
+                {/* Animated Background Gradient */}
+                <motion.div 
+                  animate={{
+                    background: [
+                      'linear-gradient(135deg, rgba(59,130,246,0.1), rgba(139,92,246,0.1))',
+                      'linear-gradient(135deg, rgba(139,92,246,0.1), rgba(16,185,129,0.1))',
+                      'linear-gradient(135deg, rgba(16,185,129,0.1), rgba(59,130,246,0.1))'
+                    ]
+                  }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute inset-0 rounded-2xl -z-10"
+                ></motion.div>
               </div>
             </div>
           </div>
