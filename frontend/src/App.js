@@ -204,94 +204,94 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Right Column - Integrated Features Illustration */}
+            {/* Right Column - Clean Simple Illustration */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               className="relative hidden xl:block py-8"
             >
-              <div className="relative max-w-md mx-auto">
-                {/* Main Performance Card */}
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-xl flex items-center justify-center">
-                      <Gauge className="w-6 h-6 text-white" />
+              <div className="relative max-w-sm mx-auto">
+                {/* Main Clean Dashboard */}
+                <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
+                  {/* Header */}
+                  <div className="flex items-center justify-between mb-8">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+                        <Gauge className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-white font-semibold">WebOS Toolkit</h3>
+                        <p className="text-blue-300 text-xs">Active</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-white font-bold text-lg">Performance Monitor</h3>
-                      <p className="text-blue-300 text-sm">Real-time optimization</p>
-                    </div>
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                   </div>
                   
-                  {/* Mock Performance Stats */}
+                  {/* Simple Feature Cards */}
                   <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-300 text-sm">Memory Usage</span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-20 h-2 bg-gray-700 rounded-full overflow-hidden">
-                          <div className="w-1/3 h-full bg-gradient-to-r from-green-400 to-blue-500"></div>
+                    <motion.div 
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.8 }}
+                      className="flex items-center gap-3 p-3 bg-blue-500/20 rounded-xl"
+                    >
+                      <Gauge className="w-4 h-4 text-blue-300" />
+                      <div className="flex-1">
+                        <div className="text-white text-sm font-medium">Performance Boost</div>
+                        <div className="w-full h-1.5 bg-gray-700 rounded-full mt-1">
+                          <div className="w-3/4 h-full bg-gradient-to-r from-blue-400 to-blue-500 rounded-full"></div>
                         </div>
-                        <span className="text-green-400 font-medium text-sm">32%</span>
                       </div>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-300 text-sm">CPU Load</span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-20 h-2 bg-gray-700 rounded-full overflow-hidden">
-                          <div className="w-1/2 h-full bg-gradient-to-r from-yellow-400 to-orange-500"></div>
+                    </motion.div>
+
+                    <motion.div 
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 1 }}
+                      className="flex items-center gap-3 p-3 bg-purple-500/20 rounded-xl"
+                    >
+                      <ChartLine className="w-4 h-4 text-purple-300" />
+                      <div className="flex-1">
+                        <div className="text-white text-sm font-medium">Smart Analytics</div>
+                        <div className="w-full h-1.5 bg-gray-700 rounded-full mt-1">
+                          <div className="w-5/6 h-full bg-gradient-to-r from-purple-400 to-purple-500 rounded-full"></div>
                         </div>
-                        <span className="text-yellow-400 font-medium text-sm">48%</span>
                       </div>
-                    </div>
+                    </motion.div>
+
+                    <motion.div 
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 1.2 }}
+                      className="flex items-center gap-3 p-3 bg-cyan-500/20 rounded-xl"
+                    >
+                      <LayoutGrid className="w-4 h-4 text-cyan-300" />
+                      <div className="flex-1">
+                        <div className="text-white text-sm font-medium">Tab Management</div>
+                        <div className="w-full h-1.5 bg-gray-700 rounded-full mt-1">
+                          <div className="w-2/3 h-full bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-full"></div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+
+                  {/* Bottom Stats */}
+                  <div className="mt-6 pt-6 border-t border-white/10">
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-300 text-sm">Active Tabs</span>
-                      <span className="text-blue-400 font-bold text-sm">12</span>
+                      <span className="text-gray-300 text-sm">Browser Speed</span>
+                      <span className="text-green-400 font-semibold text-sm">+47% faster</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Feature Pills - Integrated as Floating Cards */}
+                {/* Single Clean Floating Element */}
                 <motion.div
                   animate={{ y: [-8, 8, -8] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -top-4 -right-6 bg-blue-500/90 backdrop-blur-sm rounded-xl px-4 py-2 border border-blue-400/50 shadow-xl"
+                  className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center shadow-xl"
                 >
-                  <div className="flex items-center gap-2">
-                    <Gauge className="w-4 h-4 text-white" />
-                    <span className="text-white font-medium text-sm">Performance Boost</span>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  animate={{ y: [8, -8, 8] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute top-1/2 -left-6 bg-purple-500/90 backdrop-blur-sm rounded-xl px-4 py-2 border border-purple-400/50 shadow-xl"
-                >
-                  <div className="flex items-center gap-2">
-                    <ChartLine className="w-4 h-4 text-white" />
-                    <span className="text-white font-medium text-sm">Smart Analytics</span>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  animate={{ y: [-6, 6, -6] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                  className="absolute -bottom-4 -left-4 bg-cyan-500/90 backdrop-blur-sm rounded-xl px-4 py-2 border border-cyan-400/50 shadow-xl"
-                >
-                  <div className="flex items-center gap-2">
-                    <LayoutGrid className="w-4 h-4 text-white" />
-                    <span className="text-white font-medium text-sm">Tab Management</span>
-                  </div>
-                </motion.div>
-
-                {/* Additional Floating Element */}
-                <motion.div
-                  animate={{ y: [10, -10, 10] }}
-                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                  className="absolute top-8 -right-2 w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center shadow-xl"
-                >
-                  <Search className="w-6 h-6 text-white" />
+                  <Search className="w-5 h-5 text-white" />
                 </motion.div>
               </div>
             </motion.div>
