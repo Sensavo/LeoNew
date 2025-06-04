@@ -105,7 +105,7 @@
 user_problem_statement: "Redesign hero illustration to make it animated, contemporary professional and friendly. Extension features: customize headers, edit websites, block ads, simulate in HTML and find similar images."
 
 frontend:
-  - task: "Refined Minimalistic Glass Hero"
+  - task: "Clean White Glass Hero with Preloader"
     implemented: true
     working: true
     file: "/app/frontend/src/App.js"
@@ -122,9 +122,12 @@ frontend:
       - working: false
         agent: "main"
         comment: "Third attempt had good glassmorphism but chart was too detailed and had button-like features"
+      - working: false
+        agent: "main"
+        comment: "Fourth attempt was refined but still had charts and small floating elements"
       - working: true
         agent: "main"
-        comment: "Final refined version: smaller glass container, simplified chart (48px height, no labels), removed button-like features, simple floating icons (✓, search, ⚡) with only up/down movement, no glass effects on floating elements, reduced overall size and complexity."
+        comment: "Final white background version: white glassmorphism container (bg-white/90), removed all charts, added single animated preloader (rotating border), big static numbers (247 ads blocked, +73% speed optimization), bigger floating icons (w-12 h-12) with glass effect, clean and minimal."
 
 metadata:
   created_by: "main_agent"
