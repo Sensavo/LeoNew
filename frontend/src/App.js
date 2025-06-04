@@ -490,7 +490,7 @@ const Home = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 1, delay: 0.5 }}
-                  className="relative bg-white/5 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-white/10"
+                  className="relative bg-white/5 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-white/10 z-10"
                   style={{
                     background: 'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(59,130,246,0.05))',
                     backdropFilter: 'blur(20px)',
