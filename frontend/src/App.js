@@ -292,7 +292,7 @@ const Home = () => {
             <div className="relative hidden xl:block py-20 flex items-center">
               <div className="relative max-w-xs mx-auto mt-16">
                 
-                {/* Additional Floating Elements */}
+                {/* Additional Floating Elements - Behind Glass */}
                 <motion.div
                   animate={{
                     x: [0, 15, 0],
@@ -300,13 +300,13 @@ const Home = () => {
                     rotate: [0, 180, 360]
                   }}
                   transition={{
-                    duration: 8,
+                    duration: 6,
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="absolute -top-8 left-1/4 w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-60"
+                  className="absolute -top-8 left-1/4 w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-90 z-0"
                   style={{
-                    boxShadow: '0 0 20px rgba(6,182,212,0.6)'
+                    boxShadow: '0 0 30px rgba(6,182,212,0.8)'
                   }}
                 ></motion.div>
 
@@ -317,14 +317,14 @@ const Home = () => {
                     scale: [1, 1.2, 1]
                   }}
                   transition={{
-                    duration: 6,
+                    duration: 4,
                     repeat: Infinity,
                     ease: "easeInOut",
                     delay: 1
                   }}
-                  className="absolute top-1/3 -right-6 w-3 h-3 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full opacity-70"
+                  className="absolute top-1/3 -right-6 w-5 h-5 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full opacity-85 z-0"
                   style={{
-                    boxShadow: '0 0 15px rgba(236,72,153,0.5)'
+                    boxShadow: '0 0 25px rgba(236,72,153,0.7)'
                   }}
                 ></motion.div>
 
@@ -335,14 +335,14 @@ const Home = () => {
                     rotate: [0, -90, 0]
                   }}
                   transition={{
-                    duration: 7,
+                    duration: 5,
                     repeat: Infinity,
                     ease: "easeInOut",
                     delay: 2
                   }}
-                  className="absolute bottom-1/4 -left-4 w-2 h-6 bg-gradient-to-b from-emerald-400 to-green-500 rounded-full opacity-50"
+                  className="absolute bottom-1/4 -left-4 w-4 h-8 bg-gradient-to-b from-emerald-400 to-green-500 rounded-full opacity-80 z-0"
                   style={{
-                    boxShadow: '0 0 12px rgba(16,185,129,0.4)'
+                    boxShadow: '0 0 20px rgba(16,185,129,0.6)'
                   }}
                 ></motion.div>
 
@@ -353,18 +353,18 @@ const Home = () => {
                     scale: [1, 0.8, 1.1, 1]
                   }}
                   transition={{
-                    duration: 5,
+                    duration: 4,
                     repeat: Infinity,
                     ease: "easeInOut",
                     delay: 0.5
                   }}
-                  className="absolute top-2/3 right-1/4 w-5 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full opacity-60"
+                  className="absolute top-2/3 right-1/4 w-7 h-4 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full opacity-85 z-0"
                   style={{
-                    boxShadow: '0 0 18px rgba(251,191,36,0.5)'
+                    boxShadow: '0 0 25px rgba(251,191,36,0.7)'
                   }}
                 ></motion.div>
 
-                {/* New Floating Icon Bubbles */}
+                {/* New Floating Icon Bubbles - Behind Glass */}
                 <motion.div
                   animate={{
                     x: [0, 20, 0],
@@ -372,17 +372,17 @@ const Home = () => {
                     rotate: [0, 360, 0]
                   }}
                   transition={{
-                    duration: 10,
+                    duration: 7,
                     repeat: Infinity,
                     ease: "easeInOut",
                     delay: 3
                   }}
-                  className="absolute -top-2 right-1/3 w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center opacity-80"
+                  className="absolute -top-2 right-1/3 w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center opacity-90 z-0"
                   style={{
-                    boxShadow: '0 0 25px rgba(59,130,246,0.4)'
+                    boxShadow: '0 0 35px rgba(59,130,246,0.6)'
                   }}
                 >
-                  <span className="text-white text-xs">⚡</span>
+                  <span className="text-white text-sm">⚡</span>
                 </motion.div>
 
                 <motion.div
@@ -392,17 +392,17 @@ const Home = () => {
                     scale: [1, 1.3, 1]
                   }}
                   transition={{
-                    duration: 9,
+                    duration: 6,
                     repeat: Infinity,
                     ease: "easeInOut",
                     delay: 1.5
                   }}
-                  className="absolute top-1/2 -left-2 w-5 h-5 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center opacity-75"
+                  className="absolute top-1/2 -left-2 w-7 h-7 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center opacity-85 z-0"
                   style={{
-                    boxShadow: '0 0 20px rgba(34,197,94,0.5)'
+                    boxShadow: '0 0 30px rgba(34,197,94,0.7)'
                   }}
                 >
-                  <Shield className="w-2.5 h-2.5 text-white" />
+                  <Shield className="w-4 h-4 text-white" />
                 </motion.div>
 
                 <motion.div
@@ -412,17 +412,17 @@ const Home = () => {
                     rotate: [0, -180, 0]
                   }}
                   transition={{
-                    duration: 11,
+                    duration: 8,
                     repeat: Infinity,
                     ease: "easeInOut",
                     delay: 4
                   }}
-                  className="absolute bottom-1/3 right-0 w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center opacity-70"
+                  className="absolute bottom-1/3 right-0 w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center opacity-85 z-0"
                   style={{
-                    boxShadow: '0 0 15px rgba(168,85,247,0.6)'
+                    boxShadow: '0 0 25px rgba(168,85,247,0.8)'
                   }}
                 >
-                  <span className="text-white text-xs">🔒</span>
+                  <span className="text-white text-sm">🔒</span>
                 </motion.div>
 
                 <motion.div
@@ -432,17 +432,17 @@ const Home = () => {
                     scale: [1, 0.9, 1.2, 1]
                   }}
                   transition={{
-                    duration: 8.5,
+                    duration: 6,
                     repeat: Infinity,
                     ease: "easeInOut",
                     delay: 2.5
                   }}
-                  className="absolute top-1/4 right-1/2 w-3 h-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center opacity-65"
+                  className="absolute top-1/4 right-1/2 w-5 h-5 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center opacity-90 z-0"
                   style={{
-                    boxShadow: '0 0 12px rgba(239,68,68,0.5)'
+                    boxShadow: '0 0 20px rgba(239,68,68,0.7)'
                   }}
                 >
-                  <span className="text-white text-xs">🚫</span>
+                  <span className="text-white text-sm">🚫</span>
                 </motion.div>
 
                 <motion.div
@@ -452,17 +452,17 @@ const Home = () => {
                     rotate: [0, 270, 360]
                   }}
                   transition={{
-                    duration: 12,
+                    duration: 9,
                     repeat: Infinity,
                     ease: "easeInOut",
                     delay: 5
                   }}
-                  className="absolute bottom-1/2 -left-1 w-4 h-4 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-full flex items-center justify-center opacity-80"
+                  className="absolute bottom-1/2 -left-1 w-6 h-6 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-full flex items-center justify-center opacity-90 z-0"
                   style={{
-                    boxShadow: '0 0 18px rgba(99,102,241,0.4)'
+                    boxShadow: '0 0 28px rgba(99,102,241,0.6)'
                   }}
                 >
-                  <Gauge className="w-2 h-2 text-white" />
+                  <Gauge className="w-3 h-3 text-white" />
                 </motion.div>
 
                 <motion.div
@@ -472,17 +472,17 @@ const Home = () => {
                     scale: [1, 1.1, 0.9, 1]
                   }}
                   transition={{
-                    duration: 9.5,
+                    duration: 7,
                     repeat: Infinity,
                     ease: "easeInOut",
                     delay: 6
                   }}
-                  className="absolute top-3/4 right-2/3 w-5 h-5 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full flex items-center justify-center opacity-70"
+                  className="absolute top-3/4 right-2/3 w-7 h-7 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full flex items-center justify-center opacity-85 z-0"
                   style={{
-                    boxShadow: '0 0 16px rgba(20,184,166,0.5)'
+                    boxShadow: '0 0 26px rgba(20,184,166,0.7)'
                   }}
                 >
-                  <ChartLine className="w-2.5 h-2.5 text-white" />
+                  <ChartLine className="w-4 h-4 text-white" />
                 </motion.div>
                 
                 {/* Main Card Container - Enhanced Glass Effect */}
