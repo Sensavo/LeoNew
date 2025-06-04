@@ -393,15 +393,15 @@ const Home = () => {
                     </div>
                   </motion.div>
 
-                  {/* Compact Results Grid - Higher Contrast */}
+                  {/* Compact Results Grid - White Tiles */}
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.9 }}
                     className="grid grid-cols-2 gap-3 mb-4"
                   >
-                    {/* Ads Blocked - More White */}
-                    <div className="bg-white/80 backdrop-blur-md rounded-xl p-3 border border-white/40 shadow-lg">
+                    {/* Ads Blocked - White */}
+                    <div className="bg-white backdrop-blur-md rounded-xl p-3 border border-gray-200 shadow-lg">
                       <div className="text-center">
                         <motion.div 
                           initial={{ scale: 0 }}
@@ -423,8 +423,8 @@ const Home = () => {
                       </div>
                     </div>
                     
-                    {/* Speed Boost - More White */}
-                    <div className="bg-white/80 backdrop-blur-md rounded-xl p-3 border border-white/40 shadow-lg">
+                    {/* Speed Boost - White */}
+                    <div className="bg-white backdrop-blur-md rounded-xl p-3 border border-gray-200 shadow-lg">
                       <div className="text-center">
                         <motion.div 
                           initial={{ scale: 0 }}
