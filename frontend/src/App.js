@@ -98,15 +98,15 @@ const Home = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
           <div className="grid xl:grid-cols-2 gap-16 xl:gap-12 items-center min-h-screen">
             
-            {/* Left Column - Clean Content */}
+            {/* Left Column - Moved Higher */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-left xl:text-left lg:text-center space-y-8 py-8 xl:max-w-none lg:max-w-4xl lg:mx-auto"
+              className="text-left xl:text-left lg:text-center space-y-8 py-4 xl:max-w-none lg:max-w-4xl lg:mx-auto"
             >
-              {/* Logo with Gradient */}
-              <div className="flex items-center gap-4 xl:justify-start lg:justify-center">
+              {/* Logo with Gradient - Moved Higher */}
+              <div className="flex items-center gap-4 xl:justify-start lg:justify-center pt-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 via-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
@@ -132,7 +132,7 @@ const Home = () => {
               </div>
 
               {/* Privacy Checkbox & Chrome Store Button */}
-              <div className="space-y-4">
+              <div className="space-y-5">
                 {/* Privacy Checkbox - Simple & Clean */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -166,7 +166,7 @@ const Home = () => {
                   </div>
                 </motion.div>
 
-                {/* Chrome Store Button - Prominent */}
+                {/* Redesigned Chrome Store Button */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -182,29 +182,31 @@ const Home = () => {
                         handleAcceptAndContinue();
                       }
                     }}
-                    className="group relative inline-flex items-center gap-4 px-8 py-5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-blue-500/30"
+                    className="group relative overflow-hidden bg-white hover:bg-gray-50 rounded-2xl px-6 py-4 shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-white/20 border border-gray-200/20"
                   >
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-4">
                       <img 
                         src="https://developer.chrome.com/static/docs/webstore/branding/image/HRs9MPufa1J1h5glNhut.png"
                         alt="Chrome Web Store"
-                        className="h-10 w-auto"
+                        className="h-12 w-auto"
                       />
                       <div className="text-left">
-                        <div className="text-xs font-medium text-blue-100">Get it from</div>
-                        <div className="text-lg font-bold text-white">Chrome Web Store</div>
+                        <div className="text-xs font-medium text-gray-600 uppercase tracking-wider">Get Extension</div>
+                        <div className="text-lg font-bold text-gray-900">Chrome Web Store</div>
+                      </div>
+                      <div className="bg-blue-600 text-white p-2 rounded-full group-hover:bg-blue-700 transition-colors duration-300">
+                        <ExternalLink className="w-4 h-4" />
                       </div>
                     </div>
-                    <ExternalLink className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform duration-200" />
                     
-                    {/* Shine effect */}
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 group-hover:animate-pulse"></div>
+                    {/* Animated background effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </button>
                 </motion.div>
               </div>
             </motion.div>
 
-            {/* Right Column - Redesigned Hero Illustration */}
+            {/* Right Column - Another Illustration Design */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -212,110 +214,95 @@ const Home = () => {
               className="relative hidden xl:block py-8"
             >
               <div className="relative max-w-sm mx-auto">
-                {/* Main Browser Window Interface */}
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl">
-                  {/* Browser Header */}
-                  <div className="flex items-center gap-2 mb-6 pb-4 border-b border-white/10">
+                {/* Code Editor Style Interface */}
+                <div className="bg-gray-900/90 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl overflow-hidden">
+                  {/* Editor Header */}
+                  <div className="bg-gray-800/80 px-4 py-3 flex items-center gap-3 border-b border-gray-700/50">
                     <div className="flex gap-1.5">
                       <div className="w-3 h-3 bg-red-400 rounded-full"></div>
                       <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
                       <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                     </div>
-                    <div className="flex-1 bg-white/5 rounded-lg px-3 py-1.5 ml-3">
-                      <div className="text-gray-400 text-xs flex items-center gap-2">
-                        <Search className="w-3 h-3" />
-                        <span>chrome://extensions</span>
-                      </div>
-                    </div>
+                    <div className="text-gray-400 text-xs font-mono">webos-toolkit.js</div>
                   </div>
                   
-                  {/* Extension Card */}
-                  <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl p-4 border border-blue-400/30">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                        <Shield className="w-6 h-6 text-white" />
+                  {/* Code Content */}
+                  <div className="p-6 font-mono text-sm">
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.8, delay: 1 }}
+                      className="space-y-3"
+                    >
+                      <div className="flex items-center gap-2">
+                        <span className="text-gray-500">1</span>
+                        <span className="text-purple-400">const</span>
+                        <span className="text-blue-300">toolkit</span>
+                        <span className="text-gray-300">=</span>
+                        <span className="text-green-300">{`{`}</span>
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-white font-semibold text-sm">WebOS Toolkit</h3>
-                        <p className="text-blue-300 text-xs">Browser Extension</p>
-                      </div>
-                      <div className="text-green-400 text-xs font-medium">ON</div>
-                    </div>
-                    
-                    {/* Quick Stats */}
-                    <div className="grid grid-cols-3 gap-3">
-                      <motion.div 
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, delay: 1 }}
-                        className="text-center p-2 bg-white/5 rounded-lg"
-                      >
-                        <Gauge className="w-4 h-4 text-blue-400 mx-auto mb-1" />
-                        <div className="text-xs text-blue-300">Speed</div>
-                        <div className="text-white font-semibold text-sm">+47%</div>
-                      </motion.div>
                       
-                      <motion.div 
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, delay: 1.2 }}
-                        className="text-center p-2 bg-white/5 rounded-lg"
-                      >
-                        <ChartLine className="w-4 h-4 text-purple-400 mx-auto mb-1" />
-                        <div className="text-xs text-purple-300">Analytics</div>
-                        <div className="text-white font-semibold text-sm">Real-time</div>
-                      </motion.div>
-                      
-                      <motion.div 
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, delay: 1.4 }}
-                        className="text-center p-2 bg-white/5 rounded-lg"
-                      >
-                        <LayoutGrid className="w-4 h-4 text-cyan-400 mx-auto mb-1" />
-                        <div className="text-xs text-cyan-300">Tabs</div>
-                        <div className="text-white font-semibold text-sm">12</div>
-                      </motion.div>
-                    </div>
-                  </div>
-
-                  {/* Performance Indicator */}
-                  <div className="mt-4 flex items-center justify-between">
-                    <span className="text-gray-300 text-sm">Performance</span>
-                    <div className="flex items-center gap-2">
-                      <div className="w-16 h-2 bg-gray-700 rounded-full overflow-hidden">
-                        <motion.div 
-                          initial={{ width: 0 }}
-                          animate={{ width: "85%" }}
-                          transition={{ duration: 2, delay: 1.6 }}
-                          className="h-full bg-gradient-to-r from-green-400 to-blue-500 rounded-full"
-                        ></motion.div>
+                      <div className="flex items-center gap-2 ml-6">
+                        <span className="text-gray-500">2</span>
+                        <span className="text-yellow-300">performance:</span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-green-300">'+47%'</span>
+                          <div className="w-12 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+                        </div>
                       </div>
-                      <span className="text-green-400 font-medium text-sm">Excellent</span>
-                    </div>
+                      
+                      <div className="flex items-center gap-2 ml-6">
+                        <span className="text-gray-500">3</span>
+                        <span className="text-yellow-300">analytics:</span>
+                        <span className="text-green-300">'real-time'</span>
+                        <ChartLine className="w-4 h-4 text-purple-400 ml-2" />
+                      </div>
+                      
+                      <div className="flex items-center gap-2 ml-6">
+                        <span className="text-gray-500">4</span>
+                        <span className="text-yellow-300">tabs:</span>
+                        <span className="text-cyan-300">12</span>
+                        <LayoutGrid className="w-4 h-4 text-cyan-400 ml-2" />
+                      </div>
+                      
+                      <div className="flex items-center gap-2">
+                        <span className="text-gray-500">5</span>
+                        <span className="text-green-300">{`}`}</span>
+                      </div>
+                      
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 2 }}
+                        className="mt-4 p-3 bg-green-500/20 border border-green-400/30 rounded-lg"
+                      >
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                          <span className="text-green-300 text-xs">✓ Extension Running</span>
+                        </div>
+                      </motion.div>
+                    </motion.div>
                   </div>
                 </div>
 
-                {/* Floating Notification */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20, scale: 0.8 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 2 }}
-                  className="absolute -top-2 -left-4 bg-green-500 text-white px-3 py-2 rounded-lg text-xs font-medium shadow-xl"
-                >
-                  ✓ Extension Active
-                </motion.div>
-
-                {/* Speed Boost Indicator */}
+                {/* Floating Performance Badge */}
                 <motion.div
                   animate={{ y: [-6, 6, -6] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                  className="absolute -bottom-4 -left-2 w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center shadow-xl border-2 border-white/20"
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="absolute -top-3 -right-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl border border-white/20"
                 >
-                  <div className="text-center">
-                    <div className="text-white text-xs font-bold">+47%</div>
-                    <div className="text-cyan-200 text-xs">faster</div>
-                  </div>
+                  <Gauge className="w-3 h-3 inline mr-1" />
+                  BOOST +47%
+                </motion.div>
+
+                {/* Floating Analytics Badge */}
+                <motion.div
+                  animate={{ x: [-4, 4, -4] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+                  className="absolute -bottom-2 -left-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-2 rounded-full text-xs font-bold shadow-xl"
+                >
+                  <Search className="w-3 h-3 inline mr-1" />
+                  ANALYZE
                 </motion.div>
               </div>
             </motion.div>
