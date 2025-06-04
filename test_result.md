@@ -105,7 +105,7 @@
 user_problem_statement: "Redesign hero illustration to make it animated, contemporary professional and friendly. Extension features: customize headers, edit websites, block ads, simulate in HTML and find similar images."
 
 frontend:
-  - task: "Minimalistic Glass Hero with Animated Chart"
+  - task: "Refined Minimalistic Glass Hero"
     implemented: true
     working: true
     file: "/app/frontend/src/App.js"
@@ -119,9 +119,12 @@ frontend:
       - working: false
         agent: "main"
         comment: "Second attempt was clean but still too complex with browser mockup and multiple panels"
+      - working: false
+        agent: "main"
+        comment: "Third attempt had good glassmorphism but chart was too detailed and had button-like features"
       - working: true
         agent: "main"
-        comment: "Final minimalistic glass design with: glassmorphism container, animated performance chart (before/after bars), key metrics (247 ads blocked, +73% faster), most important features list with status indicators, minimal floating glass badges (LIVE, Find Similar), subtle particles. Focus on essential information only."
+        comment: "Final refined version: smaller glass container, simplified chart (48px height, no labels), removed button-like features, simple floating icons (✓, search, ⚡) with only up/down movement, no glass effects on floating elements, reduced overall size and complexity."
 
 metadata:
   created_by: "main_agent"
