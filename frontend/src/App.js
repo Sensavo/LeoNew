@@ -292,25 +292,31 @@ const Home = () => {
             <div className="relative hidden xl:block py-24 flex items-center">
               <div className="relative max-w-sm mx-auto mt-12">
                 
-                {/* Colorful Progress UNDER Glass - Behind and Blurred */}
+                {/* Circular Rotating Preloader with Scaling */}
                 <motion.div
-                  initial={{ opacity: 0, scaleX: 0 }}
-                  animate={{
-                    opacity: [0, 0.4, 0.8, 0.6, 0.9, 0.5, 0.7, 0.8],
-                    scaleX: [0, 0.2, 1, 0.6, 0.9, 0.3, 0.8, 1]
+                  initial={{ opacity: 0 }}
+                  animate={{ 
+                    opacity: 1,
+                    scale: [0.8, 1.1, 0.8],
                   }}
                   transition={{
-                    duration: 6,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 2
+                    opacity: { duration: 0.5, delay: 1 },
+                    scale: { 
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }
                   }}
-                  className="absolute bottom-8 left-6 right-6 h-2 rounded-full z-5"
-                  style={{
-                    background: 'linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7, #fab1a0)',
-                    transformOrigin: 'left'
-                  }}
-                />
+                  className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-5"
+                >
+                  <div 
+                    className="w-8 h-8 rounded-full"
+                    style={{
+                      background: 'conic-gradient(from 0deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7, #fab1a0, #ff6b6b)',
+                      animation: 'spin 2s linear infinite'
+                    }}
+                  />
+                </motion.div>
                 
                 {/* Main Card Container - Enhanced Glass Effect */}
                 <motion.div 
