@@ -292,6 +292,24 @@ const Home = () => {
             <div className="relative hidden xl:block py-24 flex items-center">
               <div className="relative max-w-sm mx-auto mt-12">
                 
+                {/* Colorful Progress UNDER Glass - Behind and Blurred */}
+                <motion.div
+                  animate={{
+                    scaleX: [0.2, 1, 0.6, 0.9, 0.3, 0.8, 1],
+                    opacity: [0.4, 0.8, 0.6, 0.9, 0.5, 0.7, 0.8]
+                  }}
+                  transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute bottom-8 left-6 right-6 h-2 rounded-full z-5"
+                  style={{
+                    background: 'linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7, #fab1a0)',
+                    transformOrigin: 'left'
+                  }}
+                />
+                
                 {/* Main Card Container - Enhanced Glass Effect */}
                 <motion.div 
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -380,7 +398,7 @@ const Home = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 1.1 }}
-                    className="space-y-1.5 mb-6"
+                    className="space-y-1.5"
                   >
                     <div className="flex items-center gap-2">
                       <div className="w-4 h-4 bg-blue-500/30 rounded-md flex items-center justify-center">
@@ -430,24 +448,6 @@ const Home = () => {
                       ></motion.div>
                     </div>
                   </motion.div>
-
-                  {/* Single Colorful Progress Under Glass */}
-                  <motion.div
-                    animate={{
-                      scaleX: [0.2, 1, 0.6, 0.9, 0.3, 0.8, 1],
-                      opacity: [0.4, 0.8, 0.6, 0.9, 0.5, 0.7, 0.8]
-                    }}
-                    transition={{
-                      duration: 6,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                    className="h-1.5 rounded-full"
-                    style={{
-                      background: 'linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7, #fab1a0)',
-                      transformOrigin: 'left'
-                    }}
-                  />
                 </motion.div>
 
                 {/* Minimalistic Floating Icons - All Same Size */}
