@@ -292,17 +292,17 @@ const Home = () => {
             <div className="relative hidden xl:block py-24 flex items-center">
               <div className="relative max-w-sm mx-auto mt-12">
                 
-                {/* Large Slow Circular Rotating Preloader in Center */}
+                {/* Small Transparent Slow Circular Rotating Preloader in Center */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ 
-                    opacity: 1,
-                    scale: [0.8, 1.1, 0.8],
+                    opacity: 0.3,
+                    scale: [0.7, 1.2, 0.7],
                   }}
                   transition={{
                     opacity: { duration: 0.5, delay: 1 },
                     scale: { 
-                      duration: 3,
+                      duration: 8,
                       repeat: Infinity,
                       ease: "easeInOut"
                     }
@@ -310,10 +310,10 @@ const Home = () => {
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-5"
                 >
                   <div 
-                    className="w-36 h-36 rounded-full"
+                    className="w-28 h-28 rounded-full opacity-40"
                     style={{
                       background: 'conic-gradient(from 0deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7, #fab1a0, #ff6b6b)',
-                      animation: 'spin 6s linear infinite'
+                      animation: 'spin 12s linear infinite'
                     }}
                   />
                 </motion.div>
