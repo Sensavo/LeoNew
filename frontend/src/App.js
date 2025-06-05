@@ -290,173 +290,76 @@ const Home = () => {
 
             {/* Right Column - Clean Contemporary Hero Illustration */}
             <div className="relative hidden xl:block py-24 flex items-center">
-              <div className="relative max-w-xs mx-auto mt-20">
+              <div className="relative max-w-sm mx-auto mt-20">
                 
-                {/* Success Metrics Floating Elements */}
+                {/* Abstract Colorful Gradient Shapes - Under Glass */}
                 <motion.div
                   animate={{
-                    y: [0, -8, 0],
-                    x: [0, 2, 0]
+                    rotate: [0, 180, 360],
+                    scale: [1, 1.1, 1]
                   }}
                   transition={{
-                    duration: 6,
+                    duration: 20,
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="absolute -top-6 -right-8 bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-xl border border-gray-100/50 z-20"
+                  className="absolute -top-4 -left-6 w-24 h-24 rounded-full opacity-30 z-0"
                   style={{
-                    boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
+                    background: 'linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1)'
                   }}
-                >
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
-                      <ChartLine className="w-3 h-3 text-green-600" />
-                    </div>
-                    <div className="text-xs">
-                      <div className="text-green-600 font-bold">+127%</div>
-                      <div className="text-gray-500">Growth</div>
-                    </div>
-                  </div>
-                </motion.div>
+                ></motion.div>
 
                 <motion.div
                   animate={{
-                    y: [0, -6, 0],
-                    x: [0, -3, 0]
+                    rotate: [360, 180, 0],
+                    scale: [1, 0.8, 1.2, 1]
                   }}
                   transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 1
-                  }}
-                  className="absolute top-1/4 -left-8 bg-white/95 backdrop-blur-sm rounded-xl p-2.5 shadow-xl border border-gray-100/50 z-20"
-                  style={{
-                    boxShadow: '0 8px 25px rgba(0,0,0,0.08)'
-                  }}
-                >
-                  <div className="flex items-center gap-1.5">
-                    <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center">
-                      <span className="text-blue-600 text-xs">👥</span>
-                    </div>
-                    <div className="text-xs">
-                      <div className="text-blue-600 font-bold">8.5K</div>
-                      <div className="text-gray-500">Users</div>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  animate={{
-                    y: [0, -10, 0],
-                    rotate: [0, 1, 0]
-                  }}
-                  transition={{
-                    duration: 7,
+                    duration: 15,
                     repeat: Infinity,
                     ease: "easeInOut",
                     delay: 2
                   }}
-                  className="absolute bottom-1/3 right-2 bg-white/95 backdrop-blur-sm rounded-xl p-2.5 shadow-xl border border-gray-100/50 z-20"
+                  className="absolute top-1/2 -right-8 w-20 h-32 rounded-full opacity-25 z-0"
                   style={{
-                    boxShadow: '0 8px 25px rgba(0,0,0,0.08)'
+                    background: 'linear-gradient(45deg, #a8edea, #fed6e3, #fad0c4)'
                   }}
-                >
-                  <div className="flex items-center gap-1.5">
-                    <div className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center">
-                      <span className="text-purple-600 text-xs">⭐</span>
-                    </div>
-                    <div className="text-xs">
-                      <div className="text-purple-600 font-bold">4.9</div>
-                      <div className="text-gray-500">Rating</div>
-                    </div>
-                  </div>
-                </motion.div>
+                ></motion.div>
 
                 <motion.div
                   animate={{
-                    y: [0, -5, 0],
-                    scale: [1, 1.02, 1]
+                    rotate: [0, -90, 180, 270, 360],
+                    x: [0, 10, -5, 0],
+                    y: [0, -8, 5, 0]
                   }}
                   transition={{
-                    duration: 4,
+                    duration: 25,
                     repeat: Infinity,
                     ease: "easeInOut",
-                    delay: 0.5
+                    delay: 5
                   }}
-                  className="absolute bottom-8 -left-6 bg-white/95 backdrop-blur-sm rounded-xl p-2.5 shadow-xl border border-gray-100/50 z-20"
+                  className="absolute bottom-0 left-1/4 w-28 h-16 rounded-full opacity-20 z-0"
                   style={{
-                    boxShadow: '0 8px 25px rgba(0,0,0,0.08)'
+                    background: 'linear-gradient(90deg, #667eea, #764ba2, #f093fb)'
                   }}
-                >
-                  <div className="flex items-center gap-1.5">
-                    <div className="w-5 h-5 bg-emerald-100 rounded-full flex items-center justify-center">
-                      <span className="text-emerald-600 text-xs">💰</span>
-                    </div>
-                    <div className="text-xs">
-                      <div className="text-emerald-600 font-bold">$24K</div>
-                      <div className="text-gray-500">Revenue</div>
-                    </div>
-                  </div>
-                </motion.div>
+                ></motion.div>
 
-                {/* Performance Indicators */}
                 <motion.div
                   animate={{
-                    y: [0, -4, 0],
-                    rotate: [0, -1, 0]
+                    scale: [1, 1.3, 0.9, 1],
+                    rotate: [0, 45, 90, 135, 180]
                   }}
                   transition={{
-                    duration: 8,
+                    duration: 18,
                     repeat: Infinity,
                     ease: "easeInOut",
                     delay: 3
                   }}
-                  className="absolute top-1/2 right-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full w-8 h-8 flex items-center justify-center shadow-lg z-15"
+                  className="absolute top-1/4 right-1/3 w-16 h-20 rounded-full opacity-35 z-0"
                   style={{
-                    boxShadow: '0 4px 20px rgba(59,130,246,0.3)'
+                    background: 'linear-gradient(120deg, #89f7fe, #66a6ff, #a8edea)'
                   }}
-                >
-                  <Gauge className="w-4 h-4 text-white" />
-                </motion.div>
-
-                <motion.div
-                  animate={{
-                    y: [0, -6, 0],
-                    x: [0, 1, 0]
-                  }}
-                  transition={{
-                    duration: 9,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 4
-                  }}
-                  className="absolute -top-2 left-1/3 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full w-6 h-6 flex items-center justify-center shadow-lg z-15"
-                  style={{
-                    boxShadow: '0 4px 15px rgba(16,185,129,0.3)'
-                  }}
-                >
-                  <span className="text-white text-xs">✓</span>
-                </motion.div>
-
-                <motion.div
-                  animate={{
-                    y: [0, -7, 0],
-                    rotate: [0, 2, 0]
-                  }}
-                  transition={{
-                    duration: 6.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 1.5
-                  }}
-                  className="absolute bottom-1/4 -left-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-7 h-7 flex items-center justify-center shadow-lg z-15"
-                  style={{
-                    boxShadow: '0 4px 18px rgba(168,85,247,0.3)'
-                  }}
-                >
-                  <span className="text-white text-sm">🚀</span>
-                </motion.div>
+                ></motion.div>
                 
                 {/* Main Card Container - Enhanced Glass Effect */}
                 <motion.div 
@@ -596,6 +499,68 @@ const Home = () => {
                       ></motion.div>
                     </div>
                   </motion.div>
+                </motion.div>
+
+                {/* 3 Big Colorful Bubbles on Top */}
+                <motion.div
+                  animate={{
+                    y: [0, -12, 0],
+                    rotate: [0, 5, 0]
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute -top-8 -right-10 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-30"
+                  style={{
+                    background: 'linear-gradient(135deg, #667eea, #764ba2)',
+                    boxShadow: '0 15px 40px rgba(102,126,234,0.4)'
+                  }}
+                >
+                  <span className="text-3xl">⚡</span>
+                </motion.div>
+
+                <motion.div
+                  animate={{
+                    y: [0, -15, 0],
+                    scale: [1, 1.05, 1]
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1
+                  }}
+                  className="absolute top-1/4 -left-10 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-30"
+                  style={{
+                    background: 'linear-gradient(135deg, #4ecdc4, #44a08d)',
+                    boxShadow: '0 15px 40px rgba(78,205,196,0.4)'
+                  }}
+                >
+                  <Shield className="w-7 h-7 text-white" />
+                </motion.div>
+
+                <motion.div
+                  animate={{
+                    y: [0, -10, 0],
+                    x: [0, 3, 0]
+                  }}
+                  transition={{
+                    duration: 4.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 2
+                  }}
+                  className="absolute bottom-1/4 right-4 w-15 h-15 rounded-full flex items-center justify-center shadow-2xl z-30"
+                  style={{
+                    background: 'linear-gradient(135deg, #ff6b6b, #ffa726)',
+                    boxShadow: '0 15px 40px rgba(255,107,107,0.4)',
+                    width: '60px',
+                    height: '60px'
+                  }}
+                >
+                  <span className="text-3xl">👁️</span>
                 </motion.div>
 
                 {/* Animated Background Gradient */}
