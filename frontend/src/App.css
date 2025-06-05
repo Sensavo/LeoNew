@@ -139,6 +139,16 @@ body {
   animation: float-gentle 4s ease-in-out infinite;
 }
 
+/* Smooth circular rotation for preloader */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* Modern hero grid layout with MacBook 11" support */
 .hero-grid {
   display: grid;
