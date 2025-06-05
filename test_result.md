@@ -136,7 +136,7 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Glass Effect & Preloader Fixed"
+    - "Replaced Horizontal Preloader with Circular Rotating Preloader"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
@@ -144,3 +144,5 @@ test_plan:
 agent_communication:
   - agent: "main"
     message: "Fixed glass effect with enhanced transparency and blur effects, simplified to single clean preloader bar under glass. All visual issues resolved."
+  - agent: "main"
+    message: "Replaced the non-seamless horizontal progress bar with a modern circular rotating preloader featuring conic-gradient colors, smooth rotation, and scaling animation. The new preloader is positioned at the bottom center of the glass container and provides a much more professional and seamless loading experience."
