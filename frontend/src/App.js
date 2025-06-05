@@ -297,11 +297,11 @@ const Home = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 1, delay: 0.5 }}
-                  className="relative bg-white/5 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-white/10 z-10"
+                  className="relative backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-white/20 z-10"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(59,130,246,0.05))',
-                    backdropFilter: 'blur(20px)',
-                    boxShadow: '0 25px 50px rgba(0,0,0,0.15), 0 0 60px rgba(59,130,246,0.1)'
+                    background: 'rgba(255, 255, 255, 0.08)',
+                    backdropFilter: 'blur(20px) saturate(180%)',
+                    boxShadow: '0 25px 50px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.15)'
                   }}
                 >
                   
@@ -380,7 +380,7 @@ const Home = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 1.1 }}
-                    className="space-y-1.5"
+                    className="space-y-1.5 mb-6"
                   >
                     <div className="flex items-center gap-2">
                       <div className="w-4 h-4 bg-blue-500/30 rounded-md flex items-center justify-center">
@@ -431,39 +431,21 @@ const Home = () => {
                     </div>
                   </motion.div>
 
-                  {/* Colorful Progress Under Glass - Fixed and Clean */}
+                  {/* Single Colorful Progress Under Glass */}
                   <motion.div
                     animate={{
-                      scaleX: [0.2, 1, 0.7, 1, 0.4, 0.9, 1],
-                      opacity: [0.3, 0.7, 0.5, 0.8, 0.4, 0.6, 0.7]
-                    }}
-                    transition={{
-                      duration: 8,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                    className="absolute bottom-2 left-3 right-3 h-1 rounded-full"
-                    style={{
-                      background: 'linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7, #fab1a0)',
-                      transformOrigin: 'left'
-                    }}
-                  />
-
-                  <motion.div
-                    animate={{
-                      scaleX: [0.6, 0.3, 1, 0.5, 0.8, 0.4, 0.9],
-                      opacity: [0.2, 0.6, 0.4, 0.7, 0.3, 0.5, 0.6]
+                      scaleX: [0.2, 1, 0.6, 0.9, 0.3, 0.8, 1],
+                      opacity: [0.4, 0.8, 0.6, 0.9, 0.5, 0.7, 0.8]
                     }}
                     transition={{
                       duration: 6,
                       repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: 1.5
+                      ease: "easeInOut"
                     }}
-                    className="absolute bottom-4 left-4 right-4 h-0.5 rounded-full"
+                    className="h-1.5 rounded-full"
                     style={{
-                      background: 'linear-gradient(90deg, #a8edea, #fed6e3, #667eea, #764ba2)',
-                      transformOrigin: 'center'
+                      background: 'linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7, #fab1a0)',
+                      transformOrigin: 'left'
                     }}
                   />
                 </motion.div>
