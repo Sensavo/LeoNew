@@ -294,14 +294,16 @@ const Home = () => {
                 
                 {/* Colorful Progress UNDER Glass - Behind and Blurred */}
                 <motion.div
+                  initial={{ opacity: 0, scaleX: 0 }}
                   animate={{
-                    scaleX: [0.2, 1, 0.6, 0.9, 0.3, 0.8, 1],
-                    opacity: [0.4, 0.8, 0.6, 0.9, 0.5, 0.7, 0.8]
+                    opacity: [0, 0.4, 0.8, 0.6, 0.9, 0.5, 0.7, 0.8],
+                    scaleX: [0, 0.2, 1, 0.6, 0.9, 0.3, 0.8, 1]
                   }}
                   transition={{
                     duration: 6,
                     repeat: Infinity,
-                    ease: "easeInOut"
+                    ease: "easeInOut",
+                    delay: 2
                   }}
                   className="absolute bottom-8 left-6 right-6 h-2 rounded-full z-5"
                   style={{
