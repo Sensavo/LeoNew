@@ -290,74 +290,41 @@ const Home = () => {
 
             {/* Right Column - Clean Contemporary Hero Illustration */}
             <div className="relative hidden xl:block py-24 flex items-center">
-              <div className="relative max-w-sm mx-auto mt-20">
+              <div className="relative max-w-sm mx-auto mt-12">
                 
-                {/* Abstract Colorful Gradient Shapes - Under Glass */}
+                {/* Colorful Progress Under Glass */}
                 <motion.div
                   animate={{
-                    rotate: [0, 180, 360],
-                    scale: [1, 1.1, 1]
+                    scaleX: [0.3, 1, 0.8, 1, 0.6, 1],
+                    opacity: [0.4, 0.8, 0.6, 0.9, 0.5, 0.8]
                   }}
                   transition={{
-                    duration: 20,
+                    duration: 8,
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="absolute -top-4 -left-6 w-24 h-24 rounded-full opacity-30 z-0"
+                  className="absolute bottom-2 left-2 right-2 h-1 rounded-full z-5"
                   style={{
-                    background: 'linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1)'
+                    background: 'linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7, #fab1a0)',
+                    transformOrigin: 'left'
                   }}
                 ></motion.div>
 
                 <motion.div
                   animate={{
-                    rotate: [360, 180, 0],
-                    scale: [1, 0.8, 1.2, 1]
+                    scaleX: [0.5, 0.2, 1, 0.4, 0.9, 0.7],
+                    opacity: [0.3, 0.7, 0.4, 0.8, 0.3, 0.6]
                   }}
                   transition={{
-                    duration: 15,
+                    duration: 6,
                     repeat: Infinity,
                     ease: "easeInOut",
-                    delay: 2
+                    delay: 1
                   }}
-                  className="absolute top-1/2 -right-8 w-20 h-32 rounded-full opacity-25 z-0"
+                  className="absolute bottom-4 left-4 right-4 h-0.5 rounded-full z-5"
                   style={{
-                    background: 'linear-gradient(45deg, #a8edea, #fed6e3, #fad0c4)'
-                  }}
-                ></motion.div>
-
-                <motion.div
-                  animate={{
-                    rotate: [0, -90, 180, 270, 360],
-                    x: [0, 10, -5, 0],
-                    y: [0, -8, 5, 0]
-                  }}
-                  transition={{
-                    duration: 25,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 5
-                  }}
-                  className="absolute bottom-0 left-1/4 w-28 h-16 rounded-full opacity-20 z-0"
-                  style={{
-                    background: 'linear-gradient(90deg, #667eea, #764ba2, #f093fb)'
-                  }}
-                ></motion.div>
-
-                <motion.div
-                  animate={{
-                    scale: [1, 1.3, 0.9, 1],
-                    rotate: [0, 45, 90, 135, 180]
-                  }}
-                  transition={{
-                    duration: 18,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 3
-                  }}
-                  className="absolute top-1/4 right-1/3 w-16 h-20 rounded-full opacity-35 z-0"
-                  style={{
-                    background: 'linear-gradient(120deg, #89f7fe, #66a6ff, #a8edea)'
+                    background: 'linear-gradient(90deg, #a8edea, #fed6e3, #667eea, #764ba2)',
+                    transformOrigin: 'center'
                   }}
                 ></motion.div>
                 
@@ -501,30 +468,28 @@ const Home = () => {
                   </motion.div>
                 </motion.div>
 
-                {/* 3 Big Colorful Bubbles on Top */}
+                {/* Minimalistic Floating Icons */}
                 <motion.div
                   animate={{
-                    y: [0, -12, 0],
-                    rotate: [0, 5, 0]
+                    y: [0, -8, 0]
                   }}
                   transition={{
                     duration: 4,
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="absolute -top-8 -right-10 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-30"
+                  className="absolute -top-6 -right-8 w-12 h-12 rounded-full flex items-center justify-center shadow-lg z-30"
                   style={{
                     background: 'linear-gradient(135deg, #667eea, #764ba2)',
-                    boxShadow: '0 15px 40px rgba(102,126,234,0.4)'
+                    boxShadow: '0 8px 25px rgba(102,126,234,0.3)'
                   }}
                 >
-                  <span className="text-3xl">⚡</span>
+                  <span className="text-2xl">⚡</span>
                 </motion.div>
 
                 <motion.div
                   animate={{
-                    y: [0, -15, 0],
-                    scale: [1, 1.05, 1]
+                    y: [0, -10, 0]
                   }}
                   transition={{
                     duration: 5,
@@ -532,19 +497,18 @@ const Home = () => {
                     ease: "easeInOut",
                     delay: 1
                   }}
-                  className="absolute top-1/4 -left-10 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-30"
+                  className="absolute top-1/4 -left-8 w-11 h-11 rounded-full flex items-center justify-center shadow-lg z-30"
                   style={{
                     background: 'linear-gradient(135deg, #4ecdc4, #44a08d)',
-                    boxShadow: '0 15px 40px rgba(78,205,196,0.4)'
+                    boxShadow: '0 8px 25px rgba(78,205,196,0.3)'
                   }}
                 >
-                  <Shield className="w-7 h-7 text-white" />
+                  <Shield className="w-6 h-6 text-white" />
                 </motion.div>
 
                 <motion.div
                   animate={{
-                    y: [0, -10, 0],
-                    x: [0, 3, 0]
+                    y: [0, -6, 0]
                   }}
                   transition={{
                     duration: 4.5,
@@ -552,15 +516,13 @@ const Home = () => {
                     ease: "easeInOut",
                     delay: 2
                   }}
-                  className="absolute bottom-1/4 right-4 w-15 h-15 rounded-full flex items-center justify-center shadow-2xl z-30"
+                  className="absolute -bottom-6 left-1/3 w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-30"
                   style={{
                     background: 'linear-gradient(135deg, #ff6b6b, #ffa726)',
-                    boxShadow: '0 15px 40px rgba(255,107,107,0.4)',
-                    width: '60px',
-                    height: '60px'
+                    boxShadow: '0 8px 25px rgba(255,107,107,0.3)'
                   }}
                 >
-                  <span className="text-3xl">👁️</span>
+                  <span className="text-xl">👁️</span>
                 </motion.div>
 
                 {/* Animated Background Gradient */}
