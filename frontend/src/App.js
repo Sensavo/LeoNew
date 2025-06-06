@@ -84,26 +84,22 @@ const Home = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -100, opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="relative bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 text-white py-3 px-4 shadow-lg z-50"
+          className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-b border-orange-500/20 text-white py-4 px-4 shadow-lg z-50"
+          style={{
+            background: 'linear-gradient(135deg, #131A22 0%, #232F3E 100%)'
+          }}
         >
           <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <motion.div
-                animate={{
-                  scale: [1, 1.1, 1],
-                  rotate: [0, 5, -5, 0]
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="bg-white text-orange-600 rounded-lg px-3 py-1 font-bold text-sm shadow-lg"
-              >
-                🎁 $5 Gift Card
-              </motion.div>
-              <div className="text-sm md:text-base font-medium">
-                <span className="font-bold">Limited Time!</span> Get a $5 Amazon Gift Card when you install WebOS Toolkit
+            <div className="flex items-center gap-4">
+              <div className="bg-gradient-to-r from-orange-400 to-orange-500 text-white rounded-lg px-4 py-2 font-bold text-sm shadow-lg border border-orange-400/30">
+                <span className="flex items-center gap-2">
+                  <span className="text-lg">🎁</span>
+                  $5 Amazon Gift Card
+                </span>
+              </div>
+              <div className="text-sm md:text-base">
+                <span className="text-orange-400 font-semibold">Limited Time Offer:</span>
+                <span className="text-gray-200 ml-2">Install WebOS Toolkit and receive a $5 Amazon Gift Card</span>
               </div>
             </div>
             
@@ -117,35 +113,24 @@ const Home = () => {
                     window.open(chromeStoreUrl, '_blank');
                   }
                 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white text-orange-600 hover:bg-gray-100 px-4 py-2 rounded-lg font-bold text-sm transition-colors duration-200 shadow-lg"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 shadow-lg border border-orange-400/30"
               >
-                Claim Now
+                Claim Offer
               </motion.button>
               
               <button
                 onClick={() => setIsBannerVisible(false)}
-                className="text-white hover:text-gray-200 transition-colors duration-200 p-1"
+                className="text-gray-400 hover:text-white transition-colors duration-200 p-1.5 rounded-md hover:bg-gray-700/50"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4" />
               </button>
             </div>
           </div>
           
-          {/* Animated background effect */}
-          <motion.div
-            animate={{
-              x: ['0%', '100%'],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none"
-            style={{ width: '200%' }}
-          />
+          {/* Subtle accent border */}
+          <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-orange-500/60 to-transparent" />
         </motion.div>
       )}
 
