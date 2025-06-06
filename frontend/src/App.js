@@ -77,6 +77,78 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
+      {/* $5 Amazon Gift Card Banner */}
+      {isBannerVisible && (
+        <motion.div
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -100, opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className="relative bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 text-white py-3 px-4 shadow-lg z-50"
+        >
+          <div className="max-w-7xl mx-auto flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <motion.div
+                animate={{
+                  scale: [1, 1.1, 1],
+                  rotate: [0, 5, -5, 0]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="bg-white text-orange-600 rounded-lg px-3 py-1 font-bold text-sm shadow-lg"
+              >
+                🎁 $5 Gift Card
+              </motion.div>
+              <div className="text-sm md:text-base font-medium">
+                <span className="font-bold">Limited Time!</span> Get a $5 Amazon Gift Card when you install WebOS Toolkit
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-3">
+              <motion.button
+                onClick={() => {
+                  if (!isPrivacyAccepted) {
+                    setExpandedFaq('highlight-checkbox');
+                    setTimeout(() => setExpandedFaq(null), 3000);
+                  } else {
+                    window.open(chromeStoreUrl, '_blank');
+                  }
+                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-white text-orange-600 hover:bg-gray-100 px-4 py-2 rounded-lg font-bold text-sm transition-colors duration-200 shadow-lg"
+              >
+                Claim Now
+              </motion.button>
+              
+              <button
+                onClick={() => setIsBannerVisible(false)}
+                className="text-white hover:text-gray-200 transition-colors duration-200 p-1"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+          
+          {/* Animated background effect */}
+          <motion.div
+            animate={{
+              x: ['0%', '100%'],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none"
+            style={{ width: '200%' }}
+          />
+        </motion.div>
+      )}
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Modern Background */}
