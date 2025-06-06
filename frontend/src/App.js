@@ -80,30 +80,36 @@ const Home = () => {
       {/* $5 Amazon Gift Card Banner */}
       {isBannerVisible && (
         <motion.div
-          initial={{ y: -100, opacity: 0 }}
+          initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -100, opacity: 0 }}
-          transition={{ duration: 0.5 }}
-          className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-b border-orange-500/20 text-white py-4 px-4 shadow-lg z-50"
+          exit={{ y: -50, opacity: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="relative text-white py-3 px-4 z-50"
           style={{
             background: 'linear-gradient(135deg, #131A22 0%, #232F3E 100%)'
           }}
         >
-          <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <div className="bg-gradient-to-r from-orange-400 to-orange-500 text-white rounded-lg px-4 py-2 font-bold text-sm shadow-lg border border-orange-400/30">
-                <span className="flex items-center gap-2">
-                  <span className="text-lg">🎁</span>
-                  $5 Amazon Gift Card
-                </span>
+          <div className="max-w-6xl mx-auto flex items-center justify-between">
+            <motion.div 
+              className="flex items-center gap-6"
+              initial={{ x: -20, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="text-orange-400 font-medium text-sm">
+                🎁 $5 Amazon Gift Card
               </div>
-              <div className="text-sm md:text-base">
-                <span className="text-orange-400 font-semibold">Limited Time Offer:</span>
-                <span className="text-gray-200 ml-2">Install WebOS Toolkit and receive a $5 Amazon Gift Card</span>
+              <div className="text-gray-300 text-sm">
+                Install WebOS Toolkit to claim your reward
               </div>
-            </div>
+            </motion.div>
             
-            <div className="flex items-center gap-3">
+            <motion.div 
+              className="flex items-center gap-4"
+              initial={{ x: 20, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
               <motion.button
                 onClick={() => {
                   if (!isPrivacyAccepted) {
@@ -113,24 +119,37 @@ const Home = () => {
                     window.open(chromeStoreUrl, '_blank');
                   }
                 }}
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ 
+                  scale: 1.02,
+                  boxShadow: "0 0 20px rgba(255, 153, 0, 0.3)"
+                }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 shadow-lg border border-orange-400/30"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-1.5 rounded-md font-medium text-sm transition-all duration-300"
               >
-                Claim Offer
+                Claim
               </motion.button>
               
               <button
                 onClick={() => setIsBannerVisible(false)}
-                className="text-gray-400 hover:text-white transition-colors duration-200 p-1.5 rounded-md hover:bg-gray-700/50"
+                className="text-gray-500 hover:text-gray-300 transition-colors duration-200 p-1"
               >
                 <X className="w-4 h-4" />
               </button>
-            </div>
+            </motion.div>
           </div>
           
-          {/* Subtle accent border */}
-          <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-orange-500/60 to-transparent" />
+          {/* Subtle animated glow */}
+          <motion.div 
+            animate={{
+              opacity: [0.3, 0.6, 0.3]
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute bottom-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent"
+          />
         </motion.div>
       )}
 
