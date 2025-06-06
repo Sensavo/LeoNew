@@ -139,7 +139,7 @@ frontend:
       - working: true
         agent: "main"
         comment: "Final perfect adjustment per user specifications: 1) REDUCED SIZE - Changed from w-36 h-36 (144px) to w-28 h-28 (112px) for optimal balance, 2) ADDED TRANSPARENCY - Implemented double transparency with Motion opacity: 0.3 + CSS opacity-40 for very subtle appearance, 3) MUCH SLOWER ANIMATIONS - Rotation speed increased from 6s to 12s for extremely slow elegant movement, scaling duration increased from 3s to 8s for very slow size changes, 4) ENHANCED SCALING - Increased scale range from [0.8, 1.1] to [0.7, 1.2] for more dramatic but slow size variations, 5) PERFECT CENTERING - Maintained absolute center positioning within glass container. The preloader is now perfectly balanced: smaller, very transparent, and moves extremely slowly for the most elegant effect."
-  - task: "Added $5 Amazon Gift Card Promotional Banner"
+  - task: "Added Professional $5 Amazon Gift Card Banner with Amazon Colors"
     implemented: true
     working: true
     file: "/app/frontend/src/App.js"
@@ -150,6 +150,9 @@ frontend:
       - working: true
         agent: "main"
         comment: "Successfully added promotional banner for $5 Amazon Gift Card: 1) POSITION - Top banner above hero section with full width, 2) DESIGN - Orange gradient background (from-orange-500 via-orange-600 to-orange-500) with professional styling, 3) CONTENT - Animated gift card icon (🎁 $5 Gift Card), promotional text 'Limited Time! Get a $5 Amazon Gift Card when you install WebOS Toolkit', 4) INTERACTIONS - 'Claim Now' button that respects privacy checkbox requirement, dismissible with X button, 5) ANIMATIONS - Slide-in animation, gift card icon bouncing and rotating, animated shimmer background effect, hover states on buttons, 6) RESPONSIVE - Adapts text size for mobile/desktop, 7) FUNCTIONALITY - Integrates with existing privacy flow and Chrome store URL. The banner is eye-catching, professional, and encourages users to install the extension."
+      - working: true
+        agent: "main"
+        comment: "Updated banner to professional Amazon-style design per user request: 1) AMAZON COLORS - Dark background using Amazon's brand colors (#131A22 to #232F3E gradient), orange accents (#FF9900) for highlights, 2) PROFESSIONAL DESIGN - Removed flashy animations, used subtle hover effects (1.02 scale), clean typography with proper spacing, 3) IMPROVED LAYOUT - Gift card badge now uses orange gradient with white text, professional 'Limited Time Offer:' label in orange, clean button styling with gradient, 4) SUBTLE EFFECTS - Removed rotating/bouncing animations, added subtle bottom accent border, improved close button with hover state, 5) RESPONSIVE - Better text hierarchy and spacing for professional appearance. The banner now looks like a genuine Amazon promotional offer with sophisticated styling."
 
 metadata:
   created_by: "main_agent"
