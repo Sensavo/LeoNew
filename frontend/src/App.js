@@ -157,22 +157,17 @@ const Home = () => {
         </motion.div>
       )}
 
-      {/* Hero Section - Light Theme */}
+      {/* Hero Section - Improved Light Theme */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Light Background */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1658998765622-962cb51e7888')` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-blue-50/90 to-gray-50/95" />
+        {/* Clean Light Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-blue-50" />
         
-        {/* Geometric Pattern Overlay */}
+        {/* Subtle Pattern Overlay */}
         <div 
-          className="absolute inset-0 opacity-3"
+          className="absolute inset-0 opacity-[0.02]"
           style={{ 
-            backgroundImage: `url('https://images.unsplash.com/photo-1496167117681-944f702be1f4')`,
-            backgroundSize: '400px 400px',
-            backgroundRepeat: 'repeat'
+            backgroundImage: `url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23000000" fill-opacity="0.4"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')`,
+            backgroundSize: '30px 30px'
           }}
         />
         
