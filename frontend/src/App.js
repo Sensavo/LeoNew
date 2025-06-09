@@ -699,8 +699,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Sites Where Others Fail Section */}
-      <section className="py-20 relative bg-gradient-to-b from-gray-800 via-gray-900 to-gray-800">
+      {/* Sites Where Others Fail Section - Light Theme */}
+      <section className="py-20 relative bg-gradient-to-b from-white via-gray-50 to-white">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -710,11 +710,11 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-orange-400 via-red-400 to-orange-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-orange-600 via-red-600 to-orange-700 bg-clip-text text-transparent">
                 Sites Where Others Fail, We Don't
               </span>
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Premium sites that block traditional ad blockers can't detect our AI-powered stealth technology
             </p>
           </motion.div>
@@ -740,15 +740,15 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="bg-white/5 backdrop-blur-xl rounded-xl p-4 border border-white/10 hover:border-red-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/10 text-center">
+                <div className="bg-white/70 backdrop-blur-xl rounded-xl p-4 border border-gray-200/60 hover:border-red-300/60 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/10 text-center">
                   <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">
                     {site.logo}
                   </div>
-                  <h3 className="text-white text-sm font-medium group-hover:text-red-300 transition-colors duration-300">
+                  <h3 className="text-gray-900 text-sm font-medium group-hover:text-red-600 transition-colors duration-300">
                     {site.name}
                   </h3>
                   <div className="mt-2">
-                    <div className="w-full h-1 bg-gray-700/50 rounded-full overflow-hidden">
+                    <div className="w-full h-1 bg-gray-200 rounded-full overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: '100%' }}
@@ -757,7 +757,7 @@ const Home = () => {
                         className="h-full bg-gradient-to-r from-red-500 to-orange-400 rounded-full"
                       ></motion.div>
                     </div>
-                    <div className="text-emerald-400 text-xs mt-1 font-medium">✓ Working</div>
+                    <div className="text-emerald-600 text-xs mt-1 font-medium">✓ Working</div>
                   </div>
                 </div>
               </motion.div>
