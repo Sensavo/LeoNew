@@ -62,20 +62,20 @@ const Home = () => {
 
   const faqs = [
     {
-      question: "Is WebOS Toolkit free to use?",
-      answer: "Yes, WebOS Toolkit is completely free to install and use from the Chrome Web Store."
+      question: "How is this different from other ad blockers?",
+      answer: "Our AI technology detects and blocks native ads and hidden advertising that traditional blockers miss. Plus, we're completely undetectable by anti-adblock systems."
     },
     {
-      question: "Does it work with other browsers?",
-      answer: "Currently, WebOS Toolkit is optimized for Chrome-based browsers. Support for other browsers may be added in future updates."
+      question: "Will websites know I'm using an ad blocker?",
+      answer: "No. Our stealth technology makes the extension completely invisible to website detection systems. You'll never see 'please disable your ad blocker' messages."
     },
     {
-      question: "Will it slow down my browser?",
-      answer: "No, WebOS Toolkit is designed to improve browser performance by identifying and managing resource-heavy tabs and processes."
+      question: "Does it work on paywall sites like Forbes and Wired?",
+      answer: "Yes! We specifically designed it to work on sites that block traditional ad blockers, including Forbes, Wired, Bloomberg, Business Insider, and many more."
     },
     {
-      question: "How does it protect my privacy?",
-      answer: "We collect minimal data only to provide the service functionality. All data processing follows our privacy policy guidelines."
+      question: "Is it safe and private?",
+      answer: "Absolutely. All processing happens locally in your browser using on-device AI. We don't track, monitor, or collect any of your browsing data."
     }
   ];
 
