@@ -407,16 +407,16 @@ const Home = () => {
                   </div>
                 </motion.div>
                 
-                {/* Main Card Container - Enhanced Glass Effect */}
+                {/* Main Card Container - Light Glass Effect */}
                 <motion.div 
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 1, delay: 0.5 }}
-                  className="relative bg-white/5 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-white/10 z-10"
+                  className="relative bg-white/70 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-gray-200/50 z-10"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(59,130,246,0.05))',
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(59,130,246,0.05))',
                     backdropFilter: 'blur(20px)',
-                    boxShadow: '0 25px 50px rgba(0,0,0,0.15), 0 0 60px rgba(59,130,246,0.1)'
+                    boxShadow: '0 25px 50px rgba(0,0,0,0.1), 0 0 60px rgba(59,130,246,0.05)'
                   }}
                 >
                   
