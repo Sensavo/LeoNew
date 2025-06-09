@@ -786,44 +786,68 @@ const Home = () => {
             </p>
           </motion.div>
 
-          {/* Modern Grid Layout */}
+          {/* Enhanced Grid Layout with Brand-Accurate Icons */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {[
               { 
                 name: "Forbes", 
                 description: "Business & Finance News",
                 status: "Fully Compatible",
-                color: "from-blue-500 to-blue-600"
+                color: "from-blue-600 to-blue-700",
+                bgColor: "bg-blue-600",
+                textColor: "text-white",
+                letter: "F",
+                domain: "forbes.com"
               },
               { 
                 name: "Wired", 
                 description: "Technology & Innovation",
                 status: "Fully Compatible",
-                color: "from-purple-500 to-purple-600"
+                color: "from-black to-gray-800",
+                bgColor: "bg-black",
+                textColor: "text-white",
+                letter: "W",
+                domain: "wired.com"
               },
               { 
                 name: "Bloomberg", 
                 description: "Financial Markets & News",
                 status: "Fully Compatible",
-                color: "from-green-500 to-green-600"
+                color: "from-blue-500 to-blue-600",
+                bgColor: "bg-blue-500",
+                textColor: "text-white",
+                letter: "B",
+                domain: "bloomberg.com"
               },
               { 
                 name: "Business Insider", 
                 description: "Business & Tech News",
                 status: "Fully Compatible",
-                color: "from-red-500 to-red-600"
+                color: "from-red-500 to-red-600",
+                bgColor: "bg-red-500",
+                textColor: "text-white",
+                letter: "BI",
+                domain: "businessinsider.com"
               },
               { 
                 name: "The Atlantic", 
                 description: "Politics & Culture",
                 status: "Fully Compatible",
-                color: "from-indigo-500 to-indigo-600"
+                color: "from-indigo-500 to-indigo-600",
+                bgColor: "bg-indigo-500",
+                textColor: "text-white",
+                letter: "A",
+                domain: "theatlantic.com"
               },
               { 
                 name: "The Verge", 
                 description: "Technology & Science",
                 status: "Fully Compatible",
-                color: "from-orange-500 to-orange-600"
+                color: "from-orange-500 to-orange-600",
+                bgColor: "bg-orange-500",
+                textColor: "text-white",
+                letter: "V",
+                domain: "theverge.com"
               }
             ].map((site, index) => (
               <motion.div
@@ -834,21 +858,59 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="group relative"
               >
-                <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-gray-300 transition-all duration-300 hover:shadow-xl group-hover:scale-105">
-                  {/* Site Icon */}
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${site.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <div className="w-6 h-6 bg-white rounded opacity-90"></div>
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-gray-200/60 hover:border-gray-300/80 transition-all duration-300 hover:shadow-xl hover:shadow-gray-200/50 group-hover:scale-[1.02]">
+                  {/* Enhanced Site Icon with Brand Recognition */}
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${site.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 border-2 border-white/20`}>
+                      <span className={`font-bold text-lg ${site.textColor} tracking-tight`}>
+                        {site.letter}
+                      </span>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-gray-900 leading-tight">{site.name}</h3>
+                      <div className="text-xs text-gray-500 font-mono mt-1">{site.domain}</div>
+                    </div>
                   </div>
                   
-                  {/* Site Info */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{site.name}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{site.description}</p>
+                  {/* Site Description */}
+                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">{site.description}</p>
                   
-                  {/* Status */}
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-green-600 text-sm font-medium">{site.status}</span>
+                  {/* Enhanced Status with Animation */}
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <motion.div 
+                        animate={{ 
+                          scale: [1, 1.2, 1],
+                          opacity: [0.7, 1, 0.7] 
+                        }}
+                        transition={{ 
+                          duration: 2, 
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: index * 0.3
+                        }}
+                        className="w-2.5 h-2.5 bg-green-500 rounded-full"
+                      />
+                      <span className="text-green-600 text-sm font-medium">{site.status}</span>
+                    </div>
+                    
+                    {/* Compatibility Badge */}
+                    <div className="bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-semibold border border-green-200">
+                      ✓ Verified
+                    </div>
                   </div>
+
+                  {/* Subtle Hover Effect Background */}
+                  <motion.div 
+                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                    style={{
+                      background: `linear-gradient(135deg, ${site.color.includes('blue') ? 'rgba(59, 130, 246, 0.05)' : 
+                                                            site.color.includes('black') ? 'rgba(0, 0, 0, 0.03)' :
+                                                            site.color.includes('red') ? 'rgba(239, 68, 68, 0.05)' :
+                                                            site.color.includes('indigo') ? 'rgba(99, 102, 241, 0.05)' :
+                                                            'rgba(249, 115, 22, 0.05)'}, transparent)`
+                    }}
+                  />
                 </div>
               </motion.div>
             ))}
