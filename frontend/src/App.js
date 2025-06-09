@@ -253,10 +253,10 @@ const Home = () => {
                   className="xl:flex xl:justify-start lg:flex lg:justify-center"
                 >
                   <div 
-                    className={`flex items-center gap-3 text-sm p-3 rounded-lg transition-all duration-500 ${
+                    className={`flex items-center gap-3 text-sm p-4 rounded-xl transition-all duration-500 border-2 ${
                       !isPrivacyAccepted && expandedFaq === 'highlight-checkbox' 
-                        ? 'bg-red-100 border-2 border-red-400 shadow-lg shadow-red-500/25 animate-pulse' 
-                        : 'bg-gray-100/60 border border-gray-300'
+                        ? 'bg-red-50 border-red-300 shadow-lg shadow-red-500/25 animate-pulse' 
+                        : 'bg-white/80 border-gray-300 shadow-sm'
                     }`}
                   >
                     <input
@@ -266,11 +266,11 @@ const Home = () => {
                       onChange={(e) => setIsPrivacyAccepted(e.target.checked)}
                       className="w-5 h-5 text-red-600 bg-white border-gray-400 rounded focus:ring-red-500 focus:ring-2"
                     />
-                    <label htmlFor="privacy-agreement" className="text-gray-700 text-sm">
+                    <label htmlFor="privacy-agreement" className="text-gray-800 text-sm font-medium">
                       I agree to the{' '}
                       <button
                         onClick={() => setIsPrivacyModalOpen(true)}
-                        className="text-red-600 hover:text-red-700 underline font-medium"
+                        className="text-red-600 hover:text-red-700 underline font-semibold"
                       >
                         Privacy Policy
                       </button>
