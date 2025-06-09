@@ -899,15 +899,15 @@ const Home = () => {
             {/* Brand Section */}
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
                   <Shield className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  WebOS Toolkit
+                <span className="text-2xl font-bold bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+                  AdsHide
                 </span>
               </div>
               <p className="text-gray-400 leading-relaxed">
-                Professional browser extension designed by developers for developers. Optimize your browsing experience today.
+                The AI-powered ad blocker that works where others fail. Completely undetectable and highly effective on premium sites.
               </p>
             </div>
 
