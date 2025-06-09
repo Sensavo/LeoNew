@@ -228,6 +228,36 @@ const Home = () => {
             }}
             className="absolute bottom-1/4 left-1/2 w-32 h-32 bg-gradient-to-br from-emerald-200/25 to-teal-200/20 rounded-full blur-xl"
           />
+          
+          {/* Additional Floating Elements */}
+          <motion.div
+            animate={{
+              rotate: [0, 360],
+              scale: [1, 1.05, 1],
+              opacity: [0.03, 0.06, 0.03]
+            }}
+            transition={{
+              duration: 30,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+            className="absolute top-10 right-10 w-20 h-20 bg-gradient-to-br from-yellow-200/30 to-amber-200/20 rounded-lg blur-xl"
+          />
+          
+          <motion.div
+            animate={{
+              rotate: [360, 0],
+              x: [0, 40, 0],
+              opacity: [0.04, 0.08, 0.04]
+            }}
+            transition={{
+              duration: 22,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 8
+            }}
+            className="absolute bottom-10 right-1/4 w-16 h-16 bg-gradient-to-br from-pink-200/25 to-rose-200/20 rounded-full blur-lg"
+          />
         </div>
         
         {/* Enhanced Pattern Overlay */}
