@@ -916,35 +916,81 @@ const Home = () => {
             ))}
           </div>
 
-          {/* Additional Sites Banner */}
+          {/* Enhanced Additional Sites Banner */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-8 text-center"
+            className="relative bg-gradient-to-r from-gray-50/80 to-blue-50/80 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/60 shadow-xl overflow-hidden"
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              And Many More Premium Sites
-            </h3>
-            <div className="flex flex-wrap justify-center gap-4 mb-6">
-              {["LA Times", "GQ.com", "NewsBreak", "The Independent", "Wall Street Journal", "Financial Times"].map((site, index) => (
-                <motion.span
-                  key={site}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3, delay: 0.8 + index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="px-4 py-2 bg-white rounded-full text-gray-700 font-medium shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-300"
-                >
-                  {site}
-                </motion.span>
-              ))}
+            {/* Background Pattern */}
+            <div 
+              className="absolute inset-0 opacity-[0.03]"
+              style={{
+                backgroundImage: `url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23059669" fill-opacity="0.4"%3E%3Cpath d="M20 20c0-11.046-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')`,
+                backgroundSize: '40px 40px'
+              }}
+            />
+            
+            <div className="relative">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
+                And Many More Premium Sites
+              </h3>
+              
+              <div className="flex flex-wrap justify-center gap-3 mb-6">
+                {[
+                  { name: "LA Times", color: "bg-gradient-to-r from-blue-600 to-blue-700", letter: "LA" },
+                  { name: "GQ.com", color: "bg-gradient-to-r from-black to-gray-800", letter: "GQ" },
+                  { name: "NewsBreak", color: "bg-gradient-to-r from-red-500 to-red-600", letter: "N" },
+                  { name: "The Independent", color: "bg-gradient-to-r from-purple-600 to-purple-700", letter: "I" },
+                  { name: "Wall Street Journal", color: "bg-gradient-to-r from-gray-800 to-black", letter: "WSJ" },
+                  { name: "Financial Times", color: "bg-gradient-to-r from-pink-500 to-pink-600", letter: "FT" }
+                ].map((site, index) => (
+                  <motion.div
+                    key={site.name}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.8 + index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.05 }}
+                    className="group relative"
+                  >
+                    <div className="flex items-center gap-3 px-4 py-3 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200/60 hover:border-gray-300/80 shadow-sm hover:shadow-lg transition-all duration-300">
+                      <div className={`w-8 h-8 rounded-lg ${site.color} flex items-center justify-center text-white text-xs font-bold shadow-md`}>
+                        {site.letter}
+                      </div>
+                      <span className="text-gray-700 font-medium text-sm">{site.name}</span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              
+              <div className="text-center">
+                <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
+                  Our AI technology works on hundreds of premium sites that traditionally block ad blockers. 
+                  No more "please disable your ad blocker" messages.
+                </p>
+                
+                {/* Success Stats */}
+                <div className="flex justify-center items-center gap-6 mt-6">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600">500+</div>
+                    <div className="text-xs text-gray-500 font-medium">Sites Compatible</div>
+                  </div>
+                  <div className="w-px h-8 bg-gray-300"></div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-600">99.9%</div>
+                    <div className="text-xs text-gray-500 font-medium">Success Rate</div>
+                  </div>
+                  <div className="w-px h-8 bg-gray-300"></div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-purple-600">0</div>
+                    <div className="text-xs text-gray-500 font-medium">Detection Rate</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our AI technology works on hundreds of premium sites that traditionally block ad blockers. 
-              No more "please disable your ad blocker" messages.
-            </p>
           </motion.div>
         </div>
       </section>
