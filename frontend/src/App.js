@@ -35,28 +35,28 @@ const Home = () => {
 
   const features = [
     {
-      icon: Zap,
-      title: "Boost Performance",
-      description: "Identify and shut down tab hogs, reduce load times, and clean up your memory.",
-      image: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxjb2RpbmclMjBkYXNoYm9hcmR8ZW58MHx8fGJsdWV8MTc0ODk2NDExNnww&ixlib=rb-4.1.0&q=85"
-    },
-    {
       icon: Brain,
-      title: "Smart Tools for Smart Users",
-      description: "Access advanced inspection tools, page profiling, network analysis, and DOM snapshots — all in one place.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxjb2RpbmclMjBkYXNoYm9hcmR8ZW58MHx8fGJsdWV8MTc0ODk2NDExNnww&ixlib=rb-4.1.0&q=85"
+      title: "AI-Powered Detection",
+      description: "Advanced AI identifies and blocks hidden native ads that traditional blockers miss.",
+      image: "https://images.unsplash.com/photo-1636955840493-f43a02bfa064"
     },
     {
       icon: Eye,
-      title: "Instant Page Insights",
-      description: "Get detailed breakdowns of page structure, script loads, and performance bottlenecks.",
-      image: "https://images.pexels.com/photos/5475750/pexels-photo-5475750.jpeg"
+      title: "Stealth Mode",
+      description: "Completely invisible to detection systems. No more nag screens or blocked access.",
+      image: "https://images.unsplash.com/photo-1614064643392-8dd713152ae9"
+    },
+    {
+      icon: Zap,
+      title: "Paywall Bypass",
+      description: "Access premium content without paywalls. Works on major news sites and publications.",
+      image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9"
     },
     {
       icon: Globe,
-      title: "Tab Manager & Resource Monitor",
-      description: "Stay organized, stay fast. See what's slowing you down and fix it in real time.",
-      image: "https://images.unsplash.com/photo-1529071242804-840f9a164b8b"
+      title: "Universal Compatibility",
+      description: "Works on sites where others fail: Forbes, Wired, Bloomberg, Business Insider, and more.",
+      image: "https://images.unsplash.com/photo-1636955903101-d6b4b926018c"
     }
   ];
 
