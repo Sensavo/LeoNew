@@ -201,7 +201,7 @@ const Home = () => {
 
               <div className="space-y-5">
                 <motion.h2 
-                  className="text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-tight"
+                  className="text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
@@ -216,7 +216,7 @@ const Home = () => {
                       ease: "easeInOut"
                     }}
                     style={{
-                      background: 'linear-gradient(90deg, #ffffff, #e2e8f0, #ffffff)',
+                      background: 'linear-gradient(90deg, #1f2937, #6b7280, #1f2937)',
                       backgroundSize: '200% 100%',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent'
@@ -247,7 +247,7 @@ const Home = () => {
                 </motion.h2>
                 
                 <motion.p 
-                  className="text-xl text-gray-200 leading-relaxed max-w-2xl xl:max-w-2xl lg:mx-auto"
+                  className="text-xl text-gray-700 leading-relaxed max-w-2xl xl:max-w-2xl lg:mx-auto"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
