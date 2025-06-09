@@ -686,9 +686,9 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Sites Where Others Fail Section - Light Theme */}
-      <section className="py-20 relative bg-gradient-to-b from-white via-gray-50 to-white">
-        <div className="max-w-6xl mx-auto px-6">
+      {/* Sites Where Others Fail Section - Completely Redesigned */}
+      <section className="py-20 relative bg-white">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -696,28 +696,53 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-orange-600 via-red-600 to-orange-700 bg-clip-text text-transparent">
-                Sites Where Others Fail, We Don't
-              </span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+              Works on Premium Sites That Block Others
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Premium sites that block traditional ad blockers can't detect our AI-powered stealth technology
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Major publications can't detect our AI-powered stealth technology. Access your favorite content without interruptions.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {/* Modern Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {[
-              { name: "Forbes", logo: "🏢" },
-              { name: "Wired", logo: "⚡" },
-              { name: "Bloomberg", logo: "📈" },
-              { name: "Business Insider", logo: "💼" },
-              { name: "The Atlantic", logo: "🌊" },
-              { name: "LA Times", logo: "🌴" },
-              { name: "The Verge", logo: "🔮" },
-              { name: "GQ.com", logo: "👔" },
-              { name: "NewsBreak", logo: "📰" },
-              { name: "The Independent", logo: "🗞️" }
+              { 
+                name: "Forbes", 
+                description: "Business & Finance News",
+                status: "Fully Compatible",
+                color: "from-blue-500 to-blue-600"
+              },
+              { 
+                name: "Wired", 
+                description: "Technology & Innovation",
+                status: "Fully Compatible",
+                color: "from-purple-500 to-purple-600"
+              },
+              { 
+                name: "Bloomberg", 
+                description: "Financial Markets & News",
+                status: "Fully Compatible",
+                color: "from-green-500 to-green-600"
+              },
+              { 
+                name: "Business Insider", 
+                description: "Business & Tech News",
+                status: "Fully Compatible",
+                color: "from-red-500 to-red-600"
+              },
+              { 
+                name: "The Atlantic", 
+                description: "Politics & Culture",
+                status: "Fully Compatible",
+                color: "from-indigo-500 to-indigo-600"
+              },
+              { 
+                name: "The Verge", 
+                description: "Technology & Science",
+                status: "Fully Compatible",
+                color: "from-orange-500 to-orange-600"
+              }
             ].map((site, index) => (
               <motion.div
                 key={site.name}
@@ -725,31 +750,58 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group"
+                className="group relative"
               >
-                <div className="bg-white/70 backdrop-blur-xl rounded-xl p-4 border border-gray-200/60 hover:border-red-300/60 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/10 text-center">
-                  <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">
-                    {site.logo}
+                <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-gray-300 transition-all duration-300 hover:shadow-xl group-hover:scale-105">
+                  {/* Site Icon */}
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${site.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <div className="w-6 h-6 bg-white rounded opacity-90"></div>
                   </div>
-                  <h3 className="text-gray-900 text-sm font-medium group-hover:text-red-600 transition-colors duration-300">
-                    {site.name}
-                  </h3>
-                  <div className="mt-2">
-                    <div className="w-full h-1 bg-gray-200 rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: '100%' }}
-                        transition={{ duration: 1, delay: 0.3 + index * 0.1 }}
-                        viewport={{ once: true }}
-                        className="h-full bg-gradient-to-r from-red-500 to-orange-400 rounded-full"
-                      ></motion.div>
-                    </div>
-                    <div className="text-emerald-600 text-xs mt-1 font-medium">✓ Working</div>
+                  
+                  {/* Site Info */}
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{site.name}</h3>
+                  <p className="text-gray-600 text-sm mb-4">{site.description}</p>
+                  
+                  {/* Status */}
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-green-600 text-sm font-medium">{site.status}</span>
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
+
+          {/* Additional Sites Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-8 text-center"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              And Many More Premium Sites
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4 mb-6">
+              {["LA Times", "GQ.com", "NewsBreak", "The Independent", "Wall Street Journal", "Financial Times"].map((site, index) => (
+                <motion.span
+                  key={site}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: 0.8 + index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="px-4 py-2 bg-white rounded-full text-gray-700 font-medium shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-300"
+                >
+                  {site}
+                </motion.span>
+              ))}
+            </div>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Our AI technology works on hundreds of premium sites that traditionally block ad blockers. 
+              No more "please disable your ad blocker" messages.
+            </p>
+          </motion.div>
         </div>
       </section>
 
