@@ -21,7 +21,7 @@ const Home = () => {
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
   const [isPrivacyAccepted, setIsPrivacyAccepted] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState(null);
-  const [isBannerVisible, setIsBannerVisible] = useState(true);
+  const [isBannerVisible, setIsBannerVisible] = useState(false);
   const [adsBlocked] = useState(32118397);
   const [todaysAdsBlocked] = useState(1219487);
 
