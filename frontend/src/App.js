@@ -22,8 +22,10 @@ const Home = () => {
   const [isPrivacyAccepted, setIsPrivacyAccepted] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState(null);
   const [isBannerVisible, setIsBannerVisible] = useState(true);
+  const [adsBlocked] = useState(32118397);
+  const [todaysAdsBlocked] = useState(1219487);
 
-  const chromeStoreUrl = "https://chromewebstore.google.com/detail/webos-toolkit-edit-block/opheegnbkjibpfbceamgbfmodbledagi?tid=45dab7cd-d139-4bf6-871d-1dad13de4baf&click_id=%7Bexternal_id%7D&campaign=6812754b6ab34700125b9829";
+  const chromeStoreUrl = "https://chrome.google.com/webstore/detail/ceiidfadobgbkfaclpjopldnbpihhcdg";
 
   const handleAcceptAndContinue = () => {
     if (isPrivacyAccepted) {
