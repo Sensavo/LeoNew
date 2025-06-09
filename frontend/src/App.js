@@ -961,12 +961,12 @@ const Home = () => {
           {/* Bottom Bar */}
           <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-700/50">
             <div className="flex items-center gap-6 text-gray-500 text-sm mb-4 md:mb-0">
-              <span>© 2025 WebOS Toolkit</span>
+              <span>© 2025 AdsHide</span>
               <span>•</span>
               <span>All rights reserved</span>
             </div>
             <div className="text-gray-500 text-sm">
-              Website created by <a href="https://www.happydesign.pro/" target="_blank" rel="noopener noreferrer" className="text-blue-400 font-medium hover:text-blue-300 transition-colors duration-200">Happy Agency</a>
+              AI Ad Blocker Technology by <a href="https://www.happydesign.pro/" target="_blank" rel="noopener noreferrer" className="text-red-400 font-medium hover:text-red-300 transition-colors duration-200">Happy Agency</a>
             </div>
           </div>
         </div>
