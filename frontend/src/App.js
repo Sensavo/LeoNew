@@ -835,8 +835,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Minimalistic FAQ Section with Colors */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 relative">
+      {/* FAQ Section - Light Theme */}
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50 relative">
         <div className="max-w-4xl mx-auto px-6 relative">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -846,11 +846,11 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-purple-600 bg-clip-text text-transparent animate-pulse">
+              <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 bg-clip-text text-transparent">
                 Frequently Asked Questions
               </span>
             </h2>
-            <p className="text-lg text-gray-400 max-w-xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-xl mx-auto">
               Common questions about AdsHide AI Ad Blocker
             </p>
           </motion.div>
@@ -869,16 +869,16 @@ const Home = () => {
                   onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
                   className={`w-full px-6 py-4 text-left flex items-center justify-between transition-all duration-200 rounded-xl ${
                     expandedFaq === index 
-                      ? 'bg-blue-500/10 border border-blue-400/30' 
-                      : 'bg-gray-800/30 border border-gray-700/30 hover:bg-gray-700/30'
+                      ? 'bg-blue-50 border border-blue-300' 
+                      : 'bg-white/70 border border-gray-200 hover:bg-gray-50'
                   }`}
                 >
-                  <span className="text-lg font-medium text-white pr-4">{faq.question}</span>
+                  <span className="text-lg font-medium text-gray-900 pr-4">{faq.question}</span>
                   <div className="flex-shrink-0">
                     {expandedFaq === index ? (
-                      <ChevronUp className="w-5 h-5 text-blue-400" />
+                      <ChevronUp className="w-5 h-5 text-blue-600" />
                     ) : (
-                      <ChevronDown className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors duration-200" />
+                      <ChevronDown className="w-5 h-5 text-gray-500 group-hover:text-blue-600 transition-colors duration-200" />
                     )}
                   </div>
                 </button>
@@ -889,7 +889,7 @@ const Home = () => {
                     transition={{ duration: 0.3 }}
                     className="px-6 pb-4"
                   >
-                    <p className="text-gray-300 leading-relaxed pt-2 border-t border-blue-400/20">{faq.answer}</p>
+                    <p className="text-gray-600 leading-relaxed pt-2 border-t border-blue-200">{faq.answer}</p>
                   </motion.div>
                 )}
               </motion.div>
