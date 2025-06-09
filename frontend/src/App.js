@@ -80,7 +80,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900 overflow-hidden">
       {/* Desktop Only Banner */}
       {isBannerVisible && (
         <motion.div
