@@ -157,17 +157,102 @@ const Home = () => {
         </motion.div>
       )}
 
-      {/* Hero Section - Improved Light Theme */}
+      {/* Hero Section - Enhanced Background Design */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Clean Light Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-blue-50" />
+        {/* Dynamic Gradient Background */}
+        <motion.div 
+          animate={{
+            background: [
+              'linear-gradient(135deg, #f8fafc 0%, #ffffff 25%, #e0f2fe 50%, #f1f5f9 75%, #ffffff 100%)',
+              'linear-gradient(135deg, #f1f5f9 0%, #e0f2fe 25%, #ffffff 50%, #f8fafc 75%, #e0f2fe 100%)',
+              'linear-gradient(135deg, #e0f2fe 0%, #f8fafc 25%, #f1f5f9 50%, #ffffff 75%, #f8fafc 100%)',
+              'linear-gradient(135deg, #f8fafc 0%, #ffffff 25%, #e0f2fe 50%, #f1f5f9 75%, #ffffff 100%)'
+            ]
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute inset-0"
+        />
         
-        {/* Subtle Pattern Overlay */}
-        <div 
-          className="absolute inset-0 opacity-[0.02]"
+        {/* Floating Geometric Shapes Background */}
+        <div className="absolute inset-0">
+          {/* Large Circle */}
+          <motion.div
+            animate={{
+              x: [0, 100, 0],
+              y: [0, -80, 0],
+              scale: [1, 1.1, 1],
+              opacity: [0.1, 0.15, 0.1]
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-blue-200/30 to-purple-200/20 rounded-full blur-3xl"
+          />
+          
+          {/* Medium Circle */}
+          <motion.div
+            animate={{
+              x: [0, -120, 0],
+              y: [0, 100, 0],
+              scale: [1, 0.8, 1],
+              opacity: [0.08, 0.12, 0.08]
+            }}
+            transition={{
+              duration: 25,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 5
+            }}
+            className="absolute top-1/2 right-1/3 w-48 h-48 bg-gradient-to-br from-red-200/20 to-orange-200/15 rounded-full blur-2xl"
+          />
+          
+          {/* Small Circle */}
+          <motion.div
+            animate={{
+              x: [0, 80, 0],
+              y: [0, -60, 0],
+              scale: [1, 1.2, 1],
+              opacity: [0.05, 0.1, 0.05]
+            }}
+            transition={{
+              duration: 18,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 10
+            }}
+            className="absolute bottom-1/4 left-1/2 w-32 h-32 bg-gradient-to-br from-emerald-200/25 to-teal-200/20 rounded-full blur-xl"
+          />
+        </div>
+        
+        {/* Enhanced Pattern Overlay */}
+        <motion.div 
+          animate={{
+            opacity: [0.02, 0.05, 0.02]
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute inset-0"
           style={{ 
-            backgroundImage: `url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23000000" fill-opacity="0.4"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')`,
-            backgroundSize: '30px 30px'
+            backgroundImage: `url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23059669" fill-opacity="0.1"%3E%3Ccircle cx="20" cy="20" r="2"/%3E%3Ccircle cx="80" cy="20" r="1"/%3E%3Ccircle cx="50" cy="50" r="1.5"/%3E%3Ccircle cx="20" cy="80" r="1"/%3E%3Ccircle cx="80" cy="80" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')`,
+            backgroundSize: '50px 50px'
+          }}
+        />
+        
+        {/* Subtle Grid Lines */}
+        <div 
+          className="absolute inset-0 opacity-[0.015]"
+          style={{
+            backgroundImage: `linear-gradient(90deg, #64748b 1px, transparent 1px), linear-gradient(#64748b 1px, transparent 1px)`,
+            backgroundSize: '100px 100px'
           }}
         />
         
