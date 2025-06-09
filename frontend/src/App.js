@@ -843,7 +843,7 @@ const Home = () => {
               </span>
             </h2>
             <p className="text-lg text-gray-400 max-w-xl mx-auto">
-              Common questions about WebOS Toolkit
+              Common questions about AdsHide AI Ad Blocker
             </p>
           </motion.div>
 
