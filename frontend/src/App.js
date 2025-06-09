@@ -766,8 +766,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* User Testimonials Section */}
-      <section className="py-20 relative bg-gradient-to-b from-gray-800 via-gray-900 to-gray-800">
+      {/* User Testimonials Section - Light Theme */}
+      <section className="py-20 relative bg-gradient-to-b from-gray-50 via-white to-gray-50">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -777,11 +777,11 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 bg-clip-text text-transparent">
                 User Feedback
               </span>
             </h2>
-            <p className="text-lg text-gray-400 max-w-xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-xl mx-auto">
               Real testimonials from users who switched to AdsHide
             </p>
           </motion.div>
@@ -807,27 +807,27 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-yellow-400/30 transition-all duration-300"
+                className="bg-white/70 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/60 hover:border-yellow-400/40 transition-all duration-300 shadow-lg"
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
                   ))}
                   {testimonial.verified && (
                     <div className="ml-2 flex items-center gap-1">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span className="text-green-400 text-xs font-medium">Verified</span>
+                      <CheckCircle className="w-4 h-4 text-green-500" />
+                      <span className="text-green-600 text-xs font-medium">Verified</span>
                     </div>
                   )}
                 </div>
-                <blockquote className="text-gray-200 leading-relaxed mb-4 italic">
+                <blockquote className="text-gray-700 leading-relaxed mb-4 italic">
                   "{testimonial.quote}"
                 </blockquote>
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center">
                     <Users className="w-4 h-4 text-white" />
                   </div>
-                  <span className="text-gray-400 font-medium">– {testimonial.author}</span>
+                  <span className="text-gray-600 font-medium">– {testimonial.author}</span>
                 </div>
               </motion.div>
             ))}
