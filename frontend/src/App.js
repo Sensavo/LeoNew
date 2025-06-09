@@ -33,25 +33,25 @@ const Home = () => {
 
   const features = [
     {
-      icon: Gauge,
+      icon: Zap,
       title: "Boost Performance",
       description: "Identify and shut down tab hogs, reduce load times, and clean up your memory.",
       image: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxjb2RpbmclMjBkYXNoYm9hcmR8ZW58MHx8fGJsdWV8MTc0ODk2NDExNnww&ixlib=rb-4.1.0&q=85"
     },
     {
-      icon: ChartLine,
+      icon: Brain,
       title: "Smart Tools for Smart Users",
       description: "Access advanced inspection tools, page profiling, network analysis, and DOM snapshots — all in one place.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxjb2RpbmclMjBkYXNoYm9hcmR8ZW58MHx8fGJsdWV8MTc0ODk2NDExNnww&ixlib=rb-4.1.0&q=85"
     },
     {
-      icon: Search,
+      icon: Eye,
       title: "Instant Page Insights",
       description: "Get detailed breakdowns of page structure, script loads, and performance bottlenecks.",
       image: "https://images.pexels.com/photos/5475750/pexels-photo-5475750.jpeg"
     },
     {
-      icon: LayoutGrid,
+      icon: Globe,
       title: "Tab Manager & Resource Monitor",
       description: "Stay organized, stay fast. See what's slowing you down and fix it in real time.",
       image: "https://images.unsplash.com/photo-1529071242804-840f9a164b8b"
