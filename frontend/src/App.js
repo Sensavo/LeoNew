@@ -373,30 +373,38 @@ const Home = () => {
             <div className="relative hidden xl:block py-24 flex items-center">
               <div className="relative max-w-sm mx-auto mt-12">
                 
-                {/* Small Transparent Slow Circular Rotating Preloader in Center */}
+                {/* Small Subtle Working Indicator in Center */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ 
-                    opacity: 0.3,
-                    scale: [0.7, 1.2, 0.7],
+                    opacity: 0.7,
+                    scale: [0.9, 1.05, 0.9],
                   }}
                   transition={{
                     opacity: { duration: 0.5, delay: 1 },
                     scale: { 
-                      duration: 8,
+                      duration: 4,
                       repeat: Infinity,
                       ease: "easeInOut"
                     }
                   }}
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-5"
                 >
-                  <div 
-                    className="w-28 h-28 rounded-full opacity-40"
-                    style={{
-                      background: 'conic-gradient(from 0deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7, #fab1a0, #ff6b6b)',
-                      animation: 'spin 12s linear infinite'
-                    }}
-                  />
+                  <div className="flex items-center gap-2 bg-emerald-500/10 backdrop-blur-sm rounded-full px-4 py-2 border border-emerald-500/20">
+                    <motion.div 
+                      animate={{ 
+                        scale: [1, 1.2, 1],
+                        opacity: [0.5, 1, 0.5]
+                      }}
+                      transition={{ 
+                        duration: 2, 
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                      className="w-2 h-2 bg-emerald-400 rounded-full"
+                    />
+                    <span className="text-emerald-600 text-xs font-medium">Working</span>
+                  </div>
                 </motion.div>
                 
                 {/* Main Card Container - Enhanced Glass Effect */}
