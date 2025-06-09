@@ -1,18 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { motion } from "framer-motion";
 import { 
-  Gauge, 
-  ChartLine, 
-  Search, 
-  LayoutGrid, 
+  Zap, 
+  Brain, 
+  Eye, 
+  Globe, 
   X,
   ExternalLink,
   Shield,
-  Download,
+  CheckCircle,
   ChevronDown,
-  ChevronUp
+  ChevronUp,
+  Star,
+  Users
 } from "lucide-react";
 
 const Home = () => {
