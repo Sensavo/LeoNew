@@ -622,8 +622,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Redesigned Features Section */}
-      <section className="py-20 relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+      {/* Redesigned Features Section - Light Theme */}
+      <section className="py-20 relative bg-gradient-to-b from-gray-50 via-white to-gray-100">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -633,11 +633,11 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-red-400 via-orange-400 to-red-600 bg-clip-text text-transparent animate-pulse">
+              <span className="bg-gradient-to-r from-red-600 via-orange-600 to-red-700 bg-clip-text text-transparent">
                 Why It's Smarter
               </span>
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Advanced AI technology that outperforms traditional ad blockers
             </p>
           </motion.div>
@@ -652,20 +652,20 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 h-full flex flex-col">
+                <div className="bg-white/70 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/60 hover:border-red-300/50 transition-all duration-300 hover:shadow-xl hover:shadow-red-500/10 h-full flex flex-col">
                   {/* Header */}
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                       <feature.icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
                   
                   {/* Content - Flexible grow */}
                   <div className="flex-grow mb-4">
-                    <h3 className="text-lg font-bold text-white mb-2">
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">
+                    <p className="text-gray-600 text-sm leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
@@ -673,21 +673,21 @@ const Home = () => {
                   {/* Performance Bar - Aligned to bottom */}
                   <div className="mt-auto">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-gray-400 text-xs">Performance</span>
-                      <span className="text-green-400 text-xs font-medium">
-                        {index === 0 ? '+47%' : index === 1 ? 'Real-time' : index === 2 ? 'Active' : 'Optimized'}
+                      <span className="text-gray-500 text-xs">Performance</span>
+                      <span className="text-green-600 text-xs font-medium">
+                        {index === 0 ? 'AI-Powered' : index === 1 ? 'Invisible' : index === 2 ? 'Unlimited' : 'Universal'}
                       </span>
                     </div>
-                    <div className="w-full h-1.5 bg-gray-700/50 rounded-full overflow-hidden">
+                    <div className="w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
-                        whileInView={{ width: `${75 + index * 5}%` }}
+                        whileInView={{ width: `${85 + index * 3}%` }}
                         transition={{ duration: 1.5, delay: 0.5 + index * 0.1 }}
                         viewport={{ once: true }}
                         className={`h-full rounded-full ${
-                          index === 0 ? 'bg-blue-400' :
-                          index === 1 ? 'bg-purple-400' :
-                          index === 2 ? 'bg-cyan-400' : 'bg-green-400'
+                          index === 0 ? 'bg-red-500' :
+                          index === 1 ? 'bg-purple-500' :
+                          index === 2 ? 'bg-blue-500' : 'bg-orange-500'
                         }`}
                       ></motion.div>
                     </div>
