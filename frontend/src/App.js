@@ -691,6 +691,142 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Sites Where Others Fail Section */}
+      <section className="py-20 relative bg-gradient-to-b from-gray-800 via-gray-900 to-gray-800">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-orange-400 via-red-400 to-orange-600 bg-clip-text text-transparent">
+                Sites Where Others Fail, We Don't
+              </span>
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              Premium sites that block traditional ad blockers can't detect our AI-powered stealth technology
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {[
+              { name: "Forbes", logo: "🏢" },
+              { name: "Wired", logo: "⚡" },
+              { name: "Bloomberg", logo: "📈" },
+              { name: "Business Insider", logo: "💼" },
+              { name: "The Atlantic", logo: "🌊" },
+              { name: "LA Times", logo: "🌴" },
+              { name: "The Verge", logo: "🔮" },
+              { name: "GQ.com", logo: "👔" },
+              { name: "NewsBreak", logo: "📰" },
+              { name: "The Independent", logo: "🗞️" }
+            ].map((site, index) => (
+              <motion.div
+                key={site.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="bg-white/5 backdrop-blur-xl rounded-xl p-4 border border-white/10 hover:border-red-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/10 text-center">
+                  <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">
+                    {site.logo}
+                  </div>
+                  <h3 className="text-white text-sm font-medium group-hover:text-red-300 transition-colors duration-300">
+                    {site.name}
+                  </h3>
+                  <div className="mt-2">
+                    <div className="w-full h-1 bg-gray-700/50 rounded-full overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: '100%' }}
+                        transition={{ duration: 1, delay: 0.3 + index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="h-full bg-gradient-to-r from-red-500 to-orange-400 rounded-full"
+                      ></motion.div>
+                    </div>
+                    <div className="text-emerald-400 text-xs mt-1 font-medium">✓ Working</div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* User Testimonials Section */}
+      <section className="py-20 relative bg-gradient-to-b from-gray-800 via-gray-900 to-gray-800">
+        <div className="max-w-4xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
+                User Feedback
+              </span>
+            </h2>
+            <p className="text-lg text-gray-400 max-w-xl mx-auto">
+              Real testimonials from users who switched to AdsHide
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                quote: "Finally something that actually works on Bloomberg and Forbes. No nags, no interruptions.",
+                author: "Alex T.",
+                rating: 5,
+                verified: true
+              },
+              {
+                quote: "I left Adblock for this. Never looking back.",
+                author: "Jenny K.",
+                rating: 5,
+                verified: true
+              }
+            ].map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-yellow-400/30 transition-all duration-300"
+              >
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                  {testimonial.verified && (
+                    <div className="ml-2 flex items-center gap-1">
+                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <span className="text-green-400 text-xs font-medium">Verified</span>
+                    </div>
+                  )}
+                </div>
+                <blockquote className="text-gray-200 leading-relaxed mb-4 italic">
+                  "{testimonial.quote}"
+                </blockquote>
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center">
+                    <Users className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-gray-400 font-medium">– {testimonial.author}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Minimalistic FAQ Section with Colors */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 relative">
         <div className="max-w-4xl mx-auto px-6 relative">
