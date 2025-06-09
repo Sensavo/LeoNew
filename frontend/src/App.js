@@ -296,15 +296,12 @@ const Home = () => {
                     }}
                     whileHover={{ 
                       scale: 1.05,
-                      boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
+                      boxShadow: '0 20px 60px rgba(0,0,0,0.15)',
                       y: -2
                     }}
                     whileTap={{ scale: 0.98 }}
                     transition={{ duration: 0.2 }}
-                    className="group relative overflow-hidden bg-white hover:bg-gray-50 rounded-2xl px-6 py-4 shadow-2xl border border-gray-200/20 cursor-pointer"
-                    style={{
-                      filter: !isPrivacyAccepted ? 'none' : 'none'
-                    }}
+                    className="group relative overflow-hidden bg-white hover:bg-gray-50 rounded-2xl px-8 py-5 shadow-xl border-2 border-gray-200 hover:border-gray-300 cursor-pointer"
                   >
                     <motion.div 
                       className="flex items-center gap-4"
