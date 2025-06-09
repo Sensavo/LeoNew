@@ -196,31 +196,26 @@ const Home = () => {
 
               <div className="space-y-5">
                 <motion.h2 
-                  className="text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight"
+                  className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
                   <motion.span
+                    className="block text-gray-900"
                     animate={{
-                      backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+                      opacity: [0.9, 1, 0.9]
                     }}
                     transition={{
                       duration: 4,
                       repeat: Infinity,
                       ease: "easeInOut"
                     }}
-                    style={{
-                      background: 'linear-gradient(90deg, #1f2937, #6b7280, #1f2937)',
-                      backgroundSize: '200% 100%',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent'
-                    }}
                   >
                     The Ad Blocker
                   </motion.span>
                   <motion.span 
-                    className="block"
+                    className="block bg-gradient-to-r from-red-600 via-red-700 to-orange-600 bg-clip-text text-transparent"
                     animate={{
                       backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
                     }}
@@ -231,10 +226,7 @@ const Home = () => {
                       delay: 1
                     }}
                     style={{
-                      background: 'linear-gradient(90deg, #dc2626, #ea580c, #f59e0b, #dc2626)',
-                      backgroundSize: '300% 100%',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent'
+                      backgroundSize: '300% 100%'
                     }}
                   >
                     They Can't Detect
@@ -242,7 +234,7 @@ const Home = () => {
                 </motion.h2>
                 
                 <motion.p 
-                  className="text-xl text-gray-700 leading-relaxed max-w-2xl xl:max-w-2xl lg:mx-auto"
+                  className="text-xl text-gray-800 leading-relaxed max-w-2xl xl:max-w-2xl lg:mx-auto font-medium"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
