@@ -81,7 +81,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
-      {/* $5 Amazon Gift Card Banner */}
+      {/* Desktop Only Banner */}
       {isBannerVisible && (
         <motion.div
           initial={{ y: -50, opacity: 0 }}
@@ -90,7 +90,7 @@ const Home = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="relative text-white py-3 px-4 z-50"
           style={{
-            background: 'linear-gradient(135deg, #131A22 0%, #232F3E 100%)'
+            background: 'linear-gradient(135deg, #dc2626 0%, #991b1b 100%)'
           }}
         >
           <div className="max-w-6xl mx-auto flex items-center justify-between">
@@ -100,11 +100,11 @@ const Home = () => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="text-orange-400 font-medium text-sm">
-                🎁 $5 Amazon Gift Card
+              <div className="text-yellow-300 font-medium text-sm">
+                💻 Desktop Only
               </div>
-              <div className="text-gray-300 text-sm">
-                Install WebOS Toolkit to claim your reward
+              <div className="text-gray-100 text-sm">
+                This extension works on desktop computers only - install from Chrome Web Store
               </div>
             </motion.div>
             
@@ -125,17 +125,17 @@ const Home = () => {
                 }}
                 whileHover={{ 
                   scale: 1.02,
-                  boxShadow: "0 0 20px rgba(255, 153, 0, 0.3)"
+                  boxShadow: "0 0 20px rgba(255, 255, 255, 0.3)"
                 }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-1.5 rounded-md font-medium text-sm transition-all duration-300"
+                className="bg-white hover:bg-gray-100 text-red-600 px-5 py-1.5 rounded-md font-medium text-sm transition-all duration-300"
               >
-                Claim
+                Install Now
               </motion.button>
               
               <button
                 onClick={() => setIsBannerVisible(false)}
-                className="text-gray-500 hover:text-gray-300 transition-colors duration-200 p-1"
+                className="text-gray-300 hover:text-white transition-colors duration-200 p-1"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -152,7 +152,7 @@ const Home = () => {
               repeat: Infinity,
               ease: "easeInOut"
             }}
-            className="absolute bottom-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent"
+            className="absolute bottom-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent"
           />
         </motion.div>
       )}
