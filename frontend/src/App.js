@@ -525,7 +525,7 @@ const Home = () => {
 
                     <div className="flex items-center gap-2">
                       <div className="w-4 h-4 bg-cyan-500/30 rounded-md flex items-center justify-center">
-                        <Search className="w-2.5 h-2.5 text-cyan-400" />
+                        <Eye className="w-2.5 h-2.5 text-cyan-400" />
                       </div>
                       <span className="text-gray-200 text-xs font-medium flex-1">Images</span>
                       <motion.div 
