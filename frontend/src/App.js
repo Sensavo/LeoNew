@@ -966,7 +966,7 @@ const Home = () => {
               <span>All rights reserved</span>
             </div>
             <div className="text-gray-500 text-sm">
-              AI Ad Blocker Technology by <a href="https://www.happydesign.pro/" target="_blank" rel="noopener noreferrer" className="text-red-400 font-medium hover:text-red-300 transition-colors duration-200">Happy Agency</a>
+              Website created at <a href="https://www.happydesign.pro/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-700 transition-colors duration-200">Happy Agency</a>
             </div>
           </div>
         </div>
