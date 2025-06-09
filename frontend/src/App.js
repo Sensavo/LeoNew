@@ -614,7 +614,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Redesigned Features Section - Bottom-Aligned Progress Bars */}
+      {/* Redesigned Features Section */}
       <section className="py-20 relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
@@ -625,12 +625,12 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-600 bg-clip-text text-transparent animate-pulse">
-                Key Features
+              <span className="bg-gradient-to-r from-red-400 via-orange-400 to-red-600 bg-clip-text text-transparent animate-pulse">
+                Why It's Smarter
               </span>
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              Professional tools designed to optimize your browser performance
+              Advanced AI technology that outperforms traditional ad blockers
             </p>
           </motion.div>
 
