@@ -412,31 +412,31 @@ const Home = () => {
                   }}
                 >
                   
-                  {/* Header Status */}
+                  {/* Header Status - AdsHide Branding */}
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.7 }}
                     className="flex items-center gap-2 mb-4"
                   >
-                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                    <div className="w-8 h-8 bg-gradient-to-br from-red-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg">
                       <Shield className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <div className="text-white text-sm font-bold">WebOS Toolkit</div>
-                      <div className="text-emerald-400 text-xs">Active & Protecting</div>
+                      <div className="text-white text-sm font-bold">AdsHide AI</div>
+                      <div className="text-emerald-400 text-xs">Actively Blocking</div>
                     </div>
                   </motion.div>
 
-                  {/* Compact Results Grid - White Tiles */}
+                  {/* Live Ad Block Statistics */}
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.9 }}
-                    className="grid grid-cols-2 gap-3 mb-4"
+                    className="grid grid-cols-1 gap-3 mb-4"
                   >
-                    {/* Ads Blocked - White */}
-                    <div className="bg-white backdrop-blur-md rounded-xl p-3 border border-gray-200 shadow-lg">
+                    {/* Total Ads Blocked */}
+                    <div className="bg-white backdrop-blur-md rounded-xl p-4 border border-gray-200 shadow-lg">
                       <div className="text-center">
                         <motion.div 
                           initial={{ scale: 0 }}
@@ -444,45 +444,45 @@ const Home = () => {
                           transition={{ duration: 0.6, delay: 1.2 }}
                           className="text-2xl font-bold text-red-500 mb-1"
                         >
-                          247
+                          {adsBlocked.toLocaleString()}
                         </motion.div>
-                        <div className="text-gray-700 text-xs font-medium">Ads Blocked</div>
-                        <div className="w-full bg-red-100 rounded-full h-1.5 mt-1">
+                        <div className="text-gray-700 text-xs font-medium">Total Ads Blocked</div>
+                        <div className="w-full bg-red-100 rounded-full h-1.5 mt-2">
                           <motion.div 
                             initial={{ width: 0 }}
-                            animate={{ width: '85%' }}
-                            transition={{ duration: 1.5, delay: 1.4 }}
+                            animate={{ width: '100%' }}
+                            transition={{ duration: 2, delay: 1.4 }}
                             className="bg-gradient-to-r from-red-500 to-red-400 h-1.5 rounded-full"
                           ></motion.div>
                         </div>
                       </div>
                     </div>
                     
-                    {/* Speed Boost - White */}
-                    <div className="bg-white backdrop-blur-md rounded-xl p-3 border border-gray-200 shadow-lg">
+                    {/* Today's Ads Blocked */}
+                    <div className="bg-white backdrop-blur-md rounded-xl p-4 border border-gray-200 shadow-lg">
                       <div className="text-center">
                         <motion.div 
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
                           transition={{ duration: 0.6, delay: 1.3 }}
-                          className="text-2xl font-bold text-emerald-500 mb-1"
+                          className="text-2xl font-bold text-orange-500 mb-1"
                         >
-                          +73%
+                          {todaysAdsBlocked.toLocaleString()}
                         </motion.div>
-                        <div className="text-gray-700 text-xs font-medium">Speed Boost</div>
-                        <div className="w-full bg-emerald-100 rounded-full h-1.5 mt-1">
+                        <div className="text-gray-700 text-xs font-medium">Blocked Today</div>
+                        <div className="w-full bg-orange-100 rounded-full h-1.5 mt-2">
                           <motion.div 
                             initial={{ width: 0 }}
-                            animate={{ width: '73%' }}
+                            animate={{ width: '85%' }}
                             transition={{ duration: 1.5, delay: 1.5 }}
-                            className="bg-gradient-to-r from-emerald-500 to-emerald-400 h-1.5 rounded-full"
+                            className="bg-gradient-to-r from-orange-500 to-orange-400 h-1.5 rounded-full"
                           ></motion.div>
                         </div>
                       </div>
                     </div>
                   </motion.div>
 
-                  {/* Compact Feature List - No Tiles */}
+                  {/* Compact Feature List - AI Features */}
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -490,10 +490,10 @@ const Home = () => {
                     className="space-y-1.5"
                   >
                     <div className="flex items-center gap-2">
-                      <div className="w-4 h-4 bg-blue-500/30 rounded-md flex items-center justify-center">
-                        <span className="text-blue-400 text-xs">🔧</span>
+                      <div className="w-4 h-4 bg-red-500/30 rounded-md flex items-center justify-center">
+                        <span className="text-red-400 text-xs">🧠</span>
                       </div>
-                      <span className="text-gray-200 text-xs font-medium flex-1">Headers</span>
+                      <span className="text-gray-200 text-xs font-medium flex-1">AI Detection</span>
                       <motion.div 
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity }}
@@ -502,10 +502,10 @@ const Home = () => {
                     </div>
 
                     <div className="flex items-center gap-2">
-                      <div className="w-4 h-4 bg-red-500/30 rounded-md flex items-center justify-center">
-                        <span className="text-red-400 text-xs">🚫</span>
+                      <div className="w-4 h-4 bg-purple-500/30 rounded-md flex items-center justify-center">
+                        <span className="text-purple-400 text-xs">👻</span>
                       </div>
-                      <span className="text-gray-200 text-xs font-medium flex-1">Ad Block</span>
+                      <span className="text-gray-200 text-xs font-medium flex-1">Stealth Mode</span>
                       <motion.div 
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
@@ -514,10 +514,10 @@ const Home = () => {
                     </div>
 
                     <div className="flex items-center gap-2">
-                      <div className="w-4 h-4 bg-purple-500/30 rounded-md flex items-center justify-center">
-                        <span className="text-purple-400 text-xs">⚡</span>
+                      <div className="w-4 h-4 bg-blue-500/30 rounded-md flex items-center justify-center">
+                        <span className="text-blue-400 text-xs">🔓</span>
                       </div>
-                      <span className="text-gray-200 text-xs font-medium flex-1">HTML Sim</span>
+                      <span className="text-gray-200 text-xs font-medium flex-1">Paywall Bypass</span>
                       <motion.div 
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity, delay: 1 }}
@@ -529,7 +529,7 @@ const Home = () => {
                       <div className="w-4 h-4 bg-cyan-500/30 rounded-md flex items-center justify-center">
                         <Eye className="w-2.5 h-2.5 text-cyan-400" />
                       </div>
-                      <span className="text-gray-200 text-xs font-medium flex-1">Images</span>
+                      <span className="text-gray-200 text-xs font-medium flex-1">Live Stats</span>
                       <motion.div 
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
