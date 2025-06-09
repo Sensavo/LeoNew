@@ -157,18 +157,18 @@ const Home = () => {
         </motion.div>
       )}
 
-      {/* Hero Section */}
+      {/* Hero Section - Light Theme */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Modern Background */}
+        {/* Light Background */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
           style={{ backgroundImage: `url('https://images.unsplash.com/photo-1658998765622-962cb51e7888')` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-blue-900/90 to-gray-900/95" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-blue-50/90 to-gray-50/95" />
         
         {/* Geometric Pattern Overlay */}
         <div 
-          className="absolute inset-0 opacity-5"
+          className="absolute inset-0 opacity-3"
           style={{ 
             backgroundImage: `url('https://images.unsplash.com/photo-1496167117681-944f702be1f4')`,
             backgroundSize: '400px 400px',
