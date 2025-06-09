@@ -186,16 +186,16 @@ const Home = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-left xl:text-left lg:text-center space-y-6 xl:max-w-none lg:max-w-4xl lg:mx-auto"
             >
-              {/* Logo with Gradient - AdsHide Branding */}
+              {/* Logo with Gradient - AdsHide Branding - Light Theme */}
               <div className="flex items-center gap-4 xl:justify-start lg:justify-center pt-16">
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500 via-red-600 to-orange-600 rounded-2xl flex items-center justify-center shadow-2xl">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h1 className="text-3xl xl:text-4xl font-bold bg-gradient-to-r from-red-400 via-red-500 to-orange-400 bg-clip-text text-transparent">
+                  <h1 className="text-3xl xl:text-4xl font-bold bg-gradient-to-r from-red-500 via-red-600 to-orange-500 bg-clip-text text-transparent">
                     AdsHide
                   </h1>
-                  <p className="text-red-300 font-medium">AI Ad Blocker</p>
+                  <p className="text-red-600 font-medium">AI Ad Blocker</p>
                 </div>
               </div>
 
