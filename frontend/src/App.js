@@ -420,7 +420,7 @@ const Home = () => {
                   }}
                 >
                   
-                  {/* Header Status - AdsHide Branding */}
+                  {/* Header Status - AdsHide Branding - Light Theme */}
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -431,12 +431,12 @@ const Home = () => {
                       <Shield className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <div className="text-white text-sm font-bold">AdsHide AI</div>
-                      <div className="text-emerald-400 text-xs">Actively Blocking</div>
+                      <div className="text-gray-900 text-sm font-bold">AdsHide AI</div>
+                      <div className="text-emerald-600 text-xs">Actively Blocking</div>
                     </div>
                   </motion.div>
 
-                  {/* Live Ad Block Statistics */}
+                  {/* Live Ad Block Statistics - Light Theme */}
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -444,17 +444,17 @@ const Home = () => {
                     className="grid grid-cols-1 gap-3 mb-4"
                   >
                     {/* Total Ads Blocked */}
-                    <div className="bg-white backdrop-blur-md rounded-xl p-4 border border-gray-200 shadow-lg">
+                    <div className="bg-white/90 backdrop-blur-md rounded-xl p-4 border border-gray-200 shadow-lg">
                       <div className="text-center">
                         <motion.div 
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
                           transition={{ duration: 0.6, delay: 1.2 }}
-                          className="text-2xl font-bold text-red-500 mb-1"
+                          className="text-2xl font-bold text-red-600 mb-1"
                         >
                           {adsBlocked.toLocaleString()}
                         </motion.div>
-                        <div className="text-gray-700 text-xs font-medium">Total Ads Blocked</div>
+                        <div className="text-gray-600 text-xs font-medium">Total Ads Blocked</div>
                         <div className="w-full bg-red-100 rounded-full h-1.5 mt-2">
                           <motion.div 
                             initial={{ width: 0 }}
@@ -467,17 +467,17 @@ const Home = () => {
                     </div>
                     
                     {/* Today's Ads Blocked */}
-                    <div className="bg-white backdrop-blur-md rounded-xl p-4 border border-gray-200 shadow-lg">
+                    <div className="bg-white/90 backdrop-blur-md rounded-xl p-4 border border-gray-200 shadow-lg">
                       <div className="text-center">
                         <motion.div 
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
                           transition={{ duration: 0.6, delay: 1.3 }}
-                          className="text-2xl font-bold text-orange-500 mb-1"
+                          className="text-2xl font-bold text-orange-600 mb-1"
                         >
                           {todaysAdsBlocked.toLocaleString()}
                         </motion.div>
-                        <div className="text-gray-700 text-xs font-medium">Blocked Today</div>
+                        <div className="text-gray-600 text-xs font-medium">Blocked Today</div>
                         <div className="w-full bg-orange-100 rounded-full h-1.5 mt-2">
                           <motion.div 
                             initial={{ width: 0 }}
@@ -490,7 +490,7 @@ const Home = () => {
                     </div>
                   </motion.div>
 
-                  {/* Compact Feature List - AI Features */}
+                  {/* Compact Feature List - Light Theme */}
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -498,50 +498,50 @@ const Home = () => {
                     className="space-y-1.5"
                   >
                     <div className="flex items-center gap-2">
-                      <div className="w-4 h-4 bg-red-500/30 rounded-md flex items-center justify-center">
-                        <span className="text-red-400 text-xs">🧠</span>
+                      <div className="w-4 h-4 bg-red-500/20 rounded-md flex items-center justify-center">
+                        <span className="text-red-600 text-xs">🧠</span>
                       </div>
-                      <span className="text-gray-200 text-xs font-medium flex-1">AI Detection</span>
+                      <span className="text-gray-700 text-xs font-medium flex-1">AI Detection</span>
                       <motion.div 
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity }}
-                        className="w-1.5 h-1.5 bg-emerald-400 rounded-full"
+                        className="w-1.5 h-1.5 bg-emerald-500 rounded-full"
                       ></motion.div>
                     </div>
 
                     <div className="flex items-center gap-2">
-                      <div className="w-4 h-4 bg-purple-500/30 rounded-md flex items-center justify-center">
-                        <span className="text-purple-400 text-xs">👻</span>
+                      <div className="w-4 h-4 bg-purple-500/20 rounded-md flex items-center justify-center">
+                        <span className="text-purple-600 text-xs">👻</span>
                       </div>
-                      <span className="text-gray-200 text-xs font-medium flex-1">Stealth Mode</span>
+                      <span className="text-gray-700 text-xs font-medium flex-1">Stealth Mode</span>
                       <motion.div 
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                        className="w-1.5 h-1.5 bg-emerald-400 rounded-full"
+                        className="w-1.5 h-1.5 bg-emerald-500 rounded-full"
                       ></motion.div>
                     </div>
 
                     <div className="flex items-center gap-2">
-                      <div className="w-4 h-4 bg-blue-500/30 rounded-md flex items-center justify-center">
-                        <span className="text-blue-400 text-xs">🔓</span>
+                      <div className="w-4 h-4 bg-blue-500/20 rounded-md flex items-center justify-center">
+                        <span className="text-blue-600 text-xs">🔓</span>
                       </div>
-                      <span className="text-gray-200 text-xs font-medium flex-1">Paywall Bypass</span>
+                      <span className="text-gray-700 text-xs font-medium flex-1">Paywall Bypass</span>
                       <motion.div 
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                        className="w-1.5 h-1.5 bg-emerald-400 rounded-full"
+                        className="w-1.5 h-1.5 bg-emerald-500 rounded-full"
                       ></motion.div>
                     </div>
 
                     <div className="flex items-center gap-2">
-                      <div className="w-4 h-4 bg-cyan-500/30 rounded-md flex items-center justify-center">
-                        <Eye className="w-2.5 h-2.5 text-cyan-400" />
+                      <div className="w-4 h-4 bg-cyan-500/20 rounded-md flex items-center justify-center">
+                        <Eye className="w-2.5 h-2.5 text-cyan-600" />
                       </div>
-                      <span className="text-gray-200 text-xs font-medium flex-1">Live Stats</span>
+                      <span className="text-gray-700 text-xs font-medium flex-1">Live Stats</span>
                       <motion.div 
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
-                        className="w-1.5 h-1.5 bg-emerald-400 rounded-full"
+                        className="w-1.5 h-1.5 bg-emerald-500 rounded-full"
                       ></motion.div>
                     </div>
                   </motion.div>
