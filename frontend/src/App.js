@@ -222,7 +222,7 @@ const Home = () => {
                       WebkitTextFillColor: 'transparent'
                     }}
                   >
-                    Supercharge Your
+                    The Ad Blocker
                   </motion.span>
                   <motion.span 
                     className="block"
@@ -236,13 +236,13 @@ const Home = () => {
                       delay: 1
                     }}
                     style={{
-                      background: 'linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4, #3b82f6)',
+                      background: 'linear-gradient(90deg, #dc2626, #ea580c, #f59e0b, #dc2626)',
                       backgroundSize: '300% 100%',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent'
                     }}
                   >
-                    Browser Experience
+                    They Can't Detect
                   </motion.span>
                 </motion.h2>
                 
@@ -252,7 +252,7 @@ const Home = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                  Professional developer tools to speed up your browser, unlock advanced insights, and take full control of your browsing experience.
+                  Blocks ads. Bypasses paywalls. Stays invisible. Advanced AI technology that works on sites where others fail.
                 </motion.p>
               </div>
 
