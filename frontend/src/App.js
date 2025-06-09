@@ -992,41 +992,35 @@ const Home = () => {
             </div>
 
             <div className="prose prose-invert max-w-none">
-              <h3 className="text-xl font-semibold text-blue-400 mb-4">Collecting and Using Your Personal Data</h3>
+              <h3 className="text-xl font-semibold text-red-400 mb-4">Privacy-First Ad Blocking</h3>
               
-              <h4 className="text-lg font-semibold text-white mb-3">Security of Your Personal Data</h4>
+              <h4 className="text-lg font-semibold text-white mb-3">Data Collection and Privacy</h4>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.
+                This extension is built with privacy as a core principle. We do not collect or store your personal data. All ad blocking is handled locally within your browser using on-device AI models. We do not monitor, track, or log any part of your browsing history.
               </p>
 
-              <h4 className="text-lg font-semibold text-white mb-3">Personal Data</h4>
+              <h4 className="text-lg font-semibold text-white mb-3">Local Processing</h4>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                While using Our Service, We may ask You for personally identifying information that can be used to contact or identify You. Usage Data is one type of personally identifiable information that may be collected.
+                We do not sell, share, or trade your data—because we never collect it to begin with. The only communication the extension may perform is to check for updates or bug fixes via the Chrome Web Store. We do not use remote scripts, cloud scanning, or external logging APIs.
               </p>
 
-              <h4 className="text-lg font-semibold text-white mb-3">Usage Data</h4>
+              <h4 className="text-lg font-semibold text-white mb-3">Stealth Technology</h4>
               <p className="text-gray-300 mb-4 leading-relaxed">
-                Usage Data has collected automatically when using the Service.
+                Our AI-powered stealth technology operates entirely locally in your browser, ensuring that websites cannot detect the presence of our ad blocker. This technology does not transmit any data about your browsing habits or the sites you visit.
               </p>
               <p className="text-gray-300 mb-4 leading-relaxed">
-                Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.
+                This tool was created to give users control over their web experience—without compromises to privacy or security. All ad detection and blocking happens on your device using machine learning models that run locally.
               </p>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.
-              </p>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.
+                If you have questions about how we handle data or security, feel free to reach out through the Chrome Web Store support contact. We are committed to maintaining the highest standards of privacy protection.
               </p>
 
-              <h4 className="text-lg font-semibold text-white mb-3">Information Collected while Using the Application</h4>
+              <h4 className="text-lg font-semibold text-white mb-3">Security and Updates</h4>
               <p className="text-gray-300 mb-4 leading-relaxed">
-                While using Our Application, in order to provide features of Our Application, We may collect, with Your prior permission: Information regarding your location.
-              </p>
-              <p className="text-gray-300 mb-4 leading-relaxed">
-                We use this information to provide features of Our Service, to improve and customize Our Service. The information may be uploaded to the Company's servers and/or a Service Provider's server or it may be simply stored on Your device.
+                The security of your browsing experience is important to us. While we strive to use the most advanced security measures to protect your browser experience, remember that no method of internet browsing is 100% secure from all threats.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                You can enable or disable access to this information at any time, through Your Device settings.
+                Our extension updates automatically through the Chrome Web Store to ensure you always have the latest ad blocking capabilities and security improvements, without any data collection on our part.
               </p>
             </div>
 
