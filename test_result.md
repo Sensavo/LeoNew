@@ -104,6 +104,74 @@
 
 user_problem_statement: "the preloader under the glass is not seamless, remove it and create circular shape with gradient that rotates like infinite preloader + it should slightly scale up and down, then add a banner for 5 dollar Amazon gift card"
 
+backend:
+  - task: "Health Check Endpoint"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "Tested the health check endpoint (GET /api/). The endpoint returns a 200 status code with the expected JSON response {\"message\":\"Hello World\"}. The endpoint is working correctly as documented in the API documentation."
+  - task: "Status Check Creation"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "Tested the status check creation endpoint (POST /api/status). Successfully created a status check with a client name. The endpoint returns a 200 status code with the expected JSON response containing id, client_name, and timestamp fields. The endpoint is working correctly as documented in the API documentation."
+  - task: "Status Check Retrieval"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "Tested the status check retrieval endpoint (GET /api/status). Successfully retrieved a list of status checks. The endpoint returns a 200 status code with the expected JSON response containing an array of status check objects. Each object has id, client_name, and timestamp fields. The endpoint is working correctly as documented in the API documentation."
+  - task: "MongoDB Integration"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "Tested the MongoDB integration by creating a status check and then retrieving it. The data was successfully stored in and retrieved from the MongoDB database. The integration is working correctly with the MongoDB instance at localhost:27017 as specified in the .env file."
+  - task: "CORS Configuration"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "Tested the CORS configuration by sending preflight and actual requests with Origin headers. The server correctly responds with the appropriate CORS headers (Access-Control-Allow-Origin, Access-Control-Allow-Methods, Access-Control-Allow-Headers). The CORS configuration is working correctly, allowing cross-origin requests as needed."
+  - task: "API Documentation"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "Tested the API documentation endpoints. Successfully accessed the Swagger UI (/docs), ReDoc (/redoc), and OpenAPI schema (/openapi.json). All documentation endpoints returned 200 status codes and displayed the expected content. The API documentation is accessible and correctly configured."
+
 frontend:
   - task: "Fixed Glass Effect & Simplified Preloader"
     implemented: true
