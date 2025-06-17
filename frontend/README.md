@@ -1,70 +1,215 @@
-# Getting Started with Create React App
+# Frontend - WebOS Toolkit Landing Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React-based frontend application for the WebOS Toolkit Chrome extension landing page.
 
-## Available Scripts
+## 🏗 Architecture
 
-In the project directory, you can run:
+This frontend follows a modern React architecture with:
 
-### `npm start`
+- **Component-based Design**: Modular, reusable components
+- **Custom Hooks**: Centralized state management
+- **Constants Management**: Organized data and configuration
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📦 Components Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Page Sections (`/components/sections/`)
 
-### `npm test`
+#### `Banner.js`
+Promotional banner component featuring:
+- Amazon gift card campaign
+- Dismissible functionality
+- Privacy-aware CTA button
+- Smooth slide-in animations
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### `Hero.js`
+Main landing section with:
+- Animated title with gradient effects
+- Privacy checkbox and policy link
+- Chrome Web Store installation button
+- Responsive layout for desktop/mobile
 
-### `npm run build`
+#### `HeroVisualization.js`
+Interactive dashboard mockup showing:
+- Glass morphism card design
+- Animated statistics (ads blocked, speed boost)
+- Feature status indicators
+- Floating action icons
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### `Features.js`
+Feature showcase section:
+- Grid layout (4 columns on desktop)
+- Animated progress bars
+- Hover effects and transitions
+- Performance indicators
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### `FAQ.js`
+Frequently asked questions:
+- Expandable accordion interface
+- Smooth expand/collapse animations
+- Color-coded expanded states
+- Keyboard accessibility
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### `Footer.js`
+Website footer containing:
+- Brand information and logo
+- Quick navigation links
+- Installation CTA button
+- Copyright and attribution
 
-### `npm run eject`
+### UI Components (`/components/ui/`)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### `Preloader.js`
+Circular gradient preloader:
+- Conic gradient colors
+- Rotation and scaling animations
+- Configurable size and opacity
+- Smooth entrance animation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### `PrivacyModal.js`
+Privacy policy modal dialog:
+- Scrollable content area
+- Smooth open/close animations
+- Structured policy content
+- Accessible close button
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🎯 Custom Hooks
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### `useAppState.js`
+Centralized state management for:
+- Privacy modal visibility
+- Privacy acceptance status
+- FAQ expansion state
+- Banner visibility
+- Action handlers for state changes
 
-## Learn More
+## 📊 Constants (`/constants/index.js`)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Organized application data:
+- **FEATURES**: Feature grid data with icons and descriptions
+- **FAQS**: Question and answer pairs
+- **ANIMATIONS**: Animation timing and configuration
+- **COLORS**: Gradient definitions and color schemes
+- **IMAGES**: Background and asset URLs
+- **CHROME_STORE_URL**: Extension installation link
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🎨 Styling Approach
 
-### Code Splitting
+### Tailwind CSS Configuration
+- Custom color palette
+- Extended spacing and sizing
+- Custom animation classes
+- Responsive breakpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Animation Strategy
+- **Framer Motion**: Complex animations and interactions
+- **CSS Animations**: Simple rotations and transforms
+- **Staggered Animations**: Sequential element appearances
+- **Hover States**: Interactive feedback
 
-### Analyzing the Bundle Size
+### Responsive Design
+- Mobile-first approach
+- Flexible grid layouts
+- Adaptive typography
+- Touch-friendly interactions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🔧 Development Workflow
 
-### Making a Progressive Web App
+### Component Development
+1. Create component in appropriate directory
+2. Add JSDoc documentation
+3. Implement responsive design
+4. Add accessibility attributes
+5. Test across devices
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### State Management
+- Use custom hooks for complex state
+- Pass props for simple parent-child communication
+- Centralize global state in useAppState
+- Minimize prop drilling
 
-### Advanced Configuration
+### Performance Considerations
+- Lazy load images where appropriate
+- Optimize animation performance
+- Use React.memo for expensive components
+- Minimize re-renders with proper dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🚀 Build Process
 
-### Deployment
+### Development
+```bash
+yarn start          # Start development server
+yarn lint           # Check code quality
+yarn format         # Format code with Prettier
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Production
+```bash
+yarn build          # Create production build
+yarn serve          # Serve production build locally
+```
 
-### `npm run build` fails to minify
+### Bundle Analysis
+```bash
+yarn analyze        # Analyze bundle size (if configured)
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🎯 Performance Metrics
+
+Target performance goals:
+- **First Contentful Paint**: < 1.5s
+- **Largest Contentful Paint**: < 2.5s
+- **Cumulative Layout Shift**: < 0.1
+- **First Input Delay**: < 100ms
+
+## 🔍 Testing Strategy
+
+### Component Testing
+- Unit tests for individual components
+- Integration tests for section components
+- Accessibility testing
+- Visual regression testing
+
+### E2E Testing
+- User journey testing
+- Form submission flows
+- Modal interactions
+- Responsive behavior
+
+## 📱 Browser Support
+
+### Supported Browsers
+- Chrome (latest 2 versions)
+- Firefox (latest 2 versions)
+- Safari (latest 2 versions)
+- Edge (latest 2 versions)
+
+### Progressive Enhancement
+- Core functionality without JavaScript
+- Enhanced experience with modern features
+- Graceful degradation for older browsers
+
+## 🔒 Security Considerations
+
+### Content Security Policy
+- Strict CSP headers
+- Whitelist external resources
+- Prevent XSS attacks
+
+### Data Handling
+- No sensitive data in localStorage
+- Secure API communication
+- Privacy-compliant analytics
+
+## 📈 Analytics Integration
+
+### Event Tracking
+- Page views and user interactions
+- CTA button clicks
+- Form submissions
+- Error tracking
+
+### Privacy Compliance
+- GDPR-compliant implementation
+- User consent management
+- Anonymized data collection
