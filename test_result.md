@@ -235,8 +235,7 @@ metadata:
   run_ui: true
 
 test_plan:
-  current_focus:
-    - "Added Professional $5 Amazon Gift Card Banner with Amazon Colors"
+  current_focus: []
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
