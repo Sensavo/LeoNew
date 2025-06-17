@@ -6,7 +6,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ANIMATIONS, COLORS } from "../constants";
+import { ANIMATIONS, COLORS } from "../../constants";
 
 const Preloader = ({ className = "" }) => {
   return (
