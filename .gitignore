@@ -68,3 +68,28 @@ __pycache__/
 
 # Android SDK
 android-sdk/
+
+# ===================
+# PROJECT SPECIFIC
+# ===================
+# Environment files
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+
+# Editor backups
+*.backup
+*.bak
+*.orig
+
+# Testing artifacts
+.nyc_output
+.pytest_cache/
+
+# Development tools
+.eslintcache
+
+# Original component backups
+App_original.js
+App_clean.js
