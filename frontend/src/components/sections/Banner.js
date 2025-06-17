@@ -7,7 +7,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { X } from "lucide-react";
-import { CHROME_STORE_URL, ANIMATIONS } from "../constants";
+import { CHROME_STORE_URL, ANIMATIONS } from "../../constants";
 
 const Banner = ({ 
   isVisible, 
