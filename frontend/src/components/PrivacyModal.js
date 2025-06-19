@@ -28,7 +28,7 @@ const PrivacyModal = ({ isPrivacyModalOpen, setIsPrivacyModalOpen }) => {
           
           <h4 className="text-lg font-semibold text-gray-900 mb-3">Data Collection and Privacy</h4>
           <p className="text-gray-700 mb-6 leading-relaxed">
-            This extension is built with privacy as a core principle. We do not collect or store your personal data. All ad blocking is handled locally within your browser using on-device AI models. We do not monitor, track, or log any part of your browsing history.
+            This extension is built with privacy as a core principle. We do not collect or store your personal data. All ad blocking is handled locally within your browser using advanced algorithms. We do not monitor, track, or log any part of your browsing history.
           </p>
 
           <h4 className="text-lg font-semibold text-gray-900 mb-3">Local Processing</h4>
