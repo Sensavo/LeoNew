@@ -6,8 +6,8 @@ const Features = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Detection",
-      description: "Advanced AI identifies and blocks hidden native ads that traditional blockers miss.",
+      title: "Smart Detection",
+      description: "Advanced algorithms identify and block hidden native ads that traditional blockers miss.",
       image: "https://images.unsplash.com/photo-1636955840493-f43a02bfa064"
     },
     {
