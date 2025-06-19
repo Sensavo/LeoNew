@@ -41,7 +41,7 @@ const PrivacyModal = ({ isPrivacyModalOpen, setIsPrivacyModalOpen }) => {
             Our advanced stealth technology operates entirely locally in your browser, ensuring that websites cannot detect the presence of our ad blocker. This technology does not transmit any data about your browsing habits or the sites you visit.
           </p>
           <p className="text-gray-700 mb-4 leading-relaxed">
-            This tool was created to give users control over their web experience—without compromises to privacy or security. All ad detection and blocking happens on your device using machine learning models that run locally.
+            This tool was created to give users control over their web experience—without compromises to privacy or security. All ad detection and blocking happens on your device using advanced algorithms that run locally.
           </p>
           <p className="text-gray-700 mb-6 leading-relaxed">
             If you have questions about how we handle data or security, feel free to reach out through the Chrome Web Store support contact. We are committed to maintaining the highest standards of privacy protection.
