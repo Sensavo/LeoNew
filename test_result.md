@@ -113,7 +113,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "rebuild code the same way you it here https://github.com/Sensavo/LeoNew"
+user_problem_statement: "rebuild code the same way you it here https://github.com/Sensavo/LeoNew; remove preloader; remove every mentioning that code was created by AI or Emergent"
 
 frontend:
   - task: "Remove Preloader and Clean AI/Emergent References"
