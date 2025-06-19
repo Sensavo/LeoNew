@@ -6,7 +6,7 @@ const FAQ = ({ expandedFaq, setExpandedFaq }) => {
   const faqs = [
     {
       question: "How is this different from other ad blockers?",
-      answer: "Our AI technology detects and blocks native ads and hidden advertising that traditional blockers miss. Plus, we're completely undetectable by anti-adblock systems."
+      answer: "Our advanced technology detects and blocks native ads and hidden advertising that traditional blockers miss. Plus, we're completely undetectable by anti-adblock systems."
     },
     {
       question: "Will websites know I'm using an ad blocker?",
