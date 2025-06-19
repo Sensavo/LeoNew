@@ -83,7 +83,7 @@ const Features = () => {
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-gray-500 text-xs">Performance</span>
                     <span className="text-green-600 text-xs font-medium">
-                      {index === 0 ? 'AI-Powered' : index === 1 ? 'Invisible' : index === 2 ? 'Unlimited' : 'Universal'}
+                      {index === 0 ? 'Smart Tech' : index === 1 ? 'Invisible' : index === 2 ? 'Unlimited' : 'Universal'}
                     </span>
                   </div>
                   <div className="w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
