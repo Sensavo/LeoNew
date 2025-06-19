@@ -236,13 +236,11 @@ frontend:
 metadata:
   created_by: "main_agent"
   version: "1.0"
-  test_sequence: 11
+  test_sequence: 12
   run_ui: true
 
 test_plan:
-  current_focus:
-    - "Design Enhanced Hero Background"
-    - "Redesign Premium Sites Section with Brand-Accurate Representations"
+  current_focus: []
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
