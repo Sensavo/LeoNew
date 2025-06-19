@@ -38,7 +38,7 @@ const FAQ = ({ expandedFaq, setExpandedFaq }) => {
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-xl mx-auto">
-            Common questions about AdsHide AI Ad Blocker
+            Common questions about AdsHide Ad Blocker
           </p>
         </motion.div>
 
