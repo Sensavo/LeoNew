@@ -117,14 +117,14 @@ const Stats = () => {
       />
 
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 py-12">
-        {/* Header with Logo and Home Button */}
+        {/* Header with Logo */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="w-full max-w-4xl mx-auto mb-12"
         >
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-center">
             {/* Logo */}
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-gradient-to-br from-red-500 via-red-600 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg">
@@ -137,17 +137,6 @@ const Stats = () => {
                 <p className="text-red-600 font-medium text-sm">Statistics</p>
               </div>
             </div>
-
-            {/* Home Button */}
-            <motion.button
-              onClick={() => navigate('/')}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 bg-white/80 hover:bg-white backdrop-blur-sm px-4 py-2 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-200"
-            >
-              <Home className="w-4 h-4 text-gray-600" />
-              <span className="text-gray-700 font-medium">Home</span>
-            </motion.button>
           </div>
         </motion.div>
 
