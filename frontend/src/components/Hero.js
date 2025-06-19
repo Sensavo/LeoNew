@@ -159,7 +159,7 @@ const Hero = ({
                 <h1 className="text-3xl xl:text-4xl font-bold bg-gradient-to-r from-red-500 via-red-600 to-orange-500 bg-clip-text text-transparent">
                   AdsHide
                 </h1>
-                <p className="text-red-600 font-medium">AI Ad Blocker</p>
+                <p className="text-red-600 font-medium">Advanced Ad Blocker</p>
               </div>
             </div>
 
