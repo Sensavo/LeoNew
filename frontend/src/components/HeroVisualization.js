@@ -68,7 +68,7 @@ const HeroVisualization = () => {
               <Shield className="w-4 h-4 text-white" />
             </div>
             <div>
-              <div className="text-gray-900 text-sm font-bold">AdsHide AI</div>
+              <div className="text-gray-900 text-sm font-bold">AdsHide Pro</div>
               <div className="text-emerald-600 text-xs">Actively Blocking</div>
             </div>
           </motion.div>
