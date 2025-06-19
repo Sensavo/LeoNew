@@ -119,7 +119,7 @@ const Features = () => {
             Works on Premium Sites That Block Others
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Major publications can't detect our AI-powered stealth technology. Access your favorite content without interruptions.
+            Major publications can't detect our advanced stealth technology. Access your favorite content without interruptions.
           </p>
         </motion.div>
 
