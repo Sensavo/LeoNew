@@ -138,7 +138,7 @@ const HeroVisualization = () => {
               <div className="w-4 h-4 bg-red-500/20 rounded-md flex items-center justify-center">
                 <span className="text-red-600 text-xs">🧠</span>
               </div>
-              <span className="text-gray-700 text-xs font-medium flex-1">AI Detection</span>
+              <span className="text-gray-700 text-xs font-medium flex-1">Smart Detection</span>
               <motion.div 
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
