@@ -46,7 +46,7 @@ const Features = () => {
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Advanced AI technology that outperforms traditional ad blockers
+            Advanced technology that outperforms traditional ad blockers
           </p>
         </motion.div>
 
