@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Shield, TrendingUp, Users } from "lucide-react";
 
 const Stats = () => {
-  const navigate = useNavigate();
   const [totalAdsBlocked, setTotalAdsBlocked] = useState(5569705);
   const [userContribution, setUserContribution] = useState(324234);
 
