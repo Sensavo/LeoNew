@@ -113,7 +113,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "design hero background; redesign Works on Premium Sites That Block Others section with usage of their favicons"
+user_problem_statement: "rebuild code the same way you it here https://github.com/Sensavo/LeoNew"
 
 frontend:
   - task: "Design Enhanced Hero Background"
