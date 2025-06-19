@@ -38,7 +38,7 @@ const PrivacyModal = ({ isPrivacyModalOpen, setIsPrivacyModalOpen }) => {
 
           <h4 className="text-lg font-semibold text-gray-900 mb-3">Stealth Technology</h4>
           <p className="text-gray-700 mb-4 leading-relaxed">
-            Our AI-powered stealth technology operates entirely locally in your browser, ensuring that websites cannot detect the presence of our ad blocker. This technology does not transmit any data about your browsing habits or the sites you visit.
+            Our advanced stealth technology operates entirely locally in your browser, ensuring that websites cannot detect the presence of our ad blocker. This technology does not transmit any data about your browsing habits or the sites you visit.
           </p>
           <p className="text-gray-700 mb-4 leading-relaxed">
             This tool was created to give users control over their web experience—without compromises to privacy or security. All ad detection and blocking happens on your device using machine learning models that run locally.
