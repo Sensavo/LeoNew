@@ -10,6 +10,7 @@ import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import PrivacyModal from "./components/PrivacyModal";
+import Stats from "./components/Stats";
 
 const Home = () => {
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
