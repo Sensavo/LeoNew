@@ -10,25 +10,14 @@ import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import PrivacyModal from "./components/PrivacyModal";
-import Preloader from "./components/Preloader";
 
 const Home = () => {
-  const [isLoading, setIsLoading] = useState(true);
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
   const [isPrivacyAccepted, setIsPrivacyAccepted] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState(null);
   const [isBannerVisible, setIsBannerVisible] = useState(false);
 
   const chromeStoreUrl = "https://chrome.google.com/webstore/detail/ceiidfadobgbkfaclpjopldnbpihhcdg";
-
-  useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleAcceptAndContinue = () => {
     if (isPrivacyAccepted) {
@@ -38,8 +27,6 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900 overflow-hidden">
-      <Preloader isLoading={isLoading} />
-      
       <Banner 
         isBannerVisible={isBannerVisible}
         setIsBannerVisible={setIsBannerVisible}
