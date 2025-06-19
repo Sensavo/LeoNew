@@ -25,7 +25,7 @@ const Footer = ({
               </span>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              The AI-powered ad blocker that works where others fail. Completely undetectable and highly effective on premium sites.
+              The advanced ad blocker that works where others fail. Completely undetectable and highly effective on premium sites.
             </p>
           </div>
 
