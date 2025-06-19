@@ -9,6 +9,7 @@ const Footer = ({
   setExpandedFaq, 
   chromeStoreUrl 
 }) => {
+  const navigate = useNavigate();
   return (
     <footer className="py-16 bg-gradient-to-t from-gray-100 to-gray-50 relative border-t border-gray-200">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 to-purple-50/30"></div>
