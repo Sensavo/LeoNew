@@ -18,7 +18,7 @@ const FAQ = ({ expandedFaq, setExpandedFaq }) => {
     },
     {
       question: "Is it safe and private?",
-      answer: "Absolutely. All processing happens locally in your browser using on-device AI. We don't track, monitor, or collect any of your browsing data."
+      answer: "Absolutely. All processing happens locally in your browser using advanced algorithms. We don't track, monitor, or collect any of your browsing data."
     }
   ];
 
