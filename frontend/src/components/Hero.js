@@ -208,7 +208,7 @@ const Hero = ({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Blocks ads. Bypasses paywalls. Stays invisible. Advanced AI technology that works on sites where others fail.
+                Blocks ads. Bypasses paywalls. Stays invisible. Advanced technology that works on sites where others fail.
               </motion.p>
             </div>
 
