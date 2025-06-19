@@ -251,7 +251,7 @@ const Features = () => {
             
             <div className="text-center">
               <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
-                Our AI technology works on hundreds of premium sites that traditionally block ad blockers. 
+                Our advanced technology works on hundreds of premium sites that traditionally block ad blockers. 
                 No more "please disable your ad blocker" messages.
               </p>
               
