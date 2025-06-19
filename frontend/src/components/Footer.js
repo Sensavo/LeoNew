@@ -47,6 +47,13 @@ const Footer = ({
               <a href="#faq" className="block text-gray-600 hover:text-red-600 transition-colors duration-200">
                 FAQ
               </a>
+              <button
+                onClick={() => navigate('/stats')}
+                className="flex items-center gap-2 text-gray-600 hover:text-red-600 transition-colors duration-200"
+              >
+                <BarChart3 className="w-4 h-4" />
+                Statistics
+              </button>
             </div>
           </div>
 
