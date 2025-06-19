@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Shield, Home, TrendingUp, Users } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Shield, TrendingUp, Users } from "lucide-react";
 
 const Stats = () => {
   const navigate = useNavigate();
