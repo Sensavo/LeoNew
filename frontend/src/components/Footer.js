@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Shield, ExternalLink } from "lucide-react";
+import { Shield, ExternalLink, BarChart3 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Footer = ({ 
   setIsPrivacyModalOpen, 
