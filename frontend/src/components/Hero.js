@@ -151,7 +151,7 @@ const Hero = ({
             className="text-left xl:text-left lg:text-center space-y-6 xl:max-w-none lg:max-w-4xl lg:mx-auto"
           >
             {/* Logo with Gradient - AdsHide Branding - Light Theme */}
-            <div className="flex items-center gap-4 xl:justify-start lg:justify-center pt-16">
+            <div className="flex items-center gap-4 xl:justify-start lg:justify-center pt-8 xl:pt-12">
               <div className="w-16 h-16 bg-gradient-to-br from-red-500 via-red-600 to-orange-600 rounded-2xl flex items-center justify-center shadow-2xl">
                 <Shield className="w-8 h-8 text-white" />
               </div>
