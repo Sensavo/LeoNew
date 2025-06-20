@@ -193,12 +193,7 @@ const Stats = () => {
             </motion.div>
 
             {/* Your Contribution */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="bg-white/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-200/60 shadow-xl hover:shadow-2xl transition-all duration-300"
-            >
+            <div className="bg-white/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-200/60 shadow-xl hover:shadow-2xl transition-all duration-300">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg">
                   <Users className="w-8 h-8 text-white" />
@@ -212,7 +207,7 @@ const Stats = () => {
               <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-2">
                 {formatNumber(userContribution)}
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Thank You Message */}
