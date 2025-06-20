@@ -8,7 +8,7 @@ const HeroVisualization = () => {
 
   return (
     <div className="relative hidden xl:block py-12 xl:py-16 flex items-center">
-      <div className="relative max-w-sm mx-auto mt-12">
+      <div className="relative max-w-sm mx-auto mt-6 xl:mt-8">
         
         {/* Small Subtle Working Indicator in Center */}
         <motion.div
