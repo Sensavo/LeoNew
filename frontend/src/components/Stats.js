@@ -122,21 +122,36 @@ const Stats = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full max-w-4xl mx-auto mb-12"
+          className="w-full max-w-6xl mx-auto mb-12 px-6"
         >
-          <div className="flex items-center justify-center">
-            {/* Logo */}
+          <div className="flex items-center justify-start">
+            {/* Logo - Left aligned like home page */}
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-red-500 via-red-600 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg">
-                <Shield className="w-6 h-6 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-br from-red-500 via-red-600 to-orange-600 rounded-2xl flex items-center justify-center shadow-2xl">
+                <Shield className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-red-500 via-red-600 to-orange-500 bg-clip-text text-transparent">
+                <h1 className="text-3xl xl:text-4xl font-bold bg-gradient-to-r from-red-500 via-red-600 to-orange-500 bg-clip-text text-transparent">
                   AdsHide
                 </h1>
-                <p className="text-red-600 font-medium text-sm">Statistics</p>
+                <p className="text-red-600 font-medium">Advanced Ad Blocker</p>
               </div>
             </div>
+          </div>
+          
+          {/* Title Section */}
+          <div className="mt-12 mb-8">
+            <motion.h2 
+              className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-left"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <span className="block text-gray-900">The Ad Blocker</span>
+              <span className="block bg-gradient-to-r from-red-600 via-red-700 to-orange-600 bg-clip-text text-transparent">
+                They Can't Detect
+              </span>
+            </motion.h2>
           </div>
         </motion.div>
 
