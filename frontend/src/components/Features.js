@@ -31,7 +31,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-20 relative bg-gradient-to-b from-gray-50 via-white to-gray-100">
+    <section className="py-12 xl:py-16 relative bg-gradient-to-b from-gray-50 via-white to-gray-100">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
