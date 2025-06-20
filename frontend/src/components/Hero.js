@@ -12,7 +12,7 @@ const Hero = ({
   handleAcceptAndContinue 
 }) => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen lg:min-h-[80vh] xl:min-h-[75vh] flex items-center justify-center overflow-hidden">
       {/* Dynamic Gradient Background */}
       <motion.div 
         animate={{
