@@ -141,7 +141,7 @@ const Hero = ({
       />
       
       <div className="relative z-10 max-w-7xl mx-auto px-12 py-8">
-        <div className="grid xl:grid-cols-2 gap-16 xl:gap-12 items-start min-h-screen">
+        <div className="grid xl:grid-cols-2 gap-16 xl:gap-12 items-center min-h-[60vh] xl:min-h-[50vh]">
           
           {/* Left Column - Double Padding */}
           <motion.div
