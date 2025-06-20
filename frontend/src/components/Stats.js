@@ -183,22 +183,13 @@ const Stats = () => {
               
               <motion.div
                 key={totalAdsBlocked}
-                initial={{ scale: 1.05, opacity: 0.8 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.3 }}
+                initial={{ opacity: 0.8 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.2 }}
                 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent mb-2"
               >
                 {formatNumber(totalAdsBlocked)}
               </motion.div>
-              
-              <div className="flex items-center gap-2 text-green-600">
-                <motion.div
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className="w-2 h-2 bg-green-500 rounded-full"
-                />
-                <span className="text-sm font-medium">Growing every second</span>
-              </div>
             </motion.div>
 
             {/* Your Contribution */}
@@ -218,23 +209,8 @@ const Stats = () => {
                 </div>
               </div>
               
-              <motion.div
-                key={userContribution}
-                initial={{ scale: 1.05, opacity: 0.8 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.3 }}
-                className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-2"
-              >
+              <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-2">
                 {formatNumber(userContribution)}
-              </motion.div>
-              
-              <div className="flex items-center gap-2 text-orange-600">
-                <motion.div
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                  className="w-2 h-2 bg-orange-500 rounded-full"
-                />
-                <span className="text-sm font-medium">Keep browsing!</span>
               </div>
             </motion.div>
           </div>
