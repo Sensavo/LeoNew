@@ -160,7 +160,7 @@ const Stats = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full max-w-4xl mx-auto"
+          className="w-full max-w-6xl mx-auto px-6"
         >
           {/* Stats Grid */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
