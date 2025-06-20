@@ -7,7 +7,7 @@ const HeroVisualization = () => {
   const [todaysAdsBlocked] = useState(1219487);
 
   return (
-    <div className="relative hidden xl:block py-24 flex items-center">
+    <div className="relative hidden xl:block py-12 xl:py-16 flex items-center">
       <div className="relative max-w-sm mx-auto mt-12">
         
         {/* Small Subtle Working Indicator in Center */}
