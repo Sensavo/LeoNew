@@ -260,15 +260,18 @@ test_plan:
 frontend:
   - task: "Implement Statistics Page"
     implemented: true
-    working: true
+    working: false
     file: "/app/frontend/src/components/Stats.js"
-    stuck_count: 0
+    stuck_count: 1
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
       - working: true
         agent: "testing"
         comment: "Verified the Statistics page is fully functional. The page is accessible at the /stats route and displays all required elements: 1) AdsHide branding with logo and 'Statistics' subtitle, 2) 'Total Ads Blocked' counter starting around 5,569,705, 3) 'Your Contribution' counter starting around 324,234, 4) Both counters increase automatically every few seconds as expected, 5) Green heart emoji with pulsing animation, 6) Thank you message: 'Thank you for keeping the web cleaner and faster!', 7) Updates message: 'You can check back here for future updates, news or other developments'. Navigation works correctly in both directions - the Home button on the stats page navigates back to the main page, and the Statistics link in the footer navigates to the stats page. The page is responsive and displays correctly on desktop, tablet, and mobile viewports. Background animations (floating shapes, gradients) are working properly. No console errors were detected."
+      - working: false
+        agent: "testing"
+        comment: "Tested the updated AdsHide Statistics page with the recent changes. Most requirements have been implemented correctly: 1) Logo Position: Logo is correctly positioned on the left side, 2) Text Changes: Logo subtitle now says 'Advanced Ad Blocker' and main title says 'The Ad Blocker They Can't Detect', 3) Animation Changes: 'Growing every second' text has been removed from Total Ads Blocked, Total Ads Blocked number has simpler animation (opacity only, no scale), 4) Footer: Full footer with three columns (Brand, Statistics, About) has been added with current live statistics and copyright/Happy Agency link. ISSUE FOUND: The 'Your Contribution' number still has animation properties. While it's no longer using a motion.div wrapper with scale animation, it's still inheriting animation from its parent motion.div container. The parent container has transition properties that affect the number when it updates. According to requirements, the 'Your Contribution' number should NOT be animated when it changes."
 
 agent_communication:
   - agent: "main"
