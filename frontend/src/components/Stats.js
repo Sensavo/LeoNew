@@ -138,21 +138,6 @@ const Stats = () => {
               </div>
             </div>
           </div>
-          
-          {/* Title Section */}
-          <div className="mt-12 mb-8">
-            <motion.h2 
-              className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-left"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <span className="block text-gray-900">The Ad Blocker</span>
-              <span className="block bg-gradient-to-r from-red-600 via-red-700 to-orange-600 bg-clip-text text-transparent">
-                They Can't Detect
-              </span>
-            </motion.h2>
-          </div>
         </motion.div>
 
         {/* Main Stats Container */}
