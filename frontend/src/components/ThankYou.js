@@ -5,18 +5,18 @@ import { Shield, Gift, CheckCircle, Clock, AlertTriangle } from "lucide-react";
 const ThankYou = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900 overflow-hidden">
-      {/* Dynamic Gradient Background */}
+      {/* Dynamic Gradient Background - Seamless */}
       <motion.div 
         animate={{
           background: [
-            'linear-gradient(135deg, #f8fafc 0%, #ffffff 25%, #e0f2fe 50%, #f1f5f9 75%, #ffffff 100%)',
-            'linear-gradient(135deg, #f1f5f9 0%, #e0f2fe 25%, #ffffff 50%, #f8fafc 75%, #e0f2fe 100%)',
-            'linear-gradient(135deg, #e0f2fe 0%, #f8fafc 25%, #f1f5f9 50%, #ffffff 75%, #f8fafc 100%)',
-            'linear-gradient(135deg, #f8fafc 0%, #ffffff 25%, #e0f2fe 50%, #f1f5f9 75%, #ffffff 100%)'
+            'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 20%, #e0f2fe 40%, #f1f5f9 60%, #f8fafc 80%, #ffffff 100%)',
+            'linear-gradient(135deg, #f1f5f9 0%, #e0f2fe 20%, #f8fafc 40%, #ffffff 60%, #f1f5f9 80%, #e0f2fe 100%)',
+            'linear-gradient(135deg, #e0f2fe 0%, #f8fafc 20%, #f1f5f9 40%, #f8fafc 60%, #e0f2fe 80%, #f1f5f9 100%)',
+            'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 20%, #e0f2fe 40%, #f1f5f9 60%, #f8fafc 80%, #ffffff 100%)'
           ]
         }}
         transition={{
-          duration: 15,
+          duration: 20,
           repeat: Infinity,
           ease: "easeInOut"
         }}
