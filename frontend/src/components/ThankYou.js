@@ -23,56 +23,86 @@ const ThankYou = () => {
         className="absolute inset-0"
       />
 
-      {/* Floating Geometric Shapes Background */}
+      {/* Floating Geometric Shapes Background - More Subtle */}
       <div className="absolute inset-0">
-        {/* Large Circle */}
+        {/* Large Circle - Softer Blue */}
         <motion.div
           animate={{
-            x: [0, 100, 0],
-            y: [0, -80, 0],
-            scale: [1, 1.1, 1],
-            opacity: [0.1, 0.15, 0.1]
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-blue-200/30 to-purple-200/20 rounded-full blur-3xl"
-        />
-        
-        {/* Medium Circle */}
-        <motion.div
-          animate={{
-            x: [0, -120, 0],
-            y: [0, 100, 0],
-            scale: [1, 0.8, 1],
-            opacity: [0.08, 0.12, 0.08]
+            x: [0, 60, 0],
+            y: [0, -40, 0],
+            scale: [1, 1.05, 1],
+            opacity: [0.06, 0.08, 0.06]
           }}
           transition={{
             duration: 25,
             repeat: Infinity,
-            ease: "easeInOut",
-            delay: 5
+            ease: "easeInOut"
           }}
-          className="absolute top-1/2 right-1/3 w-48 h-48 bg-gradient-to-br from-red-200/20 to-orange-200/15 rounded-full blur-2xl"
+          className="absolute top-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-blue-100/40 to-sky-100/30 rounded-full blur-3xl"
         />
         
-        {/* Small Circle */}
+        {/* Medium Circle - Softer Red/Orange */}
         <motion.div
           animate={{
-            x: [0, 80, 0],
-            y: [0, -60, 0],
-            scale: [1, 1.2, 1],
-            opacity: [0.05, 0.1, 0.05]
+            x: [0, -80, 0],
+            y: [0, 60, 0],
+            scale: [1, 0.9, 1],
+            opacity: [0.05, 0.07, 0.05]
           }}
           transition={{
-            duration: 18,
+            duration: 30,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: 10
+            delay: 8
           }}
-          className="absolute bottom-1/4 left-1/2 w-32 h-32 bg-gradient-to-br from-emerald-200/25 to-teal-200/20 rounded-full blur-xl"
+          className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-br from-red-100/30 to-orange-100/25 rounded-full blur-3xl"
+        />
+        
+        {/* Small Circle - Softer Green */}
+        <motion.div
+          animate={{
+            x: [0, 40, 0],
+            y: [0, -30, 0],
+            scale: [1, 1.1, 1],
+            opacity: [0.04, 0.06, 0.04]
+          }}
+          transition={{
+            duration: 22,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 15
+          }}
+          className="absolute bottom-1/4 left-1/2 w-48 h-48 bg-gradient-to-br from-emerald-100/35 to-teal-100/25 rounded-full blur-2xl"
+        />
+        
+        {/* Additional Subtle Elements */}
+        <motion.div
+          animate={{
+            rotate: [0, 180, 360],
+            scale: [1, 1.02, 1],
+            opacity: [0.03, 0.05, 0.03]
+          }}
+          transition={{
+            duration: 40,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-purple-100/30 to-pink-100/20 rounded-full blur-2xl"
+        />
+        
+        <motion.div
+          animate={{
+            rotate: [360, 180, 0],
+            x: [0, 20, 0],
+            opacity: [0.02, 0.04, 0.02]
+          }}
+          transition={{
+            duration: 35,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 20
+          }}
+          className="absolute bottom-10 right-1/4 w-24 h-24 bg-gradient-to-br from-indigo-100/25 to-blue-100/20 rounded-full blur-xl"
         />
       </div>
 
