@@ -276,8 +276,7 @@ const ThankYou = () => {
         </motion.div>
 
         {/* Footer */}
-        <footer className="mt-20 py-16 bg-gradient-to-t from-gray-100 to-gray-50 relative border-t border-gray-200 w-full">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 to-purple-50/30"></div>
+        <footer className="mt-20 py-16 relative w-full">
           <div className="max-w-6xl mx-auto px-6 relative">
             {/* Main Footer Content */}
             <div className="grid md:grid-cols-3 gap-12 mb-12">
