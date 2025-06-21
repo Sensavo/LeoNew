@@ -140,7 +140,8 @@ const ThankYou = () => {
             </motion.div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Thank You for Installing AI Ad Blocker!
+              Thank You for Installing<br />
+              AI Ad Blocker!
             </h2>
             
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
