@@ -106,20 +106,20 @@ const ThankYou = () => {
         />
       </div>
 
-      {/* Enhanced Pattern Overlay */}
+      {/* Enhanced Pattern Overlay - More Subtle */}
       <motion.div 
         animate={{
-          opacity: [0.02, 0.05, 0.02]
+          opacity: [0.01, 0.02, 0.01]
         }}
         transition={{
-          duration: 8,
+          duration: 12,
           repeat: Infinity,
           ease: "easeInOut"
         }}
         className="absolute inset-0"
         style={{ 
-          backgroundImage: `url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23059669" fill-opacity="0.1"%3E%3Ccircle cx="20" cy="20" r="2"/%3E%3Ccircle cx="80" cy="20" r="1"/%3E%3Ccircle cx="50" cy="50" r="1.5"/%3E%3Ccircle cx="20" cy="80" r="1"/%3E%3Ccircle cx="80" cy="80" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')`,
-          backgroundSize: '50px 50px'
+          backgroundImage: `url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23059669" fill-opacity="0.05"%3E%3Ccircle cx="20" cy="20" r="1"/%3E%3Ccircle cx="80" cy="20" r="0.5"/%3E%3Ccircle cx="50" cy="50" r="1"/%3E%3Ccircle cx="20" cy="80" r="0.5"/%3E%3Ccircle cx="80" cy="80" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')`,
+          backgroundSize: '80px 80px'
         }}
       />
 
