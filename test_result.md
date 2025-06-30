@@ -264,7 +264,7 @@ metadata:
 
 test_plan:
   current_focus: 
-    - "Implement Statistics Page"
+    - "Simplified Thank You Page"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
