@@ -113,7 +113,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "rebuild code the same way you it here https://github.com/Sensavo/LeoNew; remove preloader; remove every mentioning that code was created by AI or Emergent"
+user_problem_statement: "clear the code; remove all mentions about emergent and AI (hidden code parts only); remove backend and everything unuseful; make it as simple as possible to keep the page working properly as designed; make it easy for the developers to extract and use the gift banner code separately"
 
 frontend:
   - task: "Remove Preloader and Clean AI/Emergent References"
