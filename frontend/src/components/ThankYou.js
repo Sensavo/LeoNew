@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Shield, CheckCircle, AlertTriangle } from "lucide-react";
+import { Shield, Gift, CheckCircle, AlertTriangle } from "lucide-react";
 import GiftBanner from "./GiftBanner";
 
 const ThankYou = () => {
