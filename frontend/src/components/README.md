@@ -1,48 +1,35 @@
-# GiftBanner Component
+# UninstallPage Component
 
-A reusable React component for displaying gift/promotional banners with animations.
-
-## Usage
-
-```jsx
-import GiftBanner from './components/GiftBanner';
-
-// Basic usage
-<GiftBanner />
-
-// Customized usage
-<GiftBanner 
-  title="Your Special Offer is Ready!"
-  description="Click here to claim your reward."
-  timerText="Limited time offer"
-  className="my-4"
-/>
-```
-
-## Props
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `title` | string | "Your Amazon Gift is almost ready..." | Main heading text |
-| `description` | string | "Click the gift icon in the top right corner to claim it." | Description text |
-| `timerText` | string | "Timer running — don't miss out" | Timer message text |
-| `className` | string | "" | Additional CSS classes |
+A React component for displaying a "Sorry to see you go" uninstall page with the same visual style as the original thank you page.
 
 ## Features
 
-- Animated gift icon that rotates
-- Pulsing timer text
-- Smooth entrance animation
-- Fully customizable text content
-- Responsive design
-- Built with Framer Motion for smooth animations
+- **Same Visual Design**: Maintains identical styling to the original thank you page
+- **Beautiful Animations**: Floating shapes, gradient backgrounds, and smooth transitions
+- **Chrome Store Link**: Direct link to reinstall the extension
+- **Responsive Design**: Works perfectly on desktop, tablet, and mobile
+- **Professional Messaging**: Polite goodbye message with option to return
+
+## Content
+
+The page includes:
+- "Sorry to See You Go" heading with sad emoji
+- Main message about returning to reinstall
+- Chrome Web Store reinstall link
+- Thank you section for trying the product
+- Professional footer with branding
 
 ## Dependencies
 
 - React
-- Framer Motion
+- Framer Motion (for animations)
 - Lucide React (for icons)
+- Tailwind CSS (for styling)
 
-## Styling
+## Usage
 
-The component uses Tailwind CSS classes and is fully responsive. The color scheme uses amber/orange gradients that can be customized by modifying the component's classes.
+This component is designed to be used as a standalone uninstall page for the AdsHide ad blocker extension.
+
+## Customization
+
+To customize the Chrome Web Store URL, update the `chromeStoreUrl` variable in the component.
