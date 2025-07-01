@@ -278,9 +278,12 @@ const ThankYou = () => {
               {/* Support Section */}
               <div>
                 <h3 className="text-gray-900 font-semibold mb-4">Support</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
                   If you have any questions about your installation or rewards, please check back here for updates.
                 </p>
+                <a href="/uninstall" className="text-red-600 hover:text-red-700 text-sm font-medium transition-colors duration-200">
+                  Uninstall Guide
+                </a>
               </div>
             </div>
 
