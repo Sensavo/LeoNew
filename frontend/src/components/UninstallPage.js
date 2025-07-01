@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Shield, ExternalLink, ArrowLeft } from "lucide-react";
+import { Shield, ExternalLink } from "lucide-react";
 
 const UninstallPage = () => {
   const chromeStoreUrl = "https://chromewebstore.google.com/detail/ai-ad-blocker/ceiidfadobgbkfaclpjopldnbpihhcdg";
