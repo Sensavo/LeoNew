@@ -218,7 +218,7 @@ const UninstallPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="bg-gradient-to-br from-green-50 to-emerald-50 backdrop-blur-xl rounded-3xl p-8 border border-green-200 shadow-xl mb-8"
+            className="bg-gradient-to-br from-green-50 to-emerald-50 backdrop-blur-xl rounded-3xl p-8 border border-green-200 shadow-xl"
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Thank You for Trying AdsHide
@@ -227,27 +227,6 @@ const UninstallPage = () => {
             <p className="text-gray-700 leading-relaxed">
               We appreciate the time you spent with our ad blocker. Your feedback helps us improve and create better browsing experiences for everyone.
             </p>
-          </motion.div>
-
-          {/* Back to Home Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
-            className="text-center"
-          >
-            <motion.button
-              onClick={() => window.location.href = '/'}
-              whileHover={{ 
-                scale: 1.02,
-                boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)"
-              }}
-              whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-2 bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Home
-            </motion.button>
           </motion.div>
         </motion.div>
 
